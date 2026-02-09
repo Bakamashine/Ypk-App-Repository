@@ -1,0 +1,339 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\Ypk-Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\productswebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\productswebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}|Persistance\\Persistance\\Persistance.csproj|h:\\ypk-api\\persistance\\persistance\\persistance.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}",
+      "RelativeMoniker": "D:0:0:{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}|Persistance\\Persistance\\Persistance.csproj|solutionrelative:persistance\\persistance\\persistance.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\models\\product\\updateproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\product\\updateproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\models\\product\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\product\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\models\\order\\updateorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\order\\updateorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\models\\order\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\order\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA700F72-7DBF-4255-9966-DCB8C832A4D6}|Domain\\Domain\\Domain.csproj|h:\\ypk-api\\domain\\domain\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA700F72-7DBF-4255-9966-DCB8C832A4D6}|Domain\\Domain\\Domain.csproj|solutionrelative:domain\\domain\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\models\\user\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\user\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\models\\user\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\user\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\models\\user\\updateuserforadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\user\\updateuserforadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\models\\ypk\\updateypkdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\ypk\\updateypkdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\models\\ypk\\createypkdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\ypk\\createypkdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\models\\feedback\\updatefeedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\feedback\\updatefeedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|h:\\ypk-api\\presentation\\productswebapi\\models\\feedback\\createfeedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\feedback\\createfeedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|h:\\ypk-api\\core\\aplication\\commands\\users\\updateuseradmin\\updateadminusercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\users\\updateuseradmin\\updateadminusercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|h:\\ypk-api\\core\\aplication\\commands\\users\\updateuseradmin\\updateadminusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\users\\updateuseradmin\\updateadminusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Program.cs",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Program.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAmwBEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T20:05:39.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Properties\\launchSettings.json",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-05T19:58:24.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsWebApi.csproj",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\ProductsWebApi.csproj",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\ProductsWebApi.csproj",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\ProductsWebApi.csproj",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\ProductsWebApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-05T19:58:00.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Persistance",
+              "DocumentMoniker": "H:\\Ypk-Api\\Persistance\\Persistance\\Persistance.csproj",
+              "RelativeDocumentMoniker": "Persistance\\Persistance\\Persistance.csproj",
+              "ToolTip": "H:\\Ypk-Api\\Persistance\\Persistance\\Persistance.csproj",
+              "RelativeToolTip": "Persistance\\Persistance\\Persistance.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-05T19:47:23.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Product.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Domain\\Domain\\Model\\Product.cs",
+              "RelativeDocumentMoniker": "Domain\\Domain\\Model\\Product.cs",
+              "ToolTip": "H:\\Ypk-Api\\Domain\\Domain\\Model\\Product.cs",
+              "RelativeToolTip": "Domain\\Domain\\Model\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateOrderDto.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Order\\CreateOrderDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Order\\CreateOrderDto.cs",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Order\\CreateOrderDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Order\\CreateOrderDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateProductDto.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Product\\CreateProductDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Product\\CreateProductDto.cs",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Product\\CreateProductDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Product\\CreateProductDto.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAowCAAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateOrderDto.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Order\\UpdateOrderDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Order\\UpdateOrderDto.cs",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Order\\UpdateOrderDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Order\\UpdateOrderDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdateProductDto.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Product\\UpdateProductDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Product\\UpdateProductDto.cs",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Product\\UpdateProductDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Product\\UpdateProductDto.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAlwCsAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\User\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\User\\CreateUserDto.cs",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\User\\CreateUserDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\User\\CreateUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UpdateUserDto.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\User\\UpdateUserDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\User\\UpdateUserDto.cs",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\User\\UpdateUserDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\User\\UpdateUserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UpdateUserForAdminDto.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\User\\UpdateUserForAdminDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\User\\UpdateUserForAdminDto.cs",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\User\\UpdateUserForAdminDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\User\\UpdateUserForAdminDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UpdateFeedbackDto.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Feedback\\UpdateFeedbackDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Feedback\\UpdateFeedbackDto.cs",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Feedback\\UpdateFeedbackDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Feedback\\UpdateFeedbackDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateFeedbackDto.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Feedback\\CreateFeedbackDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Feedback\\CreateFeedbackDto.cs",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Feedback\\CreateFeedbackDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Feedback\\CreateFeedbackDto.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAswBAAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CreateYpkDto.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Ypk\\CreateYpkDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Ypk\\CreateYpkDto.cs",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Ypk\\CreateYpkDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Ypk\\CreateYpkDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UpdateYpkDto.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Ypk\\UpdateYpkDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Ypk\\UpdateYpkDto.cs",
+              "ToolTip": "H:\\Ypk-Api\\Presentation\\ProductsWebApi\\Models\\Ypk\\UpdateYpkDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Ypk\\UpdateYpkDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UpdateAdminUserCommandValidator.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommandValidator.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommandValidator.cs",
+              "ToolTip": "H:\\Ypk-Api\\Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommandValidator.cs",
+              "RelativeToolTip": "Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommandValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UpdateAdminUserCommandHandler.cs",
+              "DocumentMoniker": "H:\\Ypk-Api\\Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommandHandler.cs",
+              "ToolTip": "H:\\Ypk-Api\\Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommandHandler.cs",
+              "RelativeToolTip": "Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T19:47:23.703Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

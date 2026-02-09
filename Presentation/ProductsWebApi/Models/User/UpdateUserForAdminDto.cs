@@ -1,0 +1,32 @@
+﻿using Aplication.Commands.Users.UpdateUser;
+using Application.Common.Mappings;
+using AutoMapper;
+using Domain.Model;
+using System.ComponentModel.DataAnnotations;
+
+namespace CourseWebApi.Models.User
+{
+    public class UpdateUserForAdminDto : IMapWith<UpdateAdminUserCommand>
+    {
+        [Required]
+        public Guid Id { get; set; }
+        public string Fullname { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
+        public Role? Role { get; set; }
+        public string? UserInfo { get; set; }
+
+        public void Mapping(Profile profile)
+        {
+            profile.CreateMap<UpdateUserForAdminDto, UpdateAdminUserCommand>()
+
+                .ForMember(userCommand => userCommand.Id,
+                opt => opt.MapFrom(userDto => userDto.Id))
+                .ForMember(userCommand => userCommand.Fullname,
+                opt => opt.MapFrom(userDto => userDto.Fullname))
+                .ForMember(userCommand => userCommand.Role,
+                opt => opt.MapFrom(userDto => userDto.Role))
+                .ForMember(userCommand => userCommand.PhoneNumber,
+                opt => opt.MapFrom(userDto => userDto.PhoneNumber));
+        }
+    }
+}
