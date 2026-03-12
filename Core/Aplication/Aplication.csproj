@@ -13,7 +13,11 @@
     <None Remove="Commands\Ypks\CreateYpk\CreateYpkCommandHandler.cs~RF4a869d.TMP" />
   </ItemGroup>
 
-  <ItemGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="AutoMapper" Version="13.0.1" />
 	  <PackageReference Include="FluentValidation" Version="8.6.3" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="8.6.3" />

@@ -12,6 +12,7 @@
           "BCrypt.Net-Next": "4.0.3",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.36",
           "Persistance": "1.0.0",
+          "SixLabors.ImageSharp": "3.1.12",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
@@ -38,9 +39,6 @@
         }
       },
       "FluentValidation/8.6.3": {
-        "dependencies": {
-          "System.ComponentModel.Annotations": "4.4.1"
-        },
         "runtime": {
           "lib/netstandard2.0/FluentValidation.dll": {
             "assemblyVersion": "8.0.0.0",
@@ -124,7 +122,6 @@
       "Microsoft.EntityFrameworkCore/6.0.36": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "6.0.36",
-          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.36",
           "Microsoft.Extensions.Caching.Memory": "6.0.3",
           "Microsoft.Extensions.DependencyInjection": "6.0.2",
           "Microsoft.Extensions.Logging": "6.0.1",
@@ -146,11 +143,9 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/6.0.36": {},
       "Microsoft.EntityFrameworkCore.Relational/6.0.29": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.36",
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+          "Microsoft.EntityFrameworkCore": "6.0.36"
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {
@@ -159,7 +154,6 @@
           }
         }
       },
-      "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
       "Microsoft.Extensions.Caching.Abstractions/6.0.1": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "6.0.1"
@@ -184,11 +178,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.3624.51421"
           }
-        }
-      },
-      "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "6.0.1"
         }
       },
       "Microsoft.Extensions.DependencyInjection/6.0.2": {
@@ -330,9 +319,6 @@
         }
       },
       "Npgsql/6.0.11": {
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        },
         "runtime": {
           "lib/net6.0/Npgsql.dll": {
             "assemblyVersion": "6.0.11.0",
@@ -354,9 +340,16 @@
           }
         }
       },
+      "SixLabors.ImageSharp/3.1.12": {
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.1.12.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.2.3": {
         "dependencies": {
-          "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
           "Swashbuckle.AspNetCore.Swagger": "6.2.3",
           "Swashbuckle.AspNetCore.SwaggerGen": "6.2.3",
           "Swashbuckle.AspNetCore.SwaggerUI": "6.2.3"
@@ -400,7 +393,6 @@
           }
         }
       },
-      "System.ComponentModel.Annotations/4.4.1": {},
       "System.Diagnostics.DiagnosticSource/6.0.2": {
         "runtime": {
           "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
@@ -421,7 +413,6 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "Aplication/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
@@ -433,7 +424,10 @@
           "System.IdentityModel.Tokens.Jwt": "8.15.0"
         },
         "runtime": {
-          "Aplication.dll": {}
+          "Aplication.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Domain/1.0.0": {
@@ -441,7 +435,10 @@
           "Microsoft.EntityFrameworkCore": "6.0.36"
         },
         "runtime": {
-          "Domain.dll": {}
+          "Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Persistance/1.0.0": {
@@ -450,7 +447,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.29"
         },
         "runtime": {
-          "Persistance.dll": {}
+          "Persistance.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -545,26 +545,12 @@
       "path": "microsoft.entityframeworkcore.abstractions/6.0.36",
       "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.36.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/6.0.36": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Se0wloBaAJcLwgSW4hvGdAWjKnuIwgQ2PKTNkvG80PW/WFgedwKomY9wuO5BPewIHlX6huGyP//StQQRQOWr+Q==",
-      "path": "microsoft.entityframeworkcore.analyzers/6.0.36",
-      "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.36.nupkg.sha512"
-    },
     "Microsoft.EntityFrameworkCore.Relational/6.0.29": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-cvbRXNtRLv9mm5ivt4T0aKtuolz7RkHqkT9/CsXTQbCOgas0M1G8HNeAxeX6/3/lXqIogCBrriZ3qI5+IhCCAg==",
       "path": "microsoft.entityframeworkcore.relational/6.0.29",
       "hashPath": "microsoft.entityframeworkcore.relational.6.0.29.nupkg.sha512"
-    },
-    "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
-      "path": "microsoft.extensions.apidescription.server/3.0.0",
-      "hashPath": "microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.1": {
       "type": "package",
@@ -579,13 +565,6 @@
       "sha512": "sha512-GVNNcHoPDEUn4OQiBBGs5mE6nX7BA+LeQId9NeA+gB8xcbDUmFPAl8Er2ixNLbn4ffFr8t5jfMwdxgFG66k7BA==",
       "path": "microsoft.extensions.caching.memory/6.0.3",
       "hashPath": "microsoft.extensions.caching.memory.6.0.3.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-qWzV9o+ZRWq+pGm+1dF+R7qTgTYoXvbyowRoBxQJGfqTpqDun2eteerjRQhq5PQ/14S+lqto3Ft4gYaRyl4rdQ==",
-      "path": "microsoft.extensions.configuration.abstractions/6.0.0",
-      "hashPath": "microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/6.0.2": {
       "type": "package",
@@ -692,6 +671,13 @@
       "path": "npgsql.entityframeworkcore.postgresql/6.0.29",
       "hashPath": "npgsql.entityframeworkcore.postgresql.6.0.29.nupkg.sha512"
     },
+    "SixLabors.ImageSharp/3.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iAg6zifihXEFS/t7fiHhZBGAdCp3FavsF4i2ZIDp0JfeYeDVzvmlbY1CNhhIKimaIzrzSi5M/NBFcWvZT2rB/A==",
+      "path": "sixlabors.imagesharp/3.1.12",
+      "hashPath": "sixlabors.imagesharp.3.1.12.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/6.2.3": {
       "type": "package",
       "serviceable": true,
@@ -727,13 +713,6 @@
       "path": "system.collections.immutable/6.0.1",
       "hashPath": "system.collections.immutable.6.0.1.nupkg.sha512"
     },
-    "System.ComponentModel.Annotations/4.4.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
-      "path": "system.componentmodel.annotations/4.4.1",
-      "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
-    },
     "System.Diagnostics.DiagnosticSource/6.0.2": {
       "type": "package",
       "serviceable": true,
@@ -747,13 +726,6 @@
       "sha512": "sha512-dpodi7ixz6hxK8YCBYAWzm0IA8JYXoKcz0hbCbNifo519//rjUI0fBD8rfNr+IGqq+2gm4oQoXwHk09LX5SqqQ==",
       "path": "system.identitymodel.tokens.jwt/8.15.0",
       "hashPath": "system.identitymodel.tokens.jwt.8.15.0.nupkg.sha512"
-    },
-    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
-      "path": "system.runtime.compilerservices.unsafe/6.0.0",
-      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
     },
     "Aplication/1.0.0": {
       "type": "project",

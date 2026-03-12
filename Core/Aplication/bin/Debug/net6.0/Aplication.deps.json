@@ -32,9 +32,6 @@
         }
       },
       "FluentValidation/8.6.3": {
-        "dependencies": {
-          "System.ComponentModel.Annotations": "4.4.1"
-        },
         "runtime": {
           "lib/netstandard2.0/FluentValidation.dll": {
             "assemblyVersion": "8.0.0.0",
@@ -107,7 +104,6 @@
       "Microsoft.EntityFrameworkCore/6.0.36": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "6.0.36",
-          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.36",
           "Microsoft.Extensions.Caching.Memory": "6.0.3",
           "Microsoft.Extensions.DependencyInjection": "6.0.2",
           "Microsoft.Extensions.Logging": "6.0.1",
@@ -129,7 +125,6 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/6.0.36": {},
       "Microsoft.Extensions.Caching.Abstractions/6.0.1": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "6.0.1"
@@ -270,7 +265,6 @@
           }
         }
       },
-      "System.ComponentModel.Annotations/4.4.1": {},
       "System.Diagnostics.DiagnosticSource/6.0.2": {
         "runtime": {
           "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
@@ -296,7 +290,10 @@
           "Microsoft.EntityFrameworkCore": "6.0.36"
         },
         "runtime": {
-          "Domain.dll": {}
+          "Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -376,13 +373,6 @@
       "sha512": "sha512-nrR4lfe9izQK1eerKW/ECHuJV8xXtuvoj/APrwwOjX4+Ne2SMXBpetctPcYNVc3KyiKuUHJSLywWtsqoXE5ElA==",
       "path": "microsoft.entityframeworkcore.abstractions/6.0.36",
       "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.36.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Analyzers/6.0.36": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Se0wloBaAJcLwgSW4hvGdAWjKnuIwgQ2PKTNkvG80PW/WFgedwKomY9wuO5BPewIHlX6huGyP//StQQRQOWr+Q==",
-      "path": "microsoft.entityframeworkcore.analyzers/6.0.36",
-      "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.36.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.1": {
       "type": "package",
@@ -474,13 +464,6 @@
       "sha512": "sha512-Cc+SfP+jyCmA1TnRnDA7cRZy5jbLyWodfuUJKDJ+PJZBwWkv8szz+ztSCHAonqnL01DRaHaS2ptc4bYIEdgvWw==",
       "path": "system.collections.immutable/6.0.1",
       "hashPath": "system.collections.immutable.6.0.1.nupkg.sha512"
-    },
-    "System.ComponentModel.Annotations/4.4.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
-      "path": "system.componentmodel.annotations/4.4.1",
-      "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
     },
     "System.Diagnostics.DiagnosticSource/6.0.2": {
       "type": "package",

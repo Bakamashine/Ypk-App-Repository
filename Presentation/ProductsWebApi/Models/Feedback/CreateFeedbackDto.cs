@@ -20,6 +20,7 @@ namespace ProductsWebApi.Models.Feedback
         public string FeedbackName { get; set; } = string.Empty;
         [Required]
         public int Raiting { get; set; }
+        public IFormFile? Image { get; set; }
 
         public void Mapping(Profile profile)
         {
@@ -27,7 +28,9 @@ namespace ProductsWebApi.Models.Feedback
                 .ForMember(userCommand => userCommand.FeedbackName,
                 opt => opt.MapFrom(userDto => userDto.FeedbackName))
                 .ForMember(userCommand => userCommand.Raiting,
-                opt => opt.MapFrom(userDto => userDto.Raiting));
+                opt => opt.MapFrom(userDto => userDto.Raiting))
+                .ForMember(cmd => cmd.Image, 
+                    opt => opt.MapFrom(dto => dto.Image));
         }
     }
 }

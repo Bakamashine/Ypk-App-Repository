@@ -1,5 +1,6 @@
 ﻿using Domain.Model;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -14,5 +15,6 @@ namespace Aplication.Commands.Feedbacks.CreateFeedback
         public Guid CurrentUserId { get; set; }
         public string FeedbackName { get; set; } = string.Empty;
         public int Raiting { get; set; }
+        public IFormFile? Image { get; set; }
     }
 }

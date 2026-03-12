@@ -12,19 +12,29 @@ namespace Aplication.Commands.Feedbacks.CreateFeedback
     public class CreateFeedbackCommandHandler : IRequestHandler<CreateFeedbackCommand, Guid>
     {
         private readonly IProductsDbContext context;
+        private readonly IFileStorageService fileStorage;
 
-        public CreateFeedbackCommandHandler(IProductsDbContext context)
+        public CreateFeedbackCommandHandler(IProductsDbContext context, IFileStorageService fileStorage)
         {
             this.context = context;
+            this.fileStorage = fileStorage;
         }
         public async Task<Guid> Handle(CreateFeedbackCommand request, CancellationToken cancellationToken)
         {
+            string? imagePath = null;
+
+            if (request.Image != null)
+            {
+                imagePath = await fileStorage.SaveFileAsync(request.Image, "reviews");
+            }
+
             var newFeedback = new Feedback
             {
                 Id = Guid.NewGuid(),
                 UserId = request.CurrentUserId,
                 Comment = request.FeedbackName,
-                Raiting = request.Raiting
+                Raiting = request.Raiting,
+                ImagePath = imagePath
             };
 
             await context.Feedbacks.AddAsync( newFeedback,cancellationToken);

@@ -16,6 +16,9 @@ namespace Aplication.Dtos.Feedbacks
         public User? User { get; set; }
         public string Comment { get; set; } = string.Empty;
 
+
+        public string? ImagePath { get; set; }  
+        public string? ImageUrl { get; set; }  
         public void Mapping(Profile profile) =>
             profile.CreateMap<Feedback, FeedbackLookupDto>()
                 .ForMember(feedbackVm => feedbackVm.Id,
@@ -23,6 +26,8 @@ namespace Aplication.Dtos.Feedbacks
                 .ForMember(feedbackVm => feedbackVm.User,
                 opt => opt.MapFrom(feedback => feedback.User))
                 .ForMember(feedbackVm => feedbackVm.Comment,
-                opt => opt.MapFrom(feedback => feedback.Comment));
+                opt => opt.MapFrom(feedback => feedback.Comment))
+                .ForMember(dto => dto.ImagePath,
+                opt => opt.MapFrom(f => f.ImagePath));
     }
 }

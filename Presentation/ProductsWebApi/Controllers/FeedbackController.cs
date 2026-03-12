@@ -33,12 +33,21 @@ namespace ProductsWebApi.Controllers
         [HttpGet("All")]
         public async Task<ActionResult<FeedbackListVm>> GetAll()
         {
-            var query = new GetAllFeedbackQuery()
-            {
-
-            };
+            var query = new GetAllFeedbackQuery();
 
             var vm = await Mediator.Send(query);
+
+            if (vm?.Feedbacks != null)
+            {
+                foreach (var feedback in vm.Feedbacks)
+                {
+                    if (!string.IsNullOrEmpty(feedback.ImagePath))
+                    {
+                        feedback.ImageUrl = $"{Request.Scheme}://{Request.Host}{feedback.ImagePath}";
+                    }
+                }
+            }
+
             return Ok(vm);
         }
 
@@ -51,12 +60,18 @@ namespace ProductsWebApi.Controllers
                 Id = id,
             };
             var vm = await Mediator.Send(query);
+
+            if (!string.IsNullOrEmpty(vm.ImagePath))
+            {
+                vm.ImageUrl = $"{Request.Scheme}://{Request.Host}{vm.ImagePath}";
+            }
+
             return Ok(vm);
         }
 
         [Authorize]
         [HttpPost]
-        public async Task<ActionResult<Guid>> Create([FromBody] CreateFeedbackDto createFeedbackDto)
+        public async Task<ActionResult<Guid>> Create([FromForm] CreateFeedbackDto createFeedbackDto)
         {
             var command = mapper.Map<CreateFeedbackCommand>(createFeedbackDto);
             command.CurrentUserId = UserId;
@@ -66,7 +81,7 @@ namespace ProductsWebApi.Controllers
 
         [Authorize]
         [HttpPut]
-        public async Task<IActionResult> Update([FromBody] UpdateFeedbackDto updateFeedbackDto)
+        public async Task<IActionResult> Update([FromForm] UpdateFeedbackDto updateFeedbackDto)
         {
             var command = mapper.Map<UpdateFeedbackCommand>(updateFeedbackDto);
             command.CurrentUserId = UserId;

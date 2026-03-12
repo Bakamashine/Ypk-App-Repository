@@ -535,7 +535,10 @@
         },
         "runtime": {
           "bin/placeholder/Aplication.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Domain/1.0.0": {
         "type": "project",
@@ -1326,23 +1329,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\k125\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Artem\\.nuget\\packages\\": {},
+    "F:\\VS\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Ypk-Api\\Persistance\\Persistance\\Persistance.csproj",
+      "projectUniqueName": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\Persistance.csproj",
       "projectName": "Persistance",
-      "projectPath": "E:\\Ypk-Api\\Persistance\\Persistance\\Persistance.csproj",
-      "packagesPath": "C:\\Users\\k125\\.nuget\\packages\\",
-      "outputPath": "E:\\Ypk-Api\\Persistance\\Persistance\\obj\\",
+      "projectPath": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\Persistance.csproj",
+      "packagesPath": "C:\\Users\\Artem\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "F:\\VS\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\k125\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Artem\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1357,8 +1360,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Ypk-Api\\Core\\Aplication\\Aplication.csproj": {
-              "projectPath": "E:\\Ypk-Api\\Core\\Aplication\\Aplication.csproj"
+            "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Aplication.csproj": {
+              "projectPath": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Aplication.csproj"
             }
           }
         }
@@ -1367,7 +1370,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net6.0": {
@@ -1394,7 +1403,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

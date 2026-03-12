@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "LsF8QEmvDmMSbjkrUpvdVNuk+SiHMinPy54Cdj/ogyQ=",
-  "Source": "ProductsWebApi",
-  "BasePath": "_content/ProductsWebApi",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"YuFIT9JZvbfTVYwqoTH/1clRtPwhvWi8HVUPZL9e0jY=","Source":"ProductsWebApi","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[{"Name":"ProductsWebApi\\wwwroot","Source":"ProductsWebApi","ContentRoot":"C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\wwwroot\\","BasePath":"/","Pattern":"**"}],"Assets":[],"Endpoints":[]}
