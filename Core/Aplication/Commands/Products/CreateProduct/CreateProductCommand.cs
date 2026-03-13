@@ -1,7 +1,9 @@
 ﻿using Domain.Model;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +19,9 @@ namespace Aplication.Commands.Products.CreateProduct
         public decimal ProductCost { get; set; }
         public bool IsProduct { get; set; }
         public string Adress { get; set; } = string.Empty;
-        public string? Photo { get; set; }
-        public decimal Raiting { get; set; }
+        public IFormFile? Photo { get; set; }
 
-        public Ypk? Ypk { get; set; }
-        public StatusProduct? StatusProduct { get; set; }
+        public Guid YpkId { get; set; }
+        public Guid StatusProductId { get; set; }
     }
 }

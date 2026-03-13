@@ -17,8 +17,8 @@ namespace ProductsWebApi.Models.Order
         [Required]
         public Guid Id { get; set; }
 
-        public Domain.Model.Product? Product { get; set; }
-        public StatusOrder? StatusOrder { get; set; }
+        public Guid ProductId { get; set; }
+        public Guid StatusOrderId { get; set; }
 
         public string? CustomersComment { get; set; }
         public string? UserComment { get; set; }
@@ -27,10 +27,10 @@ namespace ProductsWebApi.Models.Order
             profile.CreateMap<UpdateOrderDto, UpdateOrderCommand>()
                 .ForMember(userCommand => userCommand.Id,
                 opt => opt.MapFrom(userDto => userDto.Id))
-                .ForMember(userCommand => userCommand.Product,
-                opt => opt.MapFrom(userDto => userDto.Product))
-                .ForMember(userCommand => userCommand.StatusOrder,
-                opt => opt.MapFrom(userDto => userDto.StatusOrder))
+                .ForMember(userCommand => userCommand.ProductId,
+                opt => opt.MapFrom(userDto => userDto.ProductId))
+                .ForMember(userCommand => userCommand.StatusOrderId,
+                opt => opt.MapFrom(userDto => userDto.StatusOrderId))
                 .ForMember(userCommand => userCommand.CustomersComment,
                 opt => opt.MapFrom(userDto => userDto.CustomersComment))
                 .ForMember(userCommand => userCommand.UserComment,

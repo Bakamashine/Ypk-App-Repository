@@ -20,6 +20,6 @@ namespace Aplication.Commands.Users.UpdateUser
         public string? UserInfo { get; set; }
         public bool IsActive { get; set; }
 
-        public Role? Role { get; set; }
+        public Guid? RoleId { get; set; }
     }
 }

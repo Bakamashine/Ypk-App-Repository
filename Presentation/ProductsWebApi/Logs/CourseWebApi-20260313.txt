@@ -1,0 +1,4 @@
+2026-03-13 12:57:17.933 +03:00 [INF] Starting web application
+2026-03-13 13:01:29.589 +03:00 [INF] Starting web application
+2026-03-13 13:03:13.249 +03:00 [INF] Starting web application
+2026-03-13 13:13:55.274 +03:00 [INF] Starting web application

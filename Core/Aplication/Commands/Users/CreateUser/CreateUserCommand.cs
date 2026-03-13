@@ -17,6 +17,6 @@ namespace Aplication.Commands.Users.CreateUser
         public string PhoneNumber { get; set; } = string.Empty;
         public string? UserInfo { get; set; }
 
-        public Role? Role { get; set; }
+        public Guid RoleId { get; set; }
     }
 }

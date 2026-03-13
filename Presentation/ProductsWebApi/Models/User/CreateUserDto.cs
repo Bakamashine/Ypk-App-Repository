@@ -15,6 +15,8 @@ namespace CourseWebApi.Models.User
         [Required]
         public string PhoneNumber { get; set; } = string.Empty;
         public string? UserInfo { get; set; }
+        [Required]
+        public Guid RoleId { get; set; } = new();
 
         public void Mapping(Profile profile)
         {
@@ -26,7 +28,9 @@ namespace CourseWebApi.Models.User
                 .ForMember(userCm => userCm.PhoneNumber,
                 opt => opt.MapFrom(userDto => userDto.PhoneNumber))
                 .ForMember(userCm => userCm.UserInfo,
-                opt => opt.MapFrom(userDto => userDto.UserInfo));
+                opt => opt.MapFrom(userDto => userDto.UserInfo))
+                .ForMember(userCm => userCm.RoleId,
+                opt => opt.MapFrom(userDto => userDto.RoleId));
         }
     }
 }

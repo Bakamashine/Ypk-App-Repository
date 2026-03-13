@@ -12,32 +12,43 @@ namespace Aplication.Commands.Products.CreateProduct
 {
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, Guid>
     {
-        private readonly IProductsDbContext context;
+        private readonly IProductsDbContext _context;
+        private readonly IFileStorageService _fileStorage;  
 
-        public CreateProductCommandHandler(IProductsDbContext context)
+        public CreateProductCommandHandler(
+            IProductsDbContext context,
+            IFileStorageService fileStorage)
         {
-            this.context = context;
+            _context = context;
+            _fileStorage = fileStorage;
         }
         public async Task<Guid> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
+            string? photoPath = null;
+
+            // Сохраняем фото, если оно есть
+            if (request.Photo != null)
+            {
+                photoPath = await _fileStorage.SaveFileAsync(request.Photo, "products");
+            }
+
             var newProduct = new Product
             {
                 Id = Guid.NewGuid(),
                 UserId = request.CurrentUserId,
                 ProductName = request.ProductName,
-                YpkId = request.Ypk.Id,
-                StatusProductId = request.StatusProduct.Id,
+                YpkId = request.YpkId,                    
+                StatusProductId = request.StatusProductId,
                 ProductCost = request.ProductCost,
                 ProductInfo = request.ProductInfo,
                 IsProduct = request.IsProduct,
-                Photo = request.Photo,
+                PhotoPath = photoPath,                     
                 Adress = request.Adress,
-                Raiting = request.Raiting
-
+                Raiting = 0
             };
 
-            await context.Products.AddAsync(newProduct, cancellationToken);
-            await context.SaveChangesAsync(cancellationToken);
+            await _context.Products.AddAsync(newProduct, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
 
             return newProduct.Id;
         }

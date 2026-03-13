@@ -34,8 +34,22 @@ namespace ProductsWebApi.Controllers
             this.mapper = mapper;
         }
 
+        /// <summary>
+        /// Get all users
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// GET (HOST)/api/user/all
+        /// </remarks>
+        /// <returns>Returns UsersListVm</returns>
+        /// <response code="200">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
+        /// <response code="403">If the user not have permission</response>
         [Authorize(Roles = "Admin")]
         [HttpGet("All")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public async Task<ActionResult<UserListVm>> GetAll()
         {
             var query = new GetAllUserQuery()
@@ -46,8 +60,22 @@ namespace ProductsWebApi.Controllers
             var vm = await Mediator.Send(query);
             return Ok(vm);
         }
-        [Authorize(Roles = "Manager,Admin")]
+
+        /// <summary>
+        /// Get info user by id
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// GET (HOST)/api/user/AB670EFA-9049-46F2-AA3F-8C5044657851
+        /// </remarks>
+        /// <param name="id">User id guid</param>
+        /// <returns>Returns UserLookupDto</returns>
+        /// <response code="200">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
+        [Authorize]
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<UserLookupDto>> Get(Guid id)
         {
             var query = new GetDetailsUserQuery
@@ -58,7 +86,29 @@ namespace ProductsWebApi.Controllers
             return Ok(vm);
         }
 
+        /// <summary>
+        /// Create object user 
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// POST (HOST)/api/user
+        /// {
+        ///     "fullname": "string",
+        ///     "password": "string",
+        ///     "phoneNumber": "string",
+        ///     "userInfo": "string",
+        ///     "roleId": "7ab72f64-5717-4562-bgfc-2c963f663sa2",
+        /// }
+        /// </remarks>
+        /// <param name="createUserDto">CreateUserDto object</param>
+        /// <returns>Returns id (guid)</returns>
+        /// <response code="201">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
+        /// <response code="403">If the user not have permission</response>
         [Authorize(Roles = "Admin")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [HttpPost]
         public async Task<ActionResult<Guid>> Create([FromBody] CreateUserDto createUserDto)
         {
@@ -67,8 +117,32 @@ namespace ProductsWebApi.Controllers
             var commandId = await Mediator.Send(command);
             return Ok(commandId);
         }
-        [Authorize(Roles = "Admin")]
+
+        /// <summary>
+        /// Update object user
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// PUT (HOST)/api/user
+        /// {
+        ///     "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        ///     "fullname": "string",
+        ///     "OldPassword": "string",
+        ///     "NewPassword": "string",
+        ///     "phoneNumber": "string",
+        ///     "userInfo": "string",
+        ///     "IsActive": "bool",
+        ///     "roleId": "7ab72f64-5717-4562-bgfc-2c963f663sa2",
+        /// }
+        /// </remarks>
+        /// <param name="updateUserDto">UpdateUserDto object</param>
+        /// <returns>Returns NoContent</returns>
+        /// <response code="204">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
+        [Authorize]
         [HttpPut]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Update([FromBody] UpdateUserDto updateUserDto)
         {
             var command = mapper.Map<UpdateUserCommand>(updateUserDto);
@@ -76,8 +150,31 @@ namespace ProductsWebApi.Controllers
             await Mediator.Send(command);
             return NoContent();
         }
+
+        /// <summary>
+        /// Update object user for admin 
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// PUT (HOST)/api/user/admin
+        /// {
+        ///     "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        ///     "fullname": "string",
+        ///     "phoneNumber": "string",
+        ///     "userInfo": "string",
+        ///     "roleId": "7ab72f64-5717-4562-bgfc-2c963f663sa2",
+        /// }
+        /// </remarks>
+        /// <param name="updateUserDto">UpdateUserForAdminDto object</param>
+        /// <returns>Returns NoContent</returns>
+        /// <response code="204">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
+        /// <response code="403">If the user not have permission</response>
         [Authorize(Roles = "Admin")]
         [HttpPut("admin")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public async Task<IActionResult> UpdateAdmin([FromBody] UpdateUserForAdminDto updateUserDto)
         {
             var command = mapper.Map<UpdateAdminUserCommand>(updateUserDto);
@@ -85,8 +182,23 @@ namespace ProductsWebApi.Controllers
             await Mediator.Send(command);
             return NoContent();
         }
+
+
+        /// <summary>
+        /// Delete object user by id
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// DELETE (HOST)/api/user/AB670EFA-9049-46F2-A5BF-8C5044287851
+        /// </remarks>
+        /// <param name="id">User id (guid)</param>
+        /// <returns>Returns NoContent</returns>
+        /// <response code="204">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
         [Authorize]
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Delete(Guid id)
         {
             var command = new DeleteUserCommand

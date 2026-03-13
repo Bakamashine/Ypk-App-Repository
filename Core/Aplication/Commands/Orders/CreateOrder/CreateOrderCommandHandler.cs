@@ -24,8 +24,8 @@ namespace Aplication.Commands.Orders.CreateOrder
             {
                 Id = Guid.NewGuid(),
                 UserId = request.CurrentUserId,
-                ProductId = request.Product.Id,
-                StatusOrderId = request.StatusOrder.Id,
+                ProductId = request.ProductId,
+                StatusOrderId = request.StatusOrderId,
                 Date = DateTime.UtcNow,
                 CustomersComment = request.CustomersComment,
                 UserComment= request.UserComment,

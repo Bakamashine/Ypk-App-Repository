@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 namespace ProductsWebApi.Controllers
 {
     [ApiController]
+    [Produces("application/json")]
     [Route("api/[controller]/[action]")]
     public class BaseController : ControllerBase
     {

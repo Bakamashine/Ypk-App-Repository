@@ -14,7 +14,7 @@ namespace Aplication.Commands.Users.UpdateUser
         public Guid CurrentUserId { get; set; }
         public string Fullname { get; set; } = string.Empty;
         public string PhoneNumber { get; set; } = string.Empty;
-        public Role Role { get; set; }
+        public Guid RoleId { get; set; }
         public string? UserInfo { get; set; }
     }
 }

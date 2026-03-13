@@ -7,10 +7,23 @@ using Microsoft.AspNetCore.Http.Features;
 using Microsoft.IdentityModel.Tokens;
 using Persistance;
 using ProductsWebApi.Services;
+using Serilog;
+using Serilog.Events;
 using System.Reflection;
 using System.Text;
 
-var builder = WebApplication.CreateBuilder(args);
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+    .WriteTo.Console()
+    .WriteTo.File("Logs/CourseWebApi-.txt",
+        rollingInterval: RollingInterval.Day,
+        retainedFileCountLimit: 30)
+    .CreateLogger();
+try
+{
+    Log.Information("Starting web application");
+
+    var builder = WebApplication.CreateBuilder(args);
 RegisterServices(builder.Services);
 
 var app = builder.Build();
@@ -37,10 +50,27 @@ void RegisterServices(IServiceCollection services)
         options.AddProfile(new AssemblyMappingProfile(typeof(IProductsDbContext).Assembly));
     });
 
-    services.AddHttpContextAccessor();
+    services.AddCors(options =>
+    {
+        options.AddPolicy("AllowAll", policy =>
+        {
+            policy.AllowAnyHeader();
+            policy.AllowAnyMethod();
+            policy.AllowAnyOrigin();
+        });
+    });
+
+        services.AddHttpContextAccessor();
     services.AddApplication();
     services.AddPersistance(builder.Configuration);
     services.AddControllers();
+
+    services.AddSwaggerGen(config =>
+    {
+        var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+        var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+        config.IncludeXmlComments(xmlPath);
+    });
 
     services.AddAuthentication(cnf =>
     {
@@ -80,11 +110,16 @@ async Task Configure(WebApplication build)
     if (app.Environment.IsDevelopment())
     {
         app.UseSwagger();
-        app.UseSwaggerUI();
+        app.UseSwaggerUI(config =>
+        {
+            config.RoutePrefix = string.Empty;
+            config.SwaggerEndpoint("swagger/v1/swagger.json", "v1");
+        });
     }
     app.UseCustomExceptionHandler();
     app.UseRouting();
     app.UseHttpsRedirection();
+    app.UseCors("AllowAll");
     app.UseAuthentication();
     app.UseAuthorization();
     app.UseStaticFiles();
@@ -92,4 +127,15 @@ async Task Configure(WebApplication build)
     {
         app?.MapControllers();
     });
+    }
 }
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application terminated unexpectedly");
+    throw;
+}
+finally
+{
+    Log.CloseAndFlush();
+}
+

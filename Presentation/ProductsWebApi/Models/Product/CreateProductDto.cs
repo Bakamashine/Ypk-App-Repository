@@ -25,14 +25,12 @@ namespace ProductsWebApi.Models.Product
         public bool IsProduct { get; set; }
         [Required]
         public string Adress { get; set; } = string.Empty;
-        [Required]
-        public decimal Raiting { get; set; }
-        public string? Photo { get; set; }
+        public IFormFile? Photo { get; set; }
 
         [Required]
-        public Domain.Model.Ypk? Ypk { get; set; }
+        public Guid YpkId { get; set; }
         [Required]
-        public StatusProduct? StatusProduct { get; set; }
+        public Guid StatusProductId { get; set; }
 
         public void Mapping(Profile profile)
         {
@@ -49,12 +47,10 @@ namespace ProductsWebApi.Models.Product
                 opt => opt.MapFrom(userDto => userDto.Adress))
                 .ForMember(userCommand => userCommand.Photo,
                 opt => opt.MapFrom(userDto => userDto.Photo))
-                .ForMember(userCommand => userCommand.Ypk,
-                opt => opt.MapFrom(userDto => userDto.Ypk))
-                .ForMember(userCommand => userCommand.Raiting,
-                opt => opt.MapFrom(userDto => userDto.Raiting))
-                .ForMember(userCommand => userCommand.StatusProduct,
-                opt => opt.MapFrom(userDto => userDto.StatusProduct));
+                .ForMember(userCommand => userCommand.YpkId,
+                opt => opt.MapFrom(userDto => userDto.YpkId))
+                .ForMember(userCommand => userCommand.StatusProductId,
+                opt => opt.MapFrom(userDto => userDto.StatusProductId));
         }
     }
 }

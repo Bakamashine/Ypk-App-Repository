@@ -16,19 +16,19 @@ namespace ProductsWebApi.Models.Order
     public class CreateOrderDto : IMapWith<CreateOrderCommand>
     {
         [Required]
-        public Domain.Model.Product? Product { get; set; }
+        public Guid ProductId { get; set; }
         [Required]
-        public StatusOrder? StatusOrder { get; set; }
+        public Guid StatusOrderId { get; set; }
 
         public string? CustomersComment { get; set; }
         public string? UserComment { get; set; }
         public void Mapping(Profile profile)
         {
             profile.CreateMap<CreateOrderDto, CreateOrderCommand>()
-                .ForMember(userCommand => userCommand.Product,
-                opt => opt.MapFrom(userDto => userDto.Product))
-                .ForMember(userCommand => userCommand.StatusOrder,
-                opt => opt.MapFrom(userDto => userDto.StatusOrder))
+                .ForMember(userCommand => userCommand.ProductId,
+                opt => opt.MapFrom(userDto => userDto.ProductId))
+                .ForMember(userCommand => userCommand.StatusOrderId,
+                opt => opt.MapFrom(userDto => userDto.StatusOrderId))
                 .ForMember(userCommand => userCommand.CustomersComment,
                 opt => opt.MapFrom(userDto => userDto.CustomersComment))
                 .ForMember(userCommand => userCommand.UserComment,

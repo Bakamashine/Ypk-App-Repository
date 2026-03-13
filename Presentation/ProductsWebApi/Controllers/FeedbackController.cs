@@ -30,7 +30,17 @@ namespace ProductsWebApi.Controllers
             this.mapper = mapper;
         }
 
+        /// <summary>
+        /// Get all Feedback
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// GET (HOST)/api/feedback/all
+        /// </remarks>
+        /// <returns>Returns FeedbackListVm</returns>
+        /// <response code="200">Siccess</response>
         [HttpGet("All")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<FeedbackListVm>> GetAll()
         {
             var query = new GetAllFeedbackQuery();
@@ -51,8 +61,18 @@ namespace ProductsWebApi.Controllers
             return Ok(vm);
         }
 
-
+        /// <summary>
+        /// Get info Feedback by id
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// GET (HOST)/api/feedback/AB670EFA-9049-46F2-AA3F-8C5044657851
+        /// </remarks>
+        /// <param name="id">Feedback id guid</param>
+        /// <returns>Returns FeedbackLookupDto</returns>
+        /// <response code="200">Siccess</response>
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<FeedbackLookupDto>> Get(Guid id)
         {
             var query = new GetDetailsFeedbackQuery
@@ -69,8 +89,26 @@ namespace ProductsWebApi.Controllers
             return Ok(vm);
         }
 
+        /// <summary>
+        /// Create object feedback 
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// POST (HOST)/api/feedback
+        ///{
+        ///  "FeedbackName": "string",
+        ///  "Raiting": "int (1-5)"
+        ///  "Image": "file"
+        ///}
+        /// </remarks>
+        /// <param name="createFeedbackDto">CreateFeedbackDto object</param>
+        /// <returns>Returns id (guid)</returns>
+        /// <response code="201">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
         [Authorize]
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<Guid>> Create([FromForm] CreateFeedbackDto createFeedbackDto)
         {
             var command = mapper.Map<CreateFeedbackCommand>(createFeedbackDto);
@@ -79,8 +117,27 @@ namespace ProductsWebApi.Controllers
             return Ok(commandId);
         }
 
+        /// <summary>
+        /// Update object Feedback 
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// PUT (HOST)/api/feedback
+        ///{
+        ///  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        ///  "FeedbackName": "string",
+        ///  "Raiting": "int (1-5)"
+        ///}        
+        /// </remarks>
+        /// <param name="updateFeedbackDto">UpdateFeedbackDto object</param>
+        /// <returns>Returns NoContent</returns>
+        /// <response code="204">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
+        [HttpPut]
         [Authorize]
         [HttpPut]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Update([FromForm] UpdateFeedbackDto updateFeedbackDto)
         {
             var command = mapper.Map<UpdateFeedbackCommand>(updateFeedbackDto);
@@ -89,8 +146,21 @@ namespace ProductsWebApi.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Delete object Feedback by id
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// DELETE (HOST)/api/feedback/AB670EFA-9049-46F2-A5BF-8C5044287851
+        /// </remarks>
+        /// <param name="id">Feedback id (guid)</param>
+        /// <returns>Returns NoContent</returns>
+        /// <response code="204">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
         [Authorize]
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Delete(Guid id)
         {
             var command = new DeleteFeedbackCommand

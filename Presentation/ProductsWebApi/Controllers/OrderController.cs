@@ -33,7 +33,20 @@ namespace ProductsWebApi.Controllers
         {
             this.mapper = mapper;
         }
+
+        /// <summary>
+        /// Get all order 
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// GET (HOST)/api/order/all
+        /// </remarks>
+        /// <returns>Returns OrderListVm</returns>
+        /// <response code="200">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
         [HttpGet("All")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<OrderListVm>> GetAll()
         {
             var query = new GetAllOrderQuery()
@@ -44,7 +57,21 @@ namespace ProductsWebApi.Controllers
             var vm = await Mediator.Send(query);
             return Ok(vm);
         }
+
+        /// <summary>
+        /// Get info order by id
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// GET (HOST)/api/order/AB670EFA-9049-46F2-AA3F-8C5044657851
+        /// </remarks>
+        /// <param name="id">Order id guid</param>
+        /// <returns>Returns OrderLookupDto</returns>
+        /// <response code="200">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<OrderLookupDto>> Get(Guid id)
         {
             var query = new GetDetailOrderQuery
@@ -54,7 +81,28 @@ namespace ProductsWebApi.Controllers
             var vm = await Mediator.Send(query);
             return Ok(vm);
         }
+
+        /// <summary>
+        /// Create object order 
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// POST (HOST)/api/order
+        /// {
+        ///  "ProductId": "3aa45f64-5717-4562-b3fc-2c963f66aff2",
+        ///  "StatusOrderId": "7ab72f64-5717-4562-bgfc-2c963f663sa2"
+        ///  "UserComment": "string"
+        ///  "CustomersComment": "string"
+        /// }
+        /// </remarks>
+        /// <param name="createOrderDto">CreateOrderDto object</param>
+        /// <returns>Returns id (guid)</returns>
+        /// <response code="201">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
+        /// <response code="403">If the user not have permission</response>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<Guid>> Create([FromBody] CreateOrderDto createOrderDto)
         {
             var command = mapper.Map<CreateOrderCommand>(createOrderDto);
@@ -63,7 +111,28 @@ namespace ProductsWebApi.Controllers
             return Ok(commandId);
         }
 
+
+        /// <summary>
+        /// Update object order 
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// PUT (HOST)/api/order
+        ///{
+        ///  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        ///  "ProductId": "3aa45f64-5717-4562-b3fc-2c963f66aff2",
+        ///  "StatusOrderId": "7ab72f64-5717-4562-bgfc-2c963f663sa2"
+        ///  "UserComment": "string"
+        ///  "CustomersComment": "string"
+        ///}        
+        /// </remarks>
+        /// <param name="updateOrderDto">UpdateOrderDto object</param>
+        /// <returns>Returns NoContent</returns>
+        /// <response code="204">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
         [HttpPut]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Update([FromBody] UpdateOrderDto updateOrderDto)
         {
             var command = mapper.Map<UpdateOrderCommand>(updateOrderDto);
@@ -72,7 +141,20 @@ namespace ProductsWebApi.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Delete object order by id
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// DELETE (HOST)/api/order/AB670EFA-9049-46F2-A5BF-8C5044287851
+        /// </remarks>
+        /// <param name="id">Order id (guid)</param>
+        /// <returns>Returns NoContent</returns>
+        /// <response code="204">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Delete(Guid id)
         {
             var command = new DeleteOrderCommand

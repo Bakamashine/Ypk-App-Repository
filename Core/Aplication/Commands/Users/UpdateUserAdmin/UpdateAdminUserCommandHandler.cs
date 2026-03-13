@@ -32,8 +32,8 @@ namespace Aplication.Commands.Users.UpdateUserAdmin
 
             if (!dublicate)
             {
-                if(!string.IsNullOrEmpty(request.Role.Id.ToString()))
-                    entity.RoleId = request.Role.Id;
+                if(!string.IsNullOrEmpty(request.RoleId.ToString()))
+                    entity.RoleId = request.RoleId;
                 if (!string.IsNullOrEmpty(request.Fullname))
                     entity.Fullname = request.Fullname;
                 if (!string.IsNullOrEmpty(request.PhoneNumber))

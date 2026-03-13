@@ -38,8 +38,8 @@ namespace Aplication.Commands.Orders.UpdateOrder
                     entity.CustomersComment = request.CustomersComment;
                 if (!string.IsNullOrEmpty(request.CustomersComment))
                     entity.CustomersComment = request.CustomersComment;
-                if(request.StatusOrder != null)
-                    entity.StatusOrderId = request.StatusOrder.Id;
+                if(request.StatusOrderId != Guid.Empty)
+                    entity.StatusOrderId = request.StatusOrderId;
 
                 await context.SaveChangesAsync(cancellationToken);
 

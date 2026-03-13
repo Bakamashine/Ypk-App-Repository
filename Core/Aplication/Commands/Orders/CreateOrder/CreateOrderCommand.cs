@@ -12,8 +12,9 @@ namespace Aplication.Commands.Orders.CreateOrder
     {
         public Guid CurrentUserId { get; set; }
 
-        public Product? Product { get; set; }
-        public StatusOrder? StatusOrder { get; set; }
+        public Guid ProductId { get; set; }
+        public Guid StatusOrderId { get; set; }
+
 
         public string? CustomersComment { get; set; }
         public string? UserComment { get; set; }

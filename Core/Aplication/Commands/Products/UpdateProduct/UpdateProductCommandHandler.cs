@@ -14,23 +14,37 @@ namespace Aplication.Commands.Products.UpdateProduct
 {
     public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand>
     {
-        private readonly IProductsDbContext context;
+        private readonly IProductsDbContext _context;
+        private readonly IFileStorageService _fileStorage;
 
-        public UpdateProductCommandHandler(IProductsDbContext context)
+
+        public UpdateProductCommandHandler(
+            IProductsDbContext context,
+            IFileStorageService fileStorage)
         {
-            this.context = context;
+            _context = context;
+            _fileStorage = fileStorage;
         }
 
         public async Task<Unit> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
         {
-            var entity = await context.Products
+
+            string? photoPath = null;
+
+            // Сохраняем фото, если оно есть
+            if (request.Photo != null)
+            {
+                photoPath = await _fileStorage.SaveFileAsync(request.Photo, "products");
+            }
+
+            var entity = await _context.Products
                 .Include(u => u.User)
                 .Include(u => u.Ypk)
                 .Include(u => u.StatusProduct)
                 .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken)
                 ?? throw new NotFoundException(nameof(Product), request.Id);
 
-            var user = await context.Users.Include(x => x.Role).FirstOrDefaultAsync(x => x.Id == request.CurrentUserId, cancellationToken);
+            var user = await _context.Users.Include(x => x.Role).FirstOrDefaultAsync(x => x.Id == request.CurrentUserId, cancellationToken);
 
             if (entity.UserId == request.CurrentUserId && user.Role.RoleName.Contains(nameof(EnumRoles.Admin)))
             {
@@ -40,18 +54,18 @@ namespace Aplication.Commands.Products.UpdateProduct
                     entity.ProductInfo = request.ProductInfo;
                 if (!string.IsNullOrEmpty(request.Adress))
                     entity.ProductInfo = request.Adress;
-                if (!string.IsNullOrEmpty(request.Photo))
-                    entity.ProductInfo = request.Photo;
+                if (!string.IsNullOrEmpty(photoPath))
+                    entity.ProductInfo = photoPath;
                 if (request.IsProduct != request.IsProduct)
                     entity.IsProduct = request.IsProduct;
                 if (request.ProductCost != request.ProductCost)
                     entity.ProductCost = request.ProductCost;
-                if(request.StatusProduct != null)
-                    entity.StatusProductId = request.StatusProduct.Id;
-                if(request.Ypk != null)
-                    entity.YpkId = request.Ypk.Id;  
+                if(request.StatusProductId != Guid.Empty)
+                    entity.StatusProductId = request.StatusProductId;
+                if(request.YpkId != Guid.Empty)
+                    entity.YpkId = request.YpkId;  
 
-                await context.SaveChangesAsync(cancellationToken);
+                await _context.SaveChangesAsync(cancellationToken);
 
                 return Unit.Value;
             }

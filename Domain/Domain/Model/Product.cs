@@ -16,7 +16,7 @@ namespace Domain.Model
         public decimal ProductCost{ get; set; }
         public string ProductInfo { get; set; } = string.Empty;
         public bool IsProduct { get; set; }
-        public string? Photo { get; set; }
+        public string? PhotoPath { get; set; }
         public string Adress { get; set; } = string.Empty;
         public decimal Raiting { get; set; }
 

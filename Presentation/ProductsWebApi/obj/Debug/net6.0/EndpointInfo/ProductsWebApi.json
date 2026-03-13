@@ -10,7 +10,10 @@
         "tags": [
           "Auth"
         ],
+        "summary": "Account authorization",
+        "description": "Sample request:\r\nPOST (HOST)/api/Auth/login\r\n{\r\n  \"login\": \"string\",\r\n  \"password\": \"string\"\r\n}",
         "requestBody": {
+          "description": "LoginDto object",
           "content": {
             "application/json": {
               "schema": {
@@ -31,7 +34,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Siccess"
           }
         }
       }
@@ -41,7 +44,10 @@
         "tags": [
           "Auth"
         ],
+        "summary": "Account registration",
+        "description": " Sample request:\r\n POST (HOST)/api/Auth/register\r\n{\r\n  \"nameUser\": \"string\",\r\n  \"login\": \"string\",\r\n  \"password\": \"string\",\r\n  \"email\": \"string\",\r\n  \"phoneNumber\": \"string\"\r\n}",
         "requestBody": {
+          "description": "RegistrationDto object",
           "content": {
             "application/json": {
               "schema": {
@@ -62,7 +68,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Siccess"
           }
         }
       }
@@ -72,21 +78,13 @@
         "tags": [
           "Feedback"
         ],
+        "summary": "Get all Feedback",
+        "description": "Sample request:\r\nGET (HOST)/api/feedback/all",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/FeedbackListVm"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/FeedbackListVm"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/FeedbackListVm"
                 }
@@ -101,10 +99,13 @@
         "tags": [
           "Feedback"
         ],
+        "summary": "Get info Feedback by id",
+        "description": "Sample request:\r\nGET (HOST)/api/feedback/AB670EFA-9049-46F2-AA3F-8C5044657851",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Feedback id guid",
             "required": true,
             "schema": {
               "type": "string",
@@ -114,19 +115,9 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/FeedbackLookupDto"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/FeedbackLookupDto"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/FeedbackLookupDto"
                 }
@@ -139,10 +130,13 @@
         "tags": [
           "Feedback"
         ],
+        "summary": "Delete object Feedback by id",
+        "description": "Sample request:\r\nDELETE (HOST)/api/feedback/AB670EFA-9049-46F2-A5BF-8C5044287851",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Feedback id (guid)",
             "required": true,
             "schema": {
               "type": "string",
@@ -151,8 +145,18 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
+          "204": {
+            "description": "Siccess"
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -162,6 +166,8 @@
         "tags": [
           "Feedback"
         ],
+        "summary": "Create object feedback",
+        "description": " Sample request:\r\n POST (HOST)/api/feedback\r\n{\r\n  \"FeedbackName\": \"string\",\r\n  \"Raiting\": \"int (1-5)\"\r\n  \"Image\": \"file\"\r\n}",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -203,25 +209,26 @@
           "200": {
             "description": "Success",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "uuid"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "type": "string",
-                  "format": "uuid"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "type": "string",
                   "format": "uuid"
                 }
               }
             }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Siccess"
           }
         }
       },
@@ -229,6 +236,8 @@
         "tags": [
           "Feedback"
         ],
+        "summary": "Update object Feedback",
+        "description": " Sample request:\r\n PUT (HOST)/api/feedback\r\n{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"FeedbackName\": \"string\",\r\n  \"Raiting\": \"int (1-5)\"\r\n}",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -266,8 +275,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
+          "204": {
+            "description": "Siccess"
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -277,23 +296,25 @@
         "tags": [
           "Order"
         ],
+        "summary": "Get all order",
+        "description": "Sample request:\r\nGET (HOST)/api/order/all",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/OrderListVm"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/OrderListVm"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrderListVm"
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -306,10 +327,13 @@
         "tags": [
           "Order"
         ],
+        "summary": "Get info order by id",
+        "description": "Sample request:\r\nGET (HOST)/api/order/AB670EFA-9049-46F2-AA3F-8C5044657851",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Order id guid",
             "required": true,
             "schema": {
               "type": "string",
@@ -319,21 +343,21 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/OrderLookupDto"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/OrderLookupDto"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/OrderLookupDto"
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -344,10 +368,13 @@
         "tags": [
           "Order"
         ],
+        "summary": "Delete object order by id",
+        "description": "Sample request:\r\nDELETE (HOST)/api/order/AB670EFA-9049-46F2-A5BF-8C5044287851",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Order id (guid)",
             "required": true,
             "schema": {
               "type": "string",
@@ -356,8 +383,18 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
+          "204": {
+            "description": "Siccess"
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -367,7 +404,10 @@
         "tags": [
           "Order"
         ],
+        "summary": "Create object order",
+        "description": "Sample request:\r\nPOST (HOST)/api/order\r\n{\r\n \"ProductId\": \"3aa45f64-5717-4562-b3fc-2c963f66aff2\",\r\n \"StatusOrderId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\"\r\n \"UserComment\": \"string\"\r\n \"CustomersComment\": \"string\"\r\n}",
         "requestBody": {
+          "description": "CreateOrderDto object",
           "content": {
             "application/json": {
               "schema": {
@@ -390,25 +430,29 @@
           "200": {
             "description": "Success",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "uuid"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "type": "string",
-                  "format": "uuid"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "type": "string",
                   "format": "uuid"
                 }
               }
             }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Siccess"
+          },
+          "403": {
+            "description": "If the user not have permission"
           }
         }
       },
@@ -416,7 +460,10 @@
         "tags": [
           "Order"
         ],
+        "summary": "Update object order",
+        "description": " Sample request:\r\n PUT (HOST)/api/order\r\n{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"ProductId\": \"3aa45f64-5717-4562-b3fc-2c963f66aff2\",\r\n  \"StatusOrderId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\"\r\n  \"UserComment\": \"string\"\r\n  \"CustomersComment\": \"string\"\r\n}",
         "requestBody": {
+          "description": "UpdateOrderDto object",
           "content": {
             "application/json": {
               "schema": {
@@ -436,8 +483,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
+          "204": {
+            "description": "Siccess"
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -447,23 +504,25 @@
         "tags": [
           "Product"
         ],
+        "summary": "Get all published products",
+        "description": "Sample request:\r\nGET (HOST)/api/product/all",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductListVm"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ProductListVm"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductListVm"
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -476,23 +535,25 @@
         "tags": [
           "Product"
         ],
+        "summary": "Get all editing products",
+        "description": "Sample request:\r\nGET (HOST)/api/product/all",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductListVm"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ProductListVm"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductListVm"
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -505,10 +566,13 @@
         "tags": [
           "Product"
         ],
+        "summary": "Get info product by id",
+        "description": "Sample request:\r\nGET (HOST)/api/product/AB670EFA-9049-46F2-AA3F-8C5044657851",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Product id guid",
             "required": true,
             "schema": {
               "type": "string",
@@ -518,21 +582,21 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductLookupDto"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ProductLookupDto"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProductLookupDto"
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -543,10 +607,13 @@
         "tags": [
           "Product"
         ],
+        "summary": "Delete object product by id",
+        "description": "Sample request:\r\nDELETE (HOST)/api/product/AB670EFA-9049-46F2-A5BF-8C5044287851",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Product id (guid)",
             "required": true,
             "schema": {
               "type": "string",
@@ -555,8 +622,28 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
+          "204": {
+            "description": "Siccess"
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -566,21 +653,78 @@
         "tags": [
           "Product"
         ],
+        "summary": "Create object product",
+        "description": "Sample request:\r\nPOST (HOST)/api/product\r\n{\r\n \"ProductInfo\": \"string\",\r\n \"Adress\": \"string\",\r\n \"Photo\": \"file\"\r\n \"ProductCost\": \"decimal\"\r\n \"IsProduct\": \"bool\"\r\n \"YpkId\": \"3aa45f64-5717-4562-b3fc-2c963f66aff2\"\r\n \"StatusProductId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\"\r\n}",
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/CreateProductDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateProductDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateProductDto"
+                "required": [
+                  "Adress",
+                  "IsProduct",
+                  "ProductCost",
+                  "ProductInfo",
+                  "ProductName",
+                  "StatusProductId",
+                  "YpkId"
+                ],
+                "type": "object",
+                "properties": {
+                  "ProductName": {
+                    "type": "string"
+                  },
+                  "ProductInfo": {
+                    "type": "string"
+                  },
+                  "ProductCost": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "IsProduct": {
+                    "type": "boolean"
+                  },
+                  "Adress": {
+                    "type": "string"
+                  },
+                  "Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "YpkId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "StatusProductId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "encoding": {
+                "ProductName": {
+                  "style": "form"
+                },
+                "ProductInfo": {
+                  "style": "form"
+                },
+                "ProductCost": {
+                  "style": "form"
+                },
+                "IsProduct": {
+                  "style": "form"
+                },
+                "Adress": {
+                  "style": "form"
+                },
+                "Photo": {
+                  "style": "form"
+                },
+                "YpkId": {
+                  "style": "form"
+                },
+                "StatusProductId": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -589,25 +733,36 @@
           "200": {
             "description": "Success",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "uuid"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "type": "string",
-                  "format": "uuid"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "type": "string",
                   "format": "uuid"
                 }
               }
             }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Siccess"
           }
         }
       },
@@ -615,28 +770,106 @@
         "tags": [
           "Product"
         ],
+        "summary": "Update object product",
+        "description": " Sample request:\r\n PUT (HOST)/api/product\r\n{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"ProductInfo\": \"string\",\r\n  \"Adress\": \"string\",\r\n  \"Photo\": \"file\"\r\n  \"ProductCost\": \"decimal\"\r\n  \"IsProduct\": \"bool\"\r\n  \"YpkId\": \"3aa45f64-5717-4562-b3fc-2c963f66aff2\"\r\n  \"StatusProductId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\"\r\n}",
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProductDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateProductDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateProductDto"
+                "required": [
+                  "Id"
+                ],
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "ProductName": {
+                    "type": "string"
+                  },
+                  "ProductInfo": {
+                    "type": "string"
+                  },
+                  "ProductCost": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "IsProduct": {
+                    "type": "boolean"
+                  },
+                  "Adress": {
+                    "type": "string"
+                  },
+                  "Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "YpkId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "StatusProductId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "encoding": {
+                "Id": {
+                  "style": "form"
+                },
+                "ProductName": {
+                  "style": "form"
+                },
+                "ProductInfo": {
+                  "style": "form"
+                },
+                "ProductCost": {
+                  "style": "form"
+                },
+                "IsProduct": {
+                  "style": "form"
+                },
+                "Adress": {
+                  "style": "form"
+                },
+                "Photo": {
+                  "style": "form"
+                },
+                "YpkId": {
+                  "style": "form"
+                },
+                "StatusProductId": {
+                  "style": "form"
+                }
               }
             }
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
+          "204": {
+            "description": "Siccess"
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -646,23 +879,35 @@
         "tags": [
           "Role"
         ],
+        "summary": "Get all roles",
+        "description": "Sample request:\r\nGET (HOST)/api/role/all",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/RoleListVm"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RoleListVm"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/RoleListVm"
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -675,10 +920,13 @@
         "tags": [
           "Role"
         ],
+        "summary": "Get info role by id",
+        "description": "Sample request:\r\nGET (HOST)/api/role/AB670EFA-9049-46F2-AA3F-8C5044657851",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Role id guid",
             "required": true,
             "schema": {
               "type": "string",
@@ -688,21 +936,31 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/RoleLookupDto"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RoleLookupDto"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/RoleLookupDto"
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -715,23 +973,35 @@
         "tags": [
           "StatusOrder"
         ],
+        "summary": "Get all status order",
+        "description": "Sample request:\r\nGET (HOST)/api/StatusOrder/all",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/StatusOrderListVm"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/StatusOrderListVm"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/StatusOrderListVm"
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -744,23 +1014,35 @@
         "tags": [
           "StatusProduct"
         ],
+        "summary": "Get all status product",
+        "description": "Sample request:\r\nGET (HOST)/api/StatusProduct/all",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/StatusProductListVm"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/StatusProductListVm"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/StatusProductListVm"
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -773,23 +1055,35 @@
         "tags": [
           "User"
         ],
+        "summary": "Get all users",
+        "description": "Sample request:\r\nGET (HOST)/api/user/all",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserListVm"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UserListVm"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserListVm"
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -802,10 +1096,13 @@
         "tags": [
           "User"
         ],
+        "summary": "Get info user by id",
+        "description": "Sample request:\r\nGET (HOST)/api/user/AB670EFA-9049-46F2-AA3F-8C5044657851",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "User id guid",
             "required": true,
             "schema": {
               "type": "string",
@@ -815,21 +1112,21 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserLookupDto"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UserLookupDto"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserLookupDto"
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -840,10 +1137,13 @@
         "tags": [
           "User"
         ],
+        "summary": "Delete object user by id",
+        "description": "Sample request:\r\nDELETE (HOST)/api/user/AB670EFA-9049-46F2-A5BF-8C5044287851",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "User id (guid)",
             "required": true,
             "schema": {
               "type": "string",
@@ -852,8 +1152,18 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
+          "204": {
+            "description": "Siccess"
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -863,7 +1173,10 @@
         "tags": [
           "User"
         ],
+        "summary": "Create object user",
+        "description": "Sample request:\r\nPOST (HOST)/api/user\r\n{\r\n    \"fullname\": \"string\",\r\n    \"password\": \"string\",\r\n    \"phoneNumber\": \"string\",\r\n    \"userInfo\": \"string\",\r\n    \"roleId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\",\r\n}",
         "requestBody": {
+          "description": "CreateUserDto object",
           "content": {
             "application/json": {
               "schema": {
@@ -883,25 +1196,33 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success",
+          "201": {
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "uuid"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string",
                   "format": "uuid"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "uuid"
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -912,7 +1233,10 @@
         "tags": [
           "User"
         ],
+        "summary": "Update object user",
+        "description": "Sample request:\r\nPUT (HOST)/api/user\r\n{\r\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"fullname\": \"string\",\r\n    \"OldPassword\": \"string\",\r\n    \"NewPassword\": \"string\",\r\n    \"phoneNumber\": \"string\",\r\n    \"userInfo\": \"string\",\r\n    \"IsActive\": \"bool\",\r\n    \"roleId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\",\r\n}",
         "requestBody": {
+          "description": "UpdateUserDto object",
           "content": {
             "application/json": {
               "schema": {
@@ -932,8 +1256,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
+          "204": {
+            "description": "Siccess"
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -943,7 +1277,10 @@
         "tags": [
           "User"
         ],
+        "summary": "Update object user for admin",
+        "description": "Sample request:\r\nPUT (HOST)/api/user/admin\r\n{\r\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"fullname\": \"string\",\r\n    \"phoneNumber\": \"string\",\r\n    \"userInfo\": \"string\",\r\n    \"roleId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\",\r\n}",
         "requestBody": {
+          "description": "UpdateUserForAdminDto object",
           "content": {
             "application/json": {
               "schema": {
@@ -963,8 +1300,28 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
+          "204": {
+            "description": "Siccess"
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -974,21 +1331,13 @@
         "tags": [
           "Ypk"
         ],
+        "summary": "Get all ypk",
+        "description": "Sample request:\r\nGET (HOST)/api/ypk/all",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/YpkListVm"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/YpkListVm"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/YpkListVm"
                 }
@@ -1003,10 +1352,13 @@
         "tags": [
           "Ypk"
         ],
+        "summary": "Get info ypk by id",
+        "description": "Sample request:\r\nGET (HOST)/api/ypk/AB670EFA-9049-46F2-AA3F-8C5044657851",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Ypk id guid",
             "required": true,
             "schema": {
               "type": "string",
@@ -1016,19 +1368,9 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/YpkLookupDto"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/YpkLookupDto"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/YpkLookupDto"
                 }
@@ -1041,10 +1383,13 @@
         "tags": [
           "Ypk"
         ],
+        "summary": "Delete object ypk by id",
+        "description": "Sample request:\r\nDELETE (HOST)/api/ypk/AB670EFA-9049-46F2-A5BF-8C5044287851",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "Ypk id (guid)",
             "required": true,
             "schema": {
               "type": "string",
@@ -1053,8 +1398,28 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "Success"
+          "204": {
+            "description": "Siccess"
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -1064,7 +1429,10 @@
         "tags": [
           "Ypk"
         ],
+        "summary": "Create object ypk",
+        "description": " Sample request:\r\n POST (HOST)/api/ypk\r\n{\r\n  \"ypkName\": \"string\",\r\n}",
         "requestBody": {
+          "description": "CreateYpkDto object",
           "content": {
             "application/json": {
               "schema": {
@@ -1084,25 +1452,33 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success",
+          "201": {
+            "description": "Siccess",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "uuid"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string",
                   "format": "uuid"
                 }
-              },
-              "text/json": {
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "uuid"
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -1113,7 +1489,10 @@
         "tags": [
           "Ypk"
         ],
+        "summary": "Update object ypk",
+        "description": " Sample request:\r\n PUT (HOST)/api/ypk\r\n{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"YpkName\": \"string\",\r\n}",
         "requestBody": {
+          "description": "UpdateYpkDto object",
           "content": {
             "application/json": {
               "schema": {
@@ -1133,8 +1512,28 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Success"
+          "204": {
+            "description": "Siccess"
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -1144,16 +1543,18 @@
     "schemas": {
       "CreateOrderDto": {
         "required": [
-          "product",
-          "statusOrder"
+          "productId",
+          "statusOrderId"
         ],
         "type": "object",
         "properties": {
-          "product": {
-            "$ref": "#/components/schemas/Product"
+          "productId": {
+            "type": "string",
+            "format": "uuid"
           },
-          "statusOrder": {
-            "$ref": "#/components/schemas/StatusOrder"
+          "statusOrderId": {
+            "type": "string",
+            "format": "uuid"
           },
           "customersComment": {
             "type": "string",
@@ -1166,57 +1567,12 @@
         },
         "additionalProperties": false
       },
-      "CreateProductDto": {
-        "required": [
-          "adress",
-          "isProduct",
-          "productCost",
-          "productInfo",
-          "productName",
-          "raiting",
-          "statusProduct",
-          "ypk"
-        ],
-        "type": "object",
-        "properties": {
-          "productName": {
-            "type": "string"
-          },
-          "productInfo": {
-            "type": "string"
-          },
-          "productCost": {
-            "type": "number",
-            "format": "double"
-          },
-          "isProduct": {
-            "type": "boolean"
-          },
-          "adress": {
-            "type": "string"
-          },
-          "raiting": {
-            "type": "number",
-            "format": "double"
-          },
-          "photo": {
-            "type": "string",
-            "nullable": true
-          },
-          "ypk": {
-            "$ref": "#/components/schemas/Ypk"
-          },
-          "statusProduct": {
-            "$ref": "#/components/schemas/StatusProduct"
-          }
-        },
-        "additionalProperties": false
-      },
       "CreateUserDto": {
         "required": [
           "fullname",
           "password",
-          "phoneNumber"
+          "phoneNumber",
+          "roleId"
         ],
         "type": "object",
         "properties": {
@@ -1232,6 +1588,10 @@
           "userInfo": {
             "type": "string",
             "nullable": true
+          },
+          "roleId": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false
@@ -1418,6 +1778,33 @@
         },
         "additionalProperties": false
       },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
+      },
       "Product": {
         "type": "object",
         "properties": {
@@ -1452,7 +1839,7 @@
           "isProduct": {
             "type": "boolean"
           },
-          "photo": {
+          "photoPath": {
             "type": "string",
             "nullable": true
           },
@@ -1527,7 +1914,11 @@
           "isProduct": {
             "type": "boolean"
           },
-          "photo": {
+          "photoPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoUrl": {
             "type": "string",
             "nullable": true
           },
@@ -1716,11 +2107,13 @@
             "type": "string",
             "format": "uuid"
           },
-          "product": {
-            "$ref": "#/components/schemas/Product"
+          "productId": {
+            "type": "string",
+            "format": "uuid"
           },
-          "statusOrder": {
-            "$ref": "#/components/schemas/StatusOrder"
+          "statusOrderId": {
+            "type": "string",
+            "format": "uuid"
           },
           "customersComment": {
             "type": "string",
@@ -1729,48 +2122,6 @@
           "userComment": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateProductDto": {
-        "required": [
-          "id"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "productName": {
-            "type": "string",
-            "nullable": true
-          },
-          "productInfo": {
-            "type": "string",
-            "nullable": true
-          },
-          "productCost": {
-            "type": "number",
-            "format": "double"
-          },
-          "isProduct": {
-            "type": "boolean"
-          },
-          "adress": {
-            "type": "string",
-            "nullable": true
-          },
-          "photo": {
-            "type": "string",
-            "nullable": true
-          },
-          "ypk": {
-            "$ref": "#/components/schemas/Ypk"
-          },
-          "statusProduct": {
-            "$ref": "#/components/schemas/StatusProduct"
           }
         },
         "additionalProperties": false
@@ -1808,8 +2159,9 @@
           "isActive": {
             "type": "boolean"
           },
-          "role": {
-            "$ref": "#/components/schemas/Role"
+          "roleId": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false
@@ -1832,8 +2184,9 @@
             "type": "string",
             "nullable": true
           },
-          "role": {
-            "$ref": "#/components/schemas/Role"
+          "roleId": {
+            "type": "string",
+            "format": "uuid"
           },
           "userInfo": {
             "type": "string",

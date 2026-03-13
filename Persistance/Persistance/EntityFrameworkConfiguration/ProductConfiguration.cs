@@ -24,7 +24,6 @@ namespace Persistance.EntityFrameworkConfiguration
             builder.Property(user => user.ProductCost).IsRequired().HasPrecision(9,2);
             builder.Property(user => user.IsProduct).IsRequired();
             builder.Property(user => user.Adress).IsRequired();
-            builder.Property(user => user.Photo).IsRequired(false);
 
             builder.HasOne(product => product.User)
                .WithMany(user => user.Products)

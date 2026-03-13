@@ -27,7 +27,7 @@ namespace Aplication.Commands.Users.CreateUser
                 Id = Guid.NewGuid(),
                 HashPassword = hasherServise.HashPasword(request.Password),
                 PhoneNumber = request.PhoneNumber,
-                RoleId = request.Role.Id,
+                RoleId = request.RoleId,
                 UserInfo = request.UserInfo,
                 IsActive = true
             };

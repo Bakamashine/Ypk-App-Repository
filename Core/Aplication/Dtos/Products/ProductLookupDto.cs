@@ -20,7 +20,10 @@ namespace Aplication.Dtos.Products
         public decimal ProductCost { get; set; }
         public string ProductInfo { get; set; } = string.Empty;
         public bool IsProduct { get; set; }
-        public string? Photo { get; set; }
+
+        public string? PhotoPath { get; set; }      
+        public string? PhotoUrl { get; set; }
+
         public string Adress { get; set; } = string.Empty;
         public decimal Raiting { get; set; }
 
@@ -43,8 +46,8 @@ namespace Aplication.Dtos.Products
                  opt => opt.MapFrom(product => product.ProductInfo))
                  .ForMember(productVm => productVm.IsProduct,
                  opt => opt.MapFrom(product => product.IsProduct))
-                 .ForMember(productVm => productVm.Photo,
-                 opt => opt.MapFrom(product => product.Photo))
+                 .ForMember(productVm => productVm.PhotoPath,
+                 opt => opt.MapFrom(product => product.PhotoPath))
                  .ForMember(productVm => productVm.Adress,
                  opt => opt.MapFrom(product => product.Adress))
                  .ForMember(productVm => productVm.Raiting,
