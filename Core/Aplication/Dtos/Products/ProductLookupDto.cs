@@ -14,9 +14,6 @@ namespace Aplication.Dtos.Products
     {
         public Guid Id { get; set; }
         public string ProductName { get; set; } = string.Empty;
-        public Ypk? Ypk { get; set; }
-        public User? User { get; set; }
-        public StatusProduct? StatusProduct { get; set; }
         public decimal ProductCost { get; set; }
         public string ProductInfo { get; set; } = string.Empty;
         public bool IsProduct { get; set; }
@@ -34,12 +31,6 @@ namespace Aplication.Dtos.Products
                  opt => opt.MapFrom(product => product.Id))
                 .ForMember(productVm => productVm.ProductName,
                  opt => opt.MapFrom(product => product.ProductName))
-                .ForMember(productVm => productVm.Ypk,
-                 opt => opt.MapFrom(product => product.Ypk))
-                 .ForMember(productVm => productVm.User,
-                 opt => opt.MapFrom(product => product.User))
-                 .ForMember(productVm => productVm.StatusProduct,
-                 opt => opt.MapFrom(product => product.StatusProduct))
                  .ForMember(productVm => productVm.ProductCost,
                  opt => opt.MapFrom(product => product.ProductCost))
                  .ForMember(productVm => productVm.ProductInfo,

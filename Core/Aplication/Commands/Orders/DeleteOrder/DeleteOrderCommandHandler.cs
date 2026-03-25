@@ -27,8 +27,7 @@ namespace Aplication.Commands.Orders.DeleteOrder
                 .FirstOrDefaultAsync(u => u.Id == request.Id, cancellationToken)
                  ?? throw new NotFoundException(nameof(Order), request.Id);
 
-
-            context.Orders.Remove(entity);
+            entity.StatusOrder = await context.StatusOrders.FirstOrDefaultAsync(x => x.StatusName == nameof(StatusOrderEnum.Cancelled), cancellationToken);
             await context.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;

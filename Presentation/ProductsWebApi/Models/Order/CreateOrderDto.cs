@@ -17,8 +17,6 @@ namespace ProductsWebApi.Models.Order
     {
         [Required]
         public Guid ProductId { get; set; }
-        [Required]
-        public Guid StatusOrderId { get; set; }
 
         public string? CustomersComment { get; set; }
         public string? UserComment { get; set; }
@@ -27,8 +25,6 @@ namespace ProductsWebApi.Models.Order
             profile.CreateMap<CreateOrderDto, CreateOrderCommand>()
                 .ForMember(userCommand => userCommand.ProductId,
                 opt => opt.MapFrom(userDto => userDto.ProductId))
-                .ForMember(userCommand => userCommand.StatusOrderId,
-                opt => opt.MapFrom(userDto => userDto.StatusOrderId))
                 .ForMember(userCommand => userCommand.CustomersComment,
                 opt => opt.MapFrom(userDto => userDto.CustomersComment))
                 .ForMember(userCommand => userCommand.UserComment,

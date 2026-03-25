@@ -32,13 +32,15 @@ namespace Aplication.Commands.Orders.UpdateOrder
 
             var user = await context.Users.Include(x => x.Role).FirstOrDefaultAsync(x => x.Id == request.CurrentUserId, cancellationToken);
 
-            if (entity.UserId == request.CurrentUserId && user.Role.RoleName.Contains(nameof(EnumRoles.Admin)))
+            if (entity.CustomerId == request.CurrentUserId && user.Role.RoleName.Contains(nameof(EnumRoles.Admin)))
             {
                 if (!string.IsNullOrEmpty(request.CustomersComment))
                     entity.CustomersComment = request.CustomersComment;
                 if (!string.IsNullOrEmpty(request.CustomersComment))
                     entity.CustomersComment = request.CustomersComment;
-                if(request.StatusOrderId != Guid.Empty)
+                if (request.ExecutorId != Guid.Empty)
+                    entity.ExecutorId = request.ExecutorId;
+                if (request.StatusOrderId != Guid.Empty)
                     entity.StatusOrderId = request.StatusOrderId;
 
                 await context.SaveChangesAsync(cancellationToken);

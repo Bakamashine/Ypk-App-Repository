@@ -111,17 +111,57 @@
             <response code="204">Siccess</response>
             <response code="401">If the user is unautorized</response>
         </member>
-        <member name="M:ProductsWebApi.Controllers.OrderController.GetAll">
+        <member name="M:ProductsWebApi.Controllers.OrderController.GetAllForManager">
             <summary>
-            Get all order 
+            Get orders for manager 
             </summary>
             <remarks>
             Sample request:
-            GET (HOST)/api/order/all
+            GET (HOST)/api/order/manager
             </remarks>
             <returns>Returns OrderListVm</returns>
             <response code="200">Siccess</response>
             <response code="401">If the user is unautorized</response>
+            <response code="403">If the user not have permission</response>
+        </member>
+        <member name="M:ProductsWebApi.Controllers.OrderController.GetAllForUser">
+            <summary>
+            Get orders for user 
+            </summary>
+            <remarks>
+            Sample request:
+            GET (HOST)/api/order/user
+            </remarks>
+            <returns>Returns OrderListVm</returns>
+            <response code="200">Siccess</response>
+            <response code="401">If the user is unautorized</response>
+            <response code="403">If the user not have permission</response>
+        </member>
+        <member name="M:ProductsWebApi.Controllers.OrderController.GetAllForManagerHistory">
+            <summary>
+            Get orders history for manager 
+            </summary>
+            <remarks>
+            Sample request:
+            GET (HOST)/api/order/manager/History
+            </remarks>
+            <returns>Returns OrderListVm</returns>
+            <response code="200">Siccess</response>
+            <response code="401">If the user is unautorized</response>
+            <response code="403">If the user not have permission</response>
+        </member>
+        <member name="M:ProductsWebApi.Controllers.OrderController.GetAllForUserHistory">
+            <summary>
+            Get orders history for user 
+            </summary>
+            <remarks>
+            Sample request:
+            GET (HOST)/api/order/user/History
+            </remarks>
+            <returns>Returns OrderListVm</returns>
+            <response code="200">Siccess</response>
+            <response code="401">If the user is unautorized</response>
+            <response code="403">If the user not have permission</response>
         </member>
         <member name="M:ProductsWebApi.Controllers.OrderController.Get(System.Guid)">
             <summary>
@@ -145,7 +185,6 @@
             POST (HOST)/api/order
             {
              "ProductId": "3aa45f64-5717-4562-b3fc-2c963f66aff2",
-             "StatusOrderId": "7ab72f64-5717-4562-bgfc-2c963f663sa2"
              "UserComment": "string"
              "CustomersComment": "string"
             }
@@ -167,6 +206,7 @@
               "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
               "ProductId": "3aa45f64-5717-4562-b3fc-2c963f66aff2",
               "StatusOrderId": "7ab72f64-5717-4562-bgfc-2c963f663sa2"
+              "ExecutorId": "8сb72f64-5717-4562-bgfc-2c963f663sa2"
               "UserComment": "string"
               "CustomersComment": "string"
             }        
@@ -296,8 +336,6 @@
             </remarks>
             <returns>Returns RoleListVm</returns>
             <response code="200">Siccess</response>
-            <response code="401">If the user is unautorized</response>
-            <response code="403">If the user not have permission</response>
         </member>
         <member name="M:ProductsWebApi.Controllers.RoleController.Get(System.Guid)">
             <summary>
@@ -310,8 +348,6 @@
             <param name="id">Role id guid</param>
             <returns>Returns RoleLookupDto</returns>
             <response code="200">Siccess</response>
-            <response code="401">If the user is unautorized</response>
-            <response code="403">If the user not have permission</response>
         </member>
         <member name="M:ProductsWebApi.Controllers.StatusOrderController.GetAll">
             <summary>

@@ -9,7 +9,8 @@ namespace Domain.Model
 {
     public class Order : BaseModel
     {
-        public Guid UserId { get; set; }
+        public Guid CustomerId { get; set; }
+        public Guid? ExecutorId { get; set; }
         public Guid ProductId { get; set; }
         public Guid StatusOrderId { get; set; }
         public DateTime Date { get; set; }

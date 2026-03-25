@@ -11,9 +11,7 @@ namespace Aplication.Commands.Orders.CreateOrder
     public class CreateOrderCommand : IRequest<Guid>
     {
         public Guid CurrentUserId { get; set; }
-
         public Guid ProductId { get; set; }
-        public Guid StatusOrderId { get; set; }
 
 
         public string? CustomersComment { get; set; }

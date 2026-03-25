@@ -19,6 +19,7 @@ namespace ProductsWebApi.Models.Order
 
         public Guid ProductId { get; set; }
         public Guid StatusOrderId { get; set; }
+        public Guid ExecutorId { get; set; }
 
         public string? CustomersComment { get; set; }
         public string? UserComment { get; set; }
@@ -29,6 +30,8 @@ namespace ProductsWebApi.Models.Order
                 opt => opt.MapFrom(userDto => userDto.Id))
                 .ForMember(userCommand => userCommand.ProductId,
                 opt => opt.MapFrom(userDto => userDto.ProductId))
+                .ForMember(userCommand => userCommand.ExecutorId,
+                opt => opt.MapFrom(userDto => userDto.ExecutorId))
                 .ForMember(userCommand => userCommand.StatusOrderId,
                 opt => opt.MapFrom(userDto => userDto.StatusOrderId))
                 .ForMember(userCommand => userCommand.CustomersComment,

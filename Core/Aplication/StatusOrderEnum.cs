@@ -8,9 +8,10 @@ namespace Aplication
 {
     public enum StatusOrderEnum
     {
-        Сompleted,
-        InProgress,
         Cancelled,
-        Waiting
+        PlaceAn,
+        InProgress,
+        ReadyForIssue,
+        Adopted
     }
 }

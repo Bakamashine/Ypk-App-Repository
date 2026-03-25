@@ -48,7 +48,7 @@ namespace Aplication.Commands.Users.UpdateUser
                         else return null;
                     }
                     if(!string.IsNullOrEmpty(request.Fullname))
-                    entity.Fullname = request.Fullname;
+                        entity.Fullname = request.Fullname;
                     if (!string.IsNullOrEmpty(request.PhoneNumber))
                         entity.PhoneNumber = request.PhoneNumber;
                     if (!string.IsNullOrEmpty(request.UserInfo))

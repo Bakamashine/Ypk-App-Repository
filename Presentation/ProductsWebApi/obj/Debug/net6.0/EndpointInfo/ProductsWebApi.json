@@ -291,13 +291,13 @@
         }
       }
     },
-    "/api/Order/All": {
+    "/api/Order/manager": {
       "get": {
         "tags": [
           "Order"
         ],
-        "summary": "Get all order",
-        "description": "Sample request:\r\nGET (HOST)/api/order/all",
+        "summary": "Get orders for manager",
+        "description": "Sample request:\r\nGET (HOST)/api/order/manager",
         "responses": {
           "200": {
             "description": "Siccess",
@@ -311,6 +311,139 @@
           },
           "401": {
             "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/user": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "summary": "Get orders for user",
+        "description": "Sample request:\r\nGET (HOST)/api/order/user",
+        "responses": {
+          "200": {
+            "description": "Siccess",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderListVm"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/manager/History": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "summary": "Get orders history for manager",
+        "description": "Sample request:\r\nGET (HOST)/api/order/manager/History",
+        "responses": {
+          "200": {
+            "description": "Siccess",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderListVm"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/user/History": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "summary": "Get orders history for user",
+        "description": "Sample request:\r\nGET (HOST)/api/order/user/History",
+        "responses": {
+          "200": {
+            "description": "Siccess",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderListVm"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "If the user not have permission",
             "content": {
               "application/json": {
                 "schema": {
@@ -405,7 +538,7 @@
           "Order"
         ],
         "summary": "Create object order",
-        "description": "Sample request:\r\nPOST (HOST)/api/order\r\n{\r\n \"ProductId\": \"3aa45f64-5717-4562-b3fc-2c963f66aff2\",\r\n \"StatusOrderId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\"\r\n \"UserComment\": \"string\"\r\n \"CustomersComment\": \"string\"\r\n}",
+        "description": "Sample request:\r\nPOST (HOST)/api/order\r\n{\r\n \"ProductId\": \"3aa45f64-5717-4562-b3fc-2c963f66aff2\",\r\n \"UserComment\": \"string\"\r\n \"CustomersComment\": \"string\"\r\n}",
         "requestBody": {
           "description": "CreateOrderDto object",
           "content": {
@@ -461,7 +594,7 @@
           "Order"
         ],
         "summary": "Update object order",
-        "description": " Sample request:\r\n PUT (HOST)/api/order\r\n{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"ProductId\": \"3aa45f64-5717-4562-b3fc-2c963f66aff2\",\r\n  \"StatusOrderId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\"\r\n  \"UserComment\": \"string\"\r\n  \"CustomersComment\": \"string\"\r\n}",
+        "description": " Sample request:\r\n PUT (HOST)/api/order\r\n{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"ProductId\": \"3aa45f64-5717-4562-b3fc-2c963f66aff2\",\r\n  \"StatusOrderId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\"\r\n  \"ExecutorId\": \"8сb72f64-5717-4562-bgfc-2c963f663sa2\"\r\n  \"UserComment\": \"string\"\r\n  \"CustomersComment\": \"string\"\r\n}",
         "requestBody": {
           "description": "UpdateOrderDto object",
           "content": {
@@ -891,26 +1024,6 @@
                 }
               }
             }
-          },
-          "401": {
-            "description": "If the user is unautorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "If the user not have permission",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
           }
         }
       }
@@ -941,26 +1054,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RoleLookupDto"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "If the user is unautorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "If the user not have permission",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -1543,16 +1636,11 @@
     "schemas": {
       "CreateOrderDto": {
         "required": [
-          "productId",
-          "statusOrderId"
+          "productId"
         ],
         "type": "object",
         "properties": {
           "productId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "statusOrderId": {
             "type": "string",
             "format": "uuid"
           },
@@ -1608,35 +1696,6 @@
         },
         "additionalProperties": false
       },
-      "Feedback": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "comment": {
-            "type": "string",
-            "nullable": true
-          },
-          "raiting": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "imagePath": {
-            "type": "string",
-            "nullable": true
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
-          }
-        },
-        "additionalProperties": false
-      },
       "FeedbackListVm": {
         "type": "object",
         "properties": {
@@ -1656,9 +1715,6 @@
           "id": {
             "type": "string",
             "format": "uuid"
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
           },
           "comment": {
             "type": "string",
@@ -1691,49 +1747,6 @@
         },
         "additionalProperties": false
       },
-      "Order": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "productId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "statusOrderId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "customersComment": {
-            "type": "string",
-            "nullable": true
-          },
-          "userComment": {
-            "type": "string",
-            "nullable": true
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
-          },
-          "product": {
-            "$ref": "#/components/schemas/Product"
-          },
-          "statusOrder": {
-            "$ref": "#/components/schemas/StatusOrder"
-          }
-        },
-        "additionalProperties": false
-      },
       "OrderListVm": {
         "type": "object",
         "properties": {
@@ -1754,6 +1767,14 @@
             "type": "string",
             "format": "uuid"
           },
+          "executorId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "customerId": {
+            "type": "string",
+            "format": "uuid"
+          },
           "date": {
             "type": "string",
             "format": "date-time"
@@ -1765,15 +1786,6 @@
           "userComment": {
             "type": "string",
             "nullable": true
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
-          },
-          "product": {
-            "$ref": "#/components/schemas/Product"
-          },
-          "statusOrder": {
-            "$ref": "#/components/schemas/StatusOrder"
           }
         },
         "additionalProperties": false
@@ -1805,71 +1817,6 @@
         },
         "additionalProperties": { }
       },
-      "Product": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "productName": {
-            "type": "string",
-            "nullable": true
-          },
-          "ypkId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "statusProductId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "productCost": {
-            "type": "number",
-            "format": "double"
-          },
-          "productInfo": {
-            "type": "string",
-            "nullable": true
-          },
-          "isProduct": {
-            "type": "boolean"
-          },
-          "photoPath": {
-            "type": "string",
-            "nullable": true
-          },
-          "adress": {
-            "type": "string",
-            "nullable": true
-          },
-          "raiting": {
-            "type": "number",
-            "format": "double"
-          },
-          "ypk": {
-            "$ref": "#/components/schemas/Ypk"
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
-          },
-          "statusProduct": {
-            "$ref": "#/components/schemas/StatusProduct"
-          },
-          "orders": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Order"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "ProductListVm": {
         "type": "object",
         "properties": {
@@ -1893,15 +1840,6 @@
           "productName": {
             "type": "string",
             "nullable": true
-          },
-          "ypk": {
-            "$ref": "#/components/schemas/Ypk"
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
-          },
-          "statusProduct": {
-            "$ref": "#/components/schemas/StatusProduct"
           },
           "productCost": {
             "type": "number",
@@ -1953,27 +1891,6 @@
         },
         "additionalProperties": false
       },
-      "Role": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "roleName": {
-            "type": "string",
-            "nullable": true
-          },
-          "users": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/User"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "RoleListVm": {
         "type": "object",
         "properties": {
@@ -2001,27 +1918,6 @@
         },
         "additionalProperties": false
       },
-      "StatusOrder": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "statusName": {
-            "type": "string",
-            "nullable": true
-          },
-          "orders": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Order"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "StatusOrderListVm": {
         "type": "object",
         "properties": {
@@ -2044,27 +1940,6 @@
           },
           "statusName": {
             "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "StatusProduct": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "statusName": {
-            "type": "string",
-            "nullable": true
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Product"
-            },
             "nullable": true
           }
         },
@@ -2112,6 +1987,10 @@
             "format": "uuid"
           },
           "statusOrderId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "executorId": {
             "type": "string",
             "format": "uuid"
           },
@@ -2212,63 +2091,6 @@
         },
         "additionalProperties": false
       },
-      "User": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "fullname": {
-            "type": "string",
-            "nullable": true
-          },
-          "hashPassword": {
-            "type": "string",
-            "nullable": true
-          },
-          "phoneNumber": {
-            "type": "string",
-            "nullable": true
-          },
-          "roleId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "userInfo": {
-            "type": "string",
-            "nullable": true
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "role": {
-            "$ref": "#/components/schemas/Role"
-          },
-          "feedbacks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Feedback"
-            },
-            "nullable": true
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Product"
-            },
-            "nullable": true
-          },
-          "orders": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Order"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "UserListVm": {
         "type": "object",
         "properties": {
@@ -2307,33 +2129,6 @@
           },
           "isActive": {
             "type": "boolean"
-          },
-          "role": {
-            "$ref": "#/components/schemas/Role"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Ypk": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "ypkName": {
-            "type": "string",
-            "nullable": true
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Product"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false

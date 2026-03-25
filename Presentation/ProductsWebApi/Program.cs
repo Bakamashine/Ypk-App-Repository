@@ -15,7 +15,7 @@ using System.Text;
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
     .WriteTo.Console()
-    .WriteTo.File("Logs/CourseWebApi-.txt",
+    .WriteTo.File("Logs/YpkApi-.txt",
         rollingInterval: RollingInterval.Day,
         retainedFileCountLimit: 30)
     .CreateLogger();
@@ -107,15 +107,13 @@ async Task Configure(WebApplication build)
 {
     await app.InitializeDatabaseAsync();
 
-    if (app.Environment.IsDevelopment())
-    {
         app.UseSwagger();
         app.UseSwaggerUI(config =>
         {
             config.RoutePrefix = string.Empty;
             config.SwaggerEndpoint("swagger/v1/swagger.json", "v1");
         });
-    }
+
     app.UseCustomExceptionHandler();
     app.UseRouting();
     app.UseHttpsRedirection();

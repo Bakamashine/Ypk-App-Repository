@@ -22,10 +22,18 @@ namespace Persistance.EntityFrameworkConfiguration
             builder.Property(user => user.RoleId).IsRequired();
             builder.Property(user => user.IsActive).IsRequired();
             builder.Property(user => user.UserInfo).IsRequired(false);
+            builder.Property(user => user.YpkId).IsRequired(false); 
 
             builder.HasOne(user => user.Role)
                 .WithMany(role => role.Users)
                 .HasForeignKey(k => k.RoleId);
+
+
+            builder.HasOne(user => user.Ypk)
+                .WithMany(ypk => ypk.Users)
+                .HasForeignKey(user => user.YpkId)
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.SetNull);
 
         }
     }

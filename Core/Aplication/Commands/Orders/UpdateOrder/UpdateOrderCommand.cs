@@ -12,6 +12,7 @@ namespace Aplication.Commands.Orders.UpdateOrder
     {
         public Guid Id { get; set; }
         public Guid CurrentUserId { get; set; }
+        public Guid ExecutorId { get; set; }
 
         public Guid StatusOrderId { get; set; }
         public Guid ProductId { get; set; }

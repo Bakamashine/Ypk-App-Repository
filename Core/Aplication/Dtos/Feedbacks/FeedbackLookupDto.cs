@@ -13,7 +13,6 @@ namespace Aplication.Dtos.Feedbacks
     public class FeedbackLookupDto : IMapWith<Feedback>
     {
         public Guid Id { get; set; }
-        public User? User { get; set; }
         public string Comment { get; set; } = string.Empty;
 
 
@@ -23,8 +22,6 @@ namespace Aplication.Dtos.Feedbacks
             profile.CreateMap<Feedback, FeedbackLookupDto>()
                 .ForMember(feedbackVm => feedbackVm.Id,
                 opt => opt.MapFrom(feedback => feedback.Id))
-                .ForMember(feedbackVm => feedbackVm.User,
-                opt => opt.MapFrom(feedback => feedback.User))
                 .ForMember(feedbackVm => feedbackVm.Comment,
                 opt => opt.MapFrom(feedback => feedback.Comment))
                 .ForMember(dto => dto.ImagePath,

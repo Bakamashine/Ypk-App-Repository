@@ -15,7 +15,6 @@ using System.Threading.Tasks;
 namespace ProductsWebApi.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize(Roles = "Admin")]
     public class RoleController : BaseController
     {
         /// <summary>
@@ -27,12 +26,8 @@ namespace ProductsWebApi.Controllers
         /// </remarks>
         /// <returns>Returns RoleListVm</returns>
         /// <response code="200">Siccess</response>
-        /// <response code="401">If the user is unautorized</response>
-        /// <response code="403">If the user not have permission</response>
         [HttpGet("All")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public async Task<ActionResult<RoleListVm>> GetAll()
         {
             var query = new GetAllRoleQuery()
@@ -54,12 +49,8 @@ namespace ProductsWebApi.Controllers
         /// <param name="id">Role id guid</param>
         /// <returns>Returns RoleLookupDto</returns>
         /// <response code="200">Siccess</response>
-        /// <response code="401">If the user is unautorized</response>
-        /// <response code="403">If the user not have permission</response>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public async Task<ActionResult<RoleLookupDto>> Get(Guid id)
         {
             var query = new GetDetailsRoleQuery

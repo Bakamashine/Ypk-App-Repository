@@ -18,7 +18,6 @@ namespace Aplication.Dtos.Users
         public string PhoneNumber { get; set; } = string.Empty;
         public string? UserInfo { get; set; }
         public bool IsActive{ get; set; }
-        public Role? Role { get; set; }
 
         public void Mapping(Profile profile)
         {
@@ -27,8 +26,6 @@ namespace Aplication.Dtos.Users
                  opt => opt.MapFrom(user => user.Id))
                 .ForMember(userVm => userVm.Fullname,
                  opt => opt.MapFrom(user => user.Fullname))
-                .ForMember(userVm => userVm.Role,
-                 opt => opt.MapFrom(user => user.Role))
                  .ForMember(userVm => userVm.PhoneNumber,
                  opt => opt.MapFrom(user => user.PhoneNumber))
                  .ForMember(userVm => userVm.HashPassword,

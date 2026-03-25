@@ -1,6 +1,8 @@
 ﻿using Aplication.Dtos.Users;
 using Aplication.Interfaces;
+using Application.Common.Exceptions;
 using AutoMapper;
+using Domain.Model;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -24,7 +26,7 @@ namespace Aplication.Queries.Users.GetUser
         {
             var entity = await context.Users
                 .Include(u => u.Role)
-                .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
+                .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken) ?? throw new NotFoundException(nameof(User), request.Id);
 
             return mapper.Map<UserLookupDto>(entity);
         }

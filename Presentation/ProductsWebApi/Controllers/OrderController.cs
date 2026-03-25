@@ -9,7 +9,10 @@ using Aplication.Dtos.Orders;
 using Aplication.Queries.Feedbacks.GetFeedback;
 using Aplication.Queries.Feedbacks.GetFeedbackList;
 using Aplication.Queries.Orders.GetOrder;
-using Aplication.Queries.Orders.GetOrderList;
+using Aplication.Queries.Orders.GetOrderListForDefaultUser;
+using Aplication.Queries.Orders.GetOrderListForDefaultUserHistory;
+using Aplication.Queries.Orders.GetOrderListForManager;
+using Aplication.Queries.Orders.GetOrderListForManagerHistory;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -35,28 +38,115 @@ namespace ProductsWebApi.Controllers
         }
 
         /// <summary>
-        /// Get all order 
+        /// Get orders for manager 
         /// </summary>
         /// <remarks>
         /// Sample request:
-        /// GET (HOST)/api/order/all
+        /// GET (HOST)/api/order/manager
         /// </remarks>
         /// <returns>Returns OrderListVm</returns>
         /// <response code="200">Siccess</response>
         /// <response code="401">If the user is unautorized</response>
-        [HttpGet("All")]
+        /// <response code="403">If the user not have permission</response>
+        [HttpGet("manager")]
+        [Authorize(Roles = "Manager,Admin")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<ActionResult<OrderListVm>> GetAll()
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public async Task<ActionResult<OrderListVm>> GetAllForManager()
         {
-            var query = new GetAllOrderQuery()
+            var query = new GetAllOrderQueryForManager()
             {
-
+                CurrentUserId = UserId,
             };
 
             var vm = await Mediator.Send(query);
             return Ok(vm);
         }
+
+
+        /// <summary>
+        /// Get orders for user 
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// GET (HOST)/api/order/user
+        /// </remarks>
+        /// <returns>Returns OrderListVm</returns>
+        /// <response code="200">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
+        /// <response code="403">If the user not have permission</response>
+        [HttpGet("user")]
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public async Task<ActionResult<OrderListVm>> GetAllForUser()
+        {
+            var query = new GetAllOrderQueryForDefaultUser()
+            {
+                CurrentUserId = UserId,
+            };
+
+            var vm = await Mediator.Send(query);
+            return Ok(vm);
+        }
+
+        /// <summary>
+        /// Get orders history for manager 
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// GET (HOST)/api/order/manager/History
+        /// </remarks>
+        /// <returns>Returns OrderListVm</returns>
+        /// <response code="200">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
+        /// <response code="403">If the user not have permission</response>
+        [HttpGet("manager/History")]
+        [Authorize(Roles = "Manager,Admin")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public async Task<ActionResult<OrderListVm>> GetAllForManagerHistory()
+        {
+            var query = new GetAllOrderQueryForManagerHistory()
+            {
+                CurrentUserId = UserId,
+            };
+
+            var vm = await Mediator.Send(query);
+            return Ok(vm);
+        }
+
+
+        /// <summary>
+        /// Get orders history for user 
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// GET (HOST)/api/order/user/History
+        /// </remarks>
+        /// <returns>Returns OrderListVm</returns>
+        /// <response code="200">Siccess</response>
+        /// <response code="401">If the user is unautorized</response>
+        /// <response code="403">If the user not have permission</response>
+        [HttpGet("user/History")]
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public async Task<ActionResult<OrderListVm>> GetAllForUserHistory()
+        {
+            var query = new GetAllOrderQueryForDefaultUserHistory()
+            {
+                CurrentUserId = UserId,
+            };
+
+            var vm = await Mediator.Send(query);
+            return Ok(vm);
+        }
+
 
         /// <summary>
         /// Get info order by id
@@ -90,7 +180,6 @@ namespace ProductsWebApi.Controllers
         /// POST (HOST)/api/order
         /// {
         ///  "ProductId": "3aa45f64-5717-4562-b3fc-2c963f66aff2",
-        ///  "StatusOrderId": "7ab72f64-5717-4562-bgfc-2c963f663sa2"
         ///  "UserComment": "string"
         ///  "CustomersComment": "string"
         /// }
@@ -122,6 +211,7 @@ namespace ProductsWebApi.Controllers
         ///  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
         ///  "ProductId": "3aa45f64-5717-4562-b3fc-2c963f66aff2",
         ///  "StatusOrderId": "7ab72f64-5717-4562-bgfc-2c963f663sa2"
+        ///  "ExecutorId": "8сb72f64-5717-4562-bgfc-2c963f663sa2"
         ///  "UserComment": "string"
         ///  "CustomersComment": "string"
         ///}        

@@ -132,7 +132,6 @@ namespace ProductsWebApi.Controllers
         ///     "phoneNumber": "string",
         ///     "userInfo": "string",
         ///     "IsActive": "bool",
-        ///     "roleId": "7ab72f64-5717-4562-bgfc-2c963f663sa2",
         /// }
         /// </remarks>
         /// <param name="updateUserDto">UpdateUserDto object</param>
@@ -163,6 +162,7 @@ namespace ProductsWebApi.Controllers
         ///     "phoneNumber": "string",
         ///     "userInfo": "string",
         ///     "roleId": "7ab72f64-5717-4562-bgfc-2c963f663sa2",
+        ///     "YpkId": "76f24f64-5717-4562-bgfc-2c963f663sa2",
         /// }
         /// </remarks>
         /// <param name="updateUserDto">UpdateUserForAdminDto object</param>

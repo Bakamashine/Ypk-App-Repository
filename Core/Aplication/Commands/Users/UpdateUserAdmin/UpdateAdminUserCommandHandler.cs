@@ -34,6 +34,8 @@ namespace Aplication.Commands.Users.UpdateUserAdmin
             {
                 if(!string.IsNullOrEmpty(request.RoleId.ToString()))
                     entity.RoleId = request.RoleId;
+                if (!string.IsNullOrEmpty(request.YpkId.ToString()))
+                    entity.YpkId = request.YpkId;
                 if (!string.IsNullOrEmpty(request.Fullname))
                     entity.Fullname = request.Fullname;
                 if (!string.IsNullOrEmpty(request.PhoneNumber))

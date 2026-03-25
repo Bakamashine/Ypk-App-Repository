@@ -20,8 +20,6 @@ namespace Aplication.Commands.Products.CreateProduct
                .NotEmpty().NotNull();
             RuleFor(createFeedbackCommand => createFeedbackCommand.IsProduct)
                .NotEmpty().NotNull();
-            RuleFor(createFeedbackCommand => createFeedbackCommand.ProductCost)
-                .InclusiveBetween(1, 5).NotNull();
         }
     }
 }

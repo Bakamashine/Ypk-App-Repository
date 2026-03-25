@@ -2,6 +2,7 @@
 using Aplication.Interfaces;
 using Domain.Model;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +24,9 @@ namespace Aplication.Commands.Orders.CreateOrder
             var newOrder = new Order
             {
                 Id = Guid.NewGuid(),
-                UserId = request.CurrentUserId,
+                CustomerId = request.CurrentUserId,
                 ProductId = request.ProductId,
-                StatusOrderId = request.StatusOrderId,
+                StatusOrder = await context.StatusOrders.FirstOrDefaultAsync(x => x.StatusName == nameof(StatusOrderEnum.PlaceAn), cancellationToken),
                 Date = DateTime.UtcNow,
                 CustomersComment = request.CustomersComment,
                 UserComment= request.UserComment,

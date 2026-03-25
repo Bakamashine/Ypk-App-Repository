@@ -19,7 +19,5 @@ namespace Aplication.Commands.Users.UpdateUser
         public string PhoneNumber { get; set; } = string.Empty;
         public string? UserInfo { get; set; }
         public bool IsActive { get; set; }
-
-        public Guid? RoleId { get; set; }
     }
 }

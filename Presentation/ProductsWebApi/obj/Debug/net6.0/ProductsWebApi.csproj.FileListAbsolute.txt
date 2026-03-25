@@ -266,7 +266,6 @@ C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\obj\Debug\
 C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\obj\Debug\net6.0\staticwebassets.build.endpoints.json
 C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\obj\Debug\net6.0\swae.build.ex.cache
-C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
 C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\obj\Debug\net6.0\Products.9F67E88B.Up2Date
 C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\obj\Debug\net6.0\ProductsWebApi.dll
 C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\obj\Debug\net6.0\refint\ProductsWebApi.dll
@@ -297,3 +296,5 @@ C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\bin\Debug\
 C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\bin\Debug\net6.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\bin\Debug\net6.0\dotnet-tools.json
+C:\Users\Artem\Desktop\Ypk-App-Repository\Presentation\ProductsWebApi\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
