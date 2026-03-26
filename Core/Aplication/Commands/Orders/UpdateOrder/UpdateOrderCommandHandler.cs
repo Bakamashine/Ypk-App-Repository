@@ -36,8 +36,8 @@ namespace Aplication.Commands.Orders.UpdateOrder
             {
                 if (!string.IsNullOrEmpty(request.CustomersComment))
                     entity.CustomersComment = request.CustomersComment;
-                if (!string.IsNullOrEmpty(request.CustomersComment))
-                    entity.CustomersComment = request.CustomersComment;
+                if (!string.IsNullOrEmpty(request.UserComment))
+                    entity.UserComment = request.UserComment;
                 if (request.ExecutorId != Guid.Empty)
                     entity.ExecutorId = request.ExecutorId;
                 if (request.StatusOrderId != Guid.Empty)

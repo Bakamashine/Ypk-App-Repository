@@ -316,6 +316,31 @@
   },
   {
     "ContainingType": "ProductsWebApi.Controllers.OrderController",
+    "Method": "GetAll",
+    "RelativePath": "api/Order/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Aplication.Dtos.Orders.OrderListVm",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProductsWebApi.Controllers.OrderController",
     "Method": "GetAllForManager",
     "RelativePath": "api/Order/manager",
     "HttpMethod": "GET",
@@ -400,13 +425,6 @@
           "application/json"
         ],
         "StatusCode": 401
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 403
       }
     ]
   },
@@ -432,13 +450,6 @@
           "application/json"
         ],
         "StatusCode": 401
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 403
       }
     ]
   },

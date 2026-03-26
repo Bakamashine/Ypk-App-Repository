@@ -359,9 +359,30 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Order/all": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "summary": "Get all orders",
+        "description": "Sample request:\r\nGET (HOST)/api/order/all",
+        "responses": {
+          "200": {
+            "description": "Siccess",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderListVm"
+                }
+              }
+            }
           },
-          "403": {
-            "description": "If the user not have permission",
+          "401": {
+            "description": "If the user is unautorized",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,16 +455,6 @@
           },
           "401": {
             "description": "If the user is unautorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "If the user not have permission",
             "content": {
               "application/json": {
                 "schema": {
@@ -1327,7 +1338,7 @@
           "User"
         ],
         "summary": "Update object user",
-        "description": "Sample request:\r\nPUT (HOST)/api/user\r\n{\r\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"fullname\": \"string\",\r\n    \"OldPassword\": \"string\",\r\n    \"NewPassword\": \"string\",\r\n    \"phoneNumber\": \"string\",\r\n    \"userInfo\": \"string\",\r\n    \"IsActive\": \"bool\",\r\n    \"roleId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\",\r\n}",
+        "description": "Sample request:\r\nPUT (HOST)/api/user\r\n{\r\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"fullname\": \"string\",\r\n    \"OldPassword\": \"string\",\r\n    \"NewPassword\": \"string\",\r\n    \"phoneNumber\": \"string\",\r\n    \"userInfo\": \"string\",\r\n    \"IsActive\": \"bool\",\r\n}",
         "requestBody": {
           "description": "UpdateUserDto object",
           "content": {
@@ -1371,7 +1382,7 @@
           "User"
         ],
         "summary": "Update object user for admin",
-        "description": "Sample request:\r\nPUT (HOST)/api/user/admin\r\n{\r\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"fullname\": \"string\",\r\n    \"phoneNumber\": \"string\",\r\n    \"userInfo\": \"string\",\r\n    \"roleId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\",\r\n}",
+        "description": "Sample request:\r\nPUT (HOST)/api/user/admin\r\n{\r\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"fullname\": \"string\",\r\n    \"phoneNumber\": \"string\",\r\n    \"userInfo\": \"string\",\r\n    \"roleId\": \"7ab72f64-5717-4562-bgfc-2c963f663sa2\",\r\n    \"YpkId\": \"76f24f64-5717-4562-bgfc-2c963f663sa2\",\r\n}",
         "requestBody": {
           "description": "UpdateUserForAdminDto object",
           "content": {
@@ -2037,10 +2048,6 @@
           },
           "isActive": {
             "type": "boolean"
-          },
-          "roleId": {
-            "type": "string",
-            "format": "uuid"
           }
         },
         "additionalProperties": false
@@ -2069,6 +2076,11 @@
           },
           "userInfo": {
             "type": "string",
+            "nullable": true
+          },
+          "ypkId": {
+            "type": "string",
+            "format": "uuid",
             "nullable": true
           }
         },
