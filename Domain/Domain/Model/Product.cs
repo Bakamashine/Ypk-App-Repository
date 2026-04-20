@@ -18,7 +18,6 @@ namespace Domain.Model
         public bool IsProduct { get; set; }
         public string? PhotoPath { get; set; }
         public string Adress { get; set; } = string.Empty;
-        public decimal Raiting { get; set; }
 
 
 

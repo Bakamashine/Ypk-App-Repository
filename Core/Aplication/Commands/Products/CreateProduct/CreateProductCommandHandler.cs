@@ -44,7 +44,6 @@ namespace Aplication.Commands.Products.CreateProduct
                 IsProduct = request.IsProduct,
                 PhotoPath = photoPath,                     
                 Adress = request.Adress,
-                Raiting = 0
             };
 
             await _context.Products.AddAsync(newProduct, cancellationToken);

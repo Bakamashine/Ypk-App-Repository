@@ -16,14 +16,14 @@ namespace ProductsWebApi.Models.Feedback
     {
         [Required]
         public Guid Id { get; set; }
-        public string FeedbackName { get; set; } = string.Empty;
+        public string Comment { get; set; } = string.Empty;
         public int Raiting { get; set; }
 
         public void Mapping(Profile profile)
         {
             profile.CreateMap<UpdateFeedbackDto, UpdateFeedbackCommand>()
-                .ForMember(userCommand => userCommand.FeedbackName,
-                opt => opt.MapFrom(userDto => userDto.FeedbackName))
+                .ForMember(userCommand => userCommand.Comment,
+                opt => opt.MapFrom(userDto => userDto.Comment))
                 .ForMember(userCommand => userCommand.Id,
                 opt => opt.MapFrom(userDto => userDto.Id))
                 .ForMember(userCommand => userCommand.Raiting,

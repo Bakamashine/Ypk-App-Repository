@@ -20,7 +20,6 @@ namespace Persistance.EntityFrameworkConfiguration
             builder.Property(user => user.StatusProductId).IsRequired();
             builder.Property(user => user.YpkId).IsRequired();
             builder.Property(user => user.UserId).IsRequired();
-            builder.Property(user => user.Raiting).IsRequired().HasAnnotation("Range", new { Minimum = 1, Maximum = 5 }); 
             builder.Property(user => user.ProductCost).IsRequired().HasPrecision(9,2);
             builder.Property(user => user.IsProduct).IsRequired();
             builder.Property(user => user.Adress).IsRequired();

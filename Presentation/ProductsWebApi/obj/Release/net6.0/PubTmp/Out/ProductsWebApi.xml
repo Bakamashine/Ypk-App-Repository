@@ -70,7 +70,7 @@
              Sample request:
              POST (HOST)/api/feedback
             {
-              "FeedbackName": "string",
+              "Comment": "string",
               "Raiting": "int (1-5)"
               "Image": "file"
             }
@@ -89,7 +89,7 @@
              PUT (HOST)/api/feedback
             {
               "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-              "FeedbackName": "string",
+              "Comment": "string",
               "Raiting": "int (1-5)"
             }        
              </remarks>

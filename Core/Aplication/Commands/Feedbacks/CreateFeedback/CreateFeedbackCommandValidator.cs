@@ -11,7 +11,7 @@ namespace Aplication.Commands.Feedbacks.CreateFeedback
     {
         public CreateFeedbackCommandValidator()
         {
-            RuleFor(createFeedbackCommand => createFeedbackCommand.FeedbackName)
+            RuleFor(createFeedbackCommand => createFeedbackCommand.Comment)
                .NotEmpty().MaximumLength(1000).NotNull();
             RuleFor(createFeedbackCommand => createFeedbackCommand.CurrentUserId)
                 .NotEqual(Guid.Empty).NotNull();

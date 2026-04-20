@@ -3,112 +3,108 @@
   "WorkspaceRootPath": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\orders\\updateorder\\updateordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\orders\\updateorder\\updateordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\orders\\updateorder\\updateordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\orders\\updateorder\\updateordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\models\\order\\updateorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\order\\updateorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlist\\getallorderquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlist\\getallorderquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlist\\getallorderqueryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlist\\getallorderqueryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlist\\getallorderqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlist\\getallorderqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\models\\user\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\user\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\users\\updateuser\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\users\\updateuser\\updateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\users\\updateuser\\updateusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\users\\updateuser\\updateusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\users\\updateuseradmin\\updateadminusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\users\\updateuseradmin\\updateadminusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\ypks\\updateypk\\updateypkcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\ypks\\updateypk\\updateypkcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\users\\updateuseradmin\\updateadminusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\users\\updateuseradmin\\updateadminusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\models\\user\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\user\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\users\\updateuser\\updateusercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\users\\updateuser\\updateusercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\models\\user\\updateuserforadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\user\\updateuserforadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\users\\updateuser\\updateusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\users\\updateuser\\updateusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlistformanagerhistory\\getallorderqueryhandlerformanagerhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlistformanagerhistory\\getallorderqueryhandlerformanagerhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\products\\deleteproduct\\deleteproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\products\\deleteproduct\\deleteproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlistformanagerhistory\\getallorderqueryvalidatorformanagerhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlistformanagerhistory\\getallorderqueryvalidatorformanagerhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\products\\updateproduct\\updateproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\products\\updateproduct\\updateproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlistformanagerhistory\\getallorderqueryformanagerhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlistformanagerhistory\\getallorderqueryformanagerhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\orders\\updateorder\\updateordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\orders\\updateorder\\updateordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlistfordefaultuser\\getallorderqueryfordefaultuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlistfordefaultuser\\getallorderqueryfordefaultuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\feedbacks\\createfeedback\\createfeedbackcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\feedbacks\\createfeedback\\createfeedbackcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlistfordefaultuserhistory\\getallorderqueryfordefaultuserhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlistfordefaultuserhistory\\getallorderqueryfordefaultuserhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\feedbacks\\deletefeedback\\deletefeedbackcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\feedbacks\\deletefeedback\\deletefeedbackcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlistformanager\\getallorderqueryvalidatorformanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlistformanager\\getallorderqueryvalidatorformanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\feedbacks\\updatefeedback\\updatefeedbackcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\feedbacks\\updatefeedback\\updatefeedbackcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlistformanager\\getallorderqueryformanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlistformanager\\getallorderqueryformanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlistformanager\\getallorderqueryhandlerformanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlistformanager\\getallorderqueryhandlerformanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\feedbacks\\updatefeedback\\updatefeedbackcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\feedbacks\\updatefeedback\\updatefeedbackcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlistfordefaultuserhistory\\getallorderqueryhandlerfordefaultuserhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlistfordefaultuserhistory\\getallorderqueryhandlerfordefaultuserhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlistfordefaultuser\\getallorderqueryhandlerfordefaultuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlistfordefaultuser\\getallorderqueryhandlerfordefaultuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\models\\feedback\\updatefeedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\feedback\\updatefeedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorderlistfordefaultuserhistory\\getallorderqueryvalidatorfordefaultuserhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorderlistfordefaultuserhistory\\getallorderqueryvalidatorfordefaultuserhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\models\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\auth\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\models\\feedback\\createfeedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\feedback\\createfeedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\dtos\\feedbacks\\feedbacklookupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\dtos\\feedbacks\\feedbacklookupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA700F72-7DBF-4255-9966-DCB8C832A4D6}|Domain\\Domain\\Domain.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\domain\\domain\\model\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA700F72-7DBF-4255-9966-DCB8C832A4D6}|Domain\\Domain\\Domain.csproj|solutionrelative:domain\\domain\\model\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\feedbacks\\getfeedback\\getdetailsfeedbackqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\feedbacks\\getfeedback\\getdetailsfeedbackqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\feedbacks\\getfeedback\\getdetailsfeedbackqueryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\feedbacks\\getfeedback\\getdetailsfeedbackqueryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\feedbacks\\getfeedback\\getdetailsfeedbackquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\feedbacks\\getfeedback\\getdetailsfeedbackquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\dtos\\feedbacks\\feedbacklistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\dtos\\feedbacks\\feedbacklistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\models\\product\\updateproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\product\\updateproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\products\\getproductlis\\getallproductqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\products\\getproductlis\\getallproductqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\dtos\\orders\\orderlookupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,104 +115,12 @@
       "RelativeMoniker": "D:0:0:{BA700F72-7DBF-4255-9966-DCB8C832A4D6}|Domain\\Domain\\Domain.csproj|solutionrelative:domain\\domain\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}|Persistance\\Persistance\\Persistance.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\persistance\\persistance\\entityframeworkconfiguration\\orderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}|Persistance\\Persistance\\Persistance.csproj|solutionrelative:persistance\\persistance\\entityframeworkconfiguration\\orderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA700F72-7DBF-4255-9966-DCB8C832A4D6}|Domain\\Domain\\Domain.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\domain\\domain\\model\\statusorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA700F72-7DBF-4255-9966-DCB8C832A4D6}|Domain\\Domain\\Domain.csproj|solutionrelative:domain\\domain\\model\\statusorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}|Persistance\\Persistance\\Persistance.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\persistance\\persistance\\entityframeworkconfiguration\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}|Persistance\\Persistance\\Persistance.csproj|solutionrelative:persistance\\persistance\\entityframeworkconfiguration\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}|Persistance\\Persistance\\Persistance.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\persistance\\persistance\\entityframeworkconfiguration\\ypkconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}|Persistance\\Persistance\\Persistance.csproj|solutionrelative:persistance\\persistance\\entityframeworkconfiguration\\ypkconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}|Persistance\\Persistance\\Persistance.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\persistance\\persistance\\entityframeworkconfiguration\\roleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}|Persistance\\Persistance\\Persistance.csproj|solutionrelative:persistance\\persistance\\entityframeworkconfiguration\\roleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA700F72-7DBF-4255-9966-DCB8C832A4D6}|Domain\\Domain\\Domain.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\domain\\domain\\model\\ypk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA700F72-7DBF-4255-9966-DCB8C832A4D6}|Domain\\Domain\\Domain.csproj|solutionrelative:domain\\domain\\model\\ypk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA700F72-7DBF-4255-9966-DCB8C832A4D6}|Domain\\Domain\\Domain.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\domain\\domain\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA700F72-7DBF-4255-9966-DCB8C832A4D6}|Domain\\Domain\\Domain.csproj|solutionrelative:domain\\domain\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\controllers\\ypkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\controllers\\ypkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\ypks\\deleteypk\\deleteypkcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\ypks\\deleteypk\\deleteypkcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\orders\\createorder\\createordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\orders\\createorder\\createordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\queries\\orders\\getorder\\getdetailorderqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\queries\\orders\\getorder\\getdetailorderqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\controllers\\statusordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\controllers\\statusordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\orders\\updateorder\\updateordercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\orders\\updateorder\\updateordercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\orders\\createorder\\createordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\orders\\createorder\\createordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\orders\\createorder\\createordercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\orders\\createorder\\createordercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\orders\\deleteorder\\deleteordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\orders\\deleteorder\\deleteordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\models\\order\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\order\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}|Persistance\\Persistance\\Persistance.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\persistance\\persistance\\entityframeworkconfiguration\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}|Persistance\\Persistance\\Persistance.csproj|solutionrelative:persistance\\persistance\\entityframeworkconfiguration\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\products\\createproduct\\createproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\products\\createproduct\\createproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\products\\createproduct\\createproductcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\products\\createproduct\\createproductcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\products\\createproduct\\createproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\products\\createproduct\\createproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\presentation\\productswebapi\\models\\product\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A63335E1-9F89-4E6C-8975-FE4485300854}|Presentation\\ProductsWebApi\\ProductsWebApi.csproj|solutionrelative:presentation\\productswebapi\\models\\product\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\products\\updateproduct\\updateproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\products\\updateproduct\\updateproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\products\\updateproduct\\updateproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\products\\updateproduct\\updateproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|c:\\users\\artem\\desktop\\ypk-app-repository\\core\\aplication\\commands\\products\\deleteproduct\\deleteproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98F045ED-E437-4C71-BF8C-8E63ADB2E184}|Core\\Aplication\\Aplication.csproj|solutionrelative:core\\aplication\\commands\\products\\deleteproduct\\deleteproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -226,7 +130,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 38,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -258,416 +162,329 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetAllOrderQuery.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderList\\GetAllOrderQuery.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderList\\GetAllOrderQuery.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderList\\GetAllOrderQuery.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderList\\GetAllOrderQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UpdateYpkCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Ypks\\UpdateYpk\\UpdateYpkCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Ypks\\UpdateYpk\\UpdateYpkCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Ypks\\UpdateYpk\\UpdateYpkCommandHandler.cs",
+              "RelativeToolTip": "Core\\Aplication\\Commands\\Ypks\\UpdateYpk\\UpdateYpkCommandHandler.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T19:08:04.726Z"
+              "WhenOpened": "2026-04-19T20:52:02.813Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetAllOrderQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderList\\GetAllOrderQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderList\\GetAllOrderQueryHandler.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderList\\GetAllOrderQueryHandler.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderList\\GetAllOrderQueryHandler.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T19:08:02.303Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetAllOrderQueryValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderList\\GetAllOrderQueryValidator.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderList\\GetAllOrderQueryValidator.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderList\\GetAllOrderQueryValidator.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderList\\GetAllOrderQueryValidator.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T19:07:49.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Presentation\\ProductsWebApi\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAcwKQAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:57:47.908Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UpdateUserCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommandHandler.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommandHandler.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommandHandler.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowDMAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:56:12.445Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
               "Title": "UpdateAdminUserCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommandHandler.cs",
               "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommandHandler.cs",
               "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommandHandler.cs",
               "RelativeToolTip": "Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommandHandler.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwCQAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:55:47.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UpdateUserCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommand.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommand.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommand.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:55:11.362Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CreateUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\User\\CreateUserDto.cs",
-              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\User\\CreateUserDto.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\User\\CreateUserDto.cs",
-              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\User\\CreateUserDto.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBwAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:54:40.45Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UpdateAdminUserCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommand.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommand.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Users\\UpdateUserAdmin\\UpdateAdminUserCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:54:26.803Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UpdateUserForAdminDto.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\User\\UpdateUserForAdminDto.cs",
-              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\User\\UpdateUserForAdminDto.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\User\\UpdateUserForAdminDto.cs",
-              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\User\\UpdateUserForAdminDto.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBQAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:54:09.617Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UpdateUserDto.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\User\\UpdateUserDto.cs",
-              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\User\\UpdateUserDto.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\User\\UpdateUserDto.cs",
-              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\User\\UpdateUserDto.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBIAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:53:56.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "GetAllOrderQueryValidatorForManagerHistory.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForManagerHistory\\GetAllOrderQueryValidatorForManagerHistory.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderListForManagerHistory\\GetAllOrderQueryValidatorForManagerHistory.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForManagerHistory\\GetAllOrderQueryValidatorForManagerHistory.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderListForManagerHistory\\GetAllOrderQueryValidatorForManagerHistory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:48:39.323Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "GetAllOrderQueryHandlerForManagerHistory.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForManagerHistory\\GetAllOrderQueryHandlerForManagerHistory.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderListForManagerHistory\\GetAllOrderQueryHandlerForManagerHistory.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForManagerHistory\\GetAllOrderQueryHandlerForManagerHistory.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderListForManagerHistory\\GetAllOrderQueryHandlerForManagerHistory.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:45:55.403Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "GetAllOrderQueryForManagerHistory.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForManagerHistory\\GetAllOrderQueryForManagerHistory.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderListForManagerHistory\\GetAllOrderQueryForManagerHistory.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForManagerHistory\\GetAllOrderQueryForManagerHistory.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderListForManagerHistory\\GetAllOrderQueryForManagerHistory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:45:50.42Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GetAllOrderQueryForDefaultUserHistory.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUserHistory\\GetAllOrderQueryForDefaultUserHistory.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUserHistory\\GetAllOrderQueryForDefaultUserHistory.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUserHistory\\GetAllOrderQueryForDefaultUserHistory.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUserHistory\\GetAllOrderQueryForDefaultUserHistory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:43:54.956Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "GetAllOrderQueryValidatorForDefaultUserHistory.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUserHistory\\GetAllOrderQueryValidatorForDefaultUserHistory.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUserHistory\\GetAllOrderQueryValidatorForDefaultUserHistory.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUserHistory\\GetAllOrderQueryValidatorForDefaultUserHistory.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUserHistory\\GetAllOrderQueryValidatorForDefaultUserHistory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:43:52.519Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "GetAllOrderQueryHandlerForDefaultUserHistory.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUserHistory\\GetAllOrderQueryHandlerForDefaultUserHistory.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUserHistory\\GetAllOrderQueryHandlerForDefaultUserHistory.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUserHistory\\GetAllOrderQueryHandlerForDefaultUserHistory.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUserHistory\\GetAllOrderQueryHandlerForDefaultUserHistory.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABgAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:43:09.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "GetAllOrderQueryHandlerForDefaultUser.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUser\\GetAllOrderQueryHandlerForDefaultUser.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUser\\GetAllOrderQueryHandlerForDefaultUser.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUser\\GetAllOrderQueryHandlerForDefaultUser.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUser\\GetAllOrderQueryHandlerForDefaultUser.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:33:53.395Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "GetAllOrderQueryForDefaultUser.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUser\\GetAllOrderQueryForDefaultUser.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUser\\GetAllOrderQueryForDefaultUser.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUser\\GetAllOrderQueryForDefaultUser.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderListForDefaultUser\\GetAllOrderQueryForDefaultUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T21:33:38.928Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "StatusOrder.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Domain\\Domain\\Model\\StatusOrder.cs",
-              "RelativeDocumentMoniker": "Domain\\Domain\\Model\\StatusOrder.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Domain\\Domain\\Model\\StatusOrder.cs",
-              "RelativeToolTip": "Domain\\Domain\\Model\\StatusOrder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T20:16:05.083Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "Presentation\\ProductsWebApi\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAwwHIAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T20:06:39.43Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "RoleConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\EntityFrameworkConfiguration\\RoleConfiguration.cs",
-              "RelativeDocumentMoniker": "Persistance\\Persistance\\EntityFrameworkConfiguration\\RoleConfiguration.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\EntityFrameworkConfiguration\\RoleConfiguration.cs",
-              "RelativeToolTip": "Persistance\\Persistance\\EntityFrameworkConfiguration\\RoleConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T20:05:27.519Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "UserConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\EntityFrameworkConfiguration\\UserConfiguration.cs",
-              "RelativeDocumentMoniker": "Persistance\\Persistance\\EntityFrameworkConfiguration\\UserConfiguration.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\EntityFrameworkConfiguration\\UserConfiguration.cs",
-              "RelativeToolTip": "Persistance\\Persistance\\EntityFrameworkConfiguration\\UserConfiguration.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAYwCUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T20:03:14.414Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "YpkConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\EntityFrameworkConfiguration\\YpkConfiguration.cs",
-              "RelativeDocumentMoniker": "Persistance\\Persistance\\EntityFrameworkConfiguration\\YpkConfiguration.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\EntityFrameworkConfiguration\\YpkConfiguration.cs",
-              "RelativeToolTip": "Persistance\\Persistance\\EntityFrameworkConfiguration\\YpkConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T20:03:08.239Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Ypk.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Domain\\Domain\\Model\\Ypk.cs",
-              "RelativeDocumentMoniker": "Domain\\Domain\\Model\\Ypk.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Domain\\Domain\\Model\\Ypk.cs",
-              "RelativeToolTip": "Domain\\Domain\\Model\\Ypk.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T19:59:45.512Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "DeleteYpkCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Ypks\\DeleteYpk\\DeleteYpkCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Ypks\\DeleteYpk\\DeleteYpkCommandHandler.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Ypks\\DeleteYpk\\DeleteYpkCommandHandler.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Ypks\\DeleteYpk\\DeleteYpkCommandHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T19:59:42.255Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Domain\\Domain\\Model\\User.cs",
-              "RelativeDocumentMoniker": "Domain\\Domain\\Model\\User.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Domain\\Domain\\Model\\User.cs",
-              "RelativeToolTip": "Domain\\Domain\\Model\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T18:41:58.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "GetAllOrderQueryValidatorForManager.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForManager\\GetAllOrderQueryValidatorForManager.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderListForManager\\GetAllOrderQueryValidatorForManager.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForManager\\GetAllOrderQueryValidatorForManager.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderListForManager\\GetAllOrderQueryValidatorForManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T18:31:20.528Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "GetAllOrderQueryForManager.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForManager\\GetAllOrderQueryForManager.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderListForManager\\GetAllOrderQueryForManager.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForManager\\GetAllOrderQueryForManager.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderListForManager\\GetAllOrderQueryForManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T18:31:12.275Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "YpkController.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\YpkController.cs",
-              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Controllers\\YpkController.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\YpkController.cs",
-              "RelativeToolTip": "Presentation\\ProductsWebApi\\Controllers\\YpkController.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAmwHIAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T11:00:03.149Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "UpdateOrderCommandValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommandValidator.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommandValidator.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommandValidator.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:52:36.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdateOrderCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommandHandler.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommandHandler.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommandHandler.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAkwCwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:51:06.377Z",
+              "WhenOpened": "2026-04-19T20:51:50.485Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UpdateOrderDto.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Order\\UpdateOrderDto.cs",
-              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Order\\UpdateOrderDto.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Order\\UpdateOrderDto.cs",
-              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Order\\UpdateOrderDto.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA9wCAAAAA2AAAAAAAAAA==",
+              "Title": "UpdateUserCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommandValidator.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommandValidator.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommandValidator.cs",
+              "RelativeToolTip": "Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:48:34.502Z"
+              "WhenOpened": "2026-04-19T20:51:48.887Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateOrderCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommand.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommand.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommand.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAawBQAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "UpdateUserCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommandHandler.cs",
+              "RelativeToolTip": "Core\\Aplication\\Commands\\Users\\UpdateUser\\UpdateUserCommandHandler.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:47:56.766Z"
+              "WhenOpened": "2026-04-19T20:51:42.721Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 4,
+              "Title": "DeleteProductCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\DeleteProduct\\DeleteProductCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Products\\DeleteProduct\\DeleteProductCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\DeleteProduct\\DeleteProductCommandHandler.cs",
+              "RelativeToolTip": "Core\\Aplication\\Commands\\Products\\DeleteProduct\\DeleteProductCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:51:36.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateOrderCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommandHandler.cs",
+              "RelativeToolTip": "Core\\Aplication\\Commands\\Orders\\UpdateOrder\\UpdateOrderCommandHandler.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:50:22.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateFeedbackCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Feedbacks\\CreateFeedback\\CreateFeedbackCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Feedbacks\\CreateFeedback\\CreateFeedbackCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Feedbacks\\CreateFeedback\\CreateFeedbackCommandHandler.cs",
+              "RelativeToolTip": "Core\\Aplication\\Commands\\Feedbacks\\CreateFeedback\\CreateFeedbackCommandHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:50:16.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DeleteFeedbackCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Feedbacks\\DeleteFeedback\\DeleteFeedbackCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Feedbacks\\DeleteFeedback\\DeleteFeedbackCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Feedbacks\\DeleteFeedback\\DeleteFeedbackCommandHandler.cs",
+              "RelativeToolTip": "Core\\Aplication\\Commands\\Feedbacks\\DeleteFeedback\\DeleteFeedbackCommandHandler.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:50:04.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UpdateFeedbackCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Feedbacks\\UpdateFeedback\\UpdateFeedbackCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Feedbacks\\UpdateFeedback\\UpdateFeedbackCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Feedbacks\\UpdateFeedback\\UpdateFeedbackCommandHandler.cs",
+              "RelativeToolTip": "Core\\Aplication\\Commands\\Feedbacks\\UpdateFeedback\\UpdateFeedbackCommandHandler.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA4wCYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:46:47.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:42:43.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Auth\\LoginDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Auth\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Auth\\LoginDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Auth\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:38:45.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UpdateFeedbackCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Feedbacks\\UpdateFeedback\\UpdateFeedbackCommand.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Feedbacks\\UpdateFeedback\\UpdateFeedbackCommand.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Feedbacks\\UpdateFeedback\\UpdateFeedbackCommand.cs",
+              "RelativeToolTip": "Core\\Aplication\\Commands\\Feedbacks\\UpdateFeedback\\UpdateFeedbackCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:29:42.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UpdateFeedbackDto.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Feedback\\UpdateFeedbackDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Feedback\\UpdateFeedbackDto.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Feedback\\UpdateFeedbackDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Feedback\\UpdateFeedbackDto.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:29:24.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateFeedbackDto.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Feedback\\CreateFeedbackDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Feedback\\CreateFeedbackDto.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Feedback\\CreateFeedbackDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Feedback\\CreateFeedbackDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:29:22.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GetDetailsFeedbackQueryValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Feedbacks\\GetFeedback\\GetDetailsFeedbackQueryValidator.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Feedbacks\\GetFeedback\\GetDetailsFeedbackQueryValidator.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Feedbacks\\GetFeedback\\GetDetailsFeedbackQueryValidator.cs",
+              "RelativeToolTip": "Core\\Aplication\\Queries\\Feedbacks\\GetFeedback\\GetDetailsFeedbackQueryValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T18:33:53.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GetDetailsFeedbackQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Feedbacks\\GetFeedback\\GetDetailsFeedbackQuery.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Feedbacks\\GetFeedback\\GetDetailsFeedbackQuery.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Feedbacks\\GetFeedback\\GetDetailsFeedbackQuery.cs",
+              "RelativeToolTip": "Core\\Aplication\\Queries\\Feedbacks\\GetFeedback\\GetDetailsFeedbackQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T18:33:51.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GetDetailsFeedbackQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Feedbacks\\GetFeedback\\GetDetailsFeedbackQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Feedbacks\\GetFeedback\\GetDetailsFeedbackQueryHandler.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Feedbacks\\GetFeedback\\GetDetailsFeedbackQueryHandler.cs",
+              "RelativeToolTip": "Core\\Aplication\\Queries\\Feedbacks\\GetFeedback\\GetDetailsFeedbackQueryHandler.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T18:33:48.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FeedbackController.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\FeedbackController.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Controllers\\FeedbackController.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\FeedbackController.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Controllers\\FeedbackController.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAIwIwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T18:32:00.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Feedback.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Domain\\Domain\\Model\\Feedback.cs",
+              "RelativeDocumentMoniker": "Domain\\Domain\\Model\\Feedback.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Domain\\Domain\\Model\\Feedback.cs",
+              "RelativeToolTip": "Domain\\Domain\\Model\\Feedback.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T18:30:54.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FeedbackLookupDto.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Dtos\\Feedbacks\\FeedbackLookupDto.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Dtos\\Feedbacks\\FeedbackLookupDto.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Dtos\\Feedbacks\\FeedbackLookupDto.cs",
+              "RelativeToolTip": "Core\\Aplication\\Dtos\\Feedbacks\\FeedbackLookupDto.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwBcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T18:30:44.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FeedbackListVm.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Dtos\\Feedbacks\\FeedbackListVm.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Dtos\\Feedbacks\\FeedbackListVm.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Dtos\\Feedbacks\\FeedbackListVm.cs",
+              "RelativeToolTip": "Core\\Aplication\\Dtos\\Feedbacks\\FeedbackListVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T18:30:44.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "GetAllProductQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Products\\GetProductLis\\GetAllProductQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Products\\GetProductLis\\GetAllProductQueryHandler.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Products\\GetProductLis\\GetAllProductQueryHandler.cs",
+              "RelativeToolTip": "Core\\Aplication\\Queries\\Products\\GetProductLis\\GetAllProductQueryHandler.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T19:54:38.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateProductCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\UpdateProduct\\UpdateProductCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Products\\UpdateProduct\\UpdateProductCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\UpdateProduct\\UpdateProductCommandHandler.cs",
+              "RelativeToolTip": "Core\\Aplication\\Commands\\Products\\UpdateProduct\\UpdateProductCommandHandler.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA1wDAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T19:25:19.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UpdateProductDto.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Product\\UpdateProductDto.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Product\\UpdateProductDto.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Product\\UpdateProductDto.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Product\\UpdateProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T19:24:35.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T16:20:00.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Presentation\\ProductsWebApi\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAQwMIAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T16:19:33.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "CreateOrderCommandValidator.cs",
               "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\CreateOrder\\CreateOrderCommandValidator.cs",
               "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Orders\\CreateOrder\\CreateOrderCommandValidator.cs",
@@ -679,31 +496,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "OrderLookupDto.cs",
               "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Dtos\\Orders\\OrderLookupDto.cs",
               "RelativeDocumentMoniker": "Core\\Aplication\\Dtos\\Orders\\OrderLookupDto.cs",
               "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Dtos\\Orders\\OrderLookupDto.cs",
               "RelativeToolTip": "Core\\Aplication\\Dtos\\Orders\\OrderLookupDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvygAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T10:24:14.874Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Domain\\Domain\\Model\\Order.cs",
               "RelativeDocumentMoniker": "Domain\\Domain\\Model\\Order.cs",
               "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Domain\\Domain\\Model\\Order.cs",
               "RelativeToolTip": "Domain\\Domain\\Model\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswBUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T10:22:02.187Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 28,
               "Title": "CreateOrderCommand.cs",
               "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\CreateOrder\\CreateOrderCommand.cs",
               "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Orders\\CreateOrder\\CreateOrderCommand.cs",
@@ -712,198 +529,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T10:18:50.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "StatusOrderController.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\StatusOrderController.cs",
-              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Controllers\\StatusOrderController.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\StatusOrderController.cs",
-              "RelativeToolTip": "Presentation\\ProductsWebApi\\Controllers\\StatusOrderController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:19:13.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "CreateOrderDto.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Order\\CreateOrderDto.cs",
-              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Order\\CreateOrderDto.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Order\\CreateOrderDto.cs",
-              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Order\\CreateOrderDto.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAwwBIAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:18:55.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "DeleteOrderCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\DeleteOrder\\DeleteOrderCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Orders\\DeleteOrder\\DeleteOrderCommandHandler.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\DeleteOrder\\DeleteOrderCommandHandler.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Orders\\DeleteOrder\\DeleteOrderCommandHandler.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAACaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:04:51.848Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "CreateOrderCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\CreateOrder\\CreateOrderCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Orders\\CreateOrder\\CreateOrderCommandHandler.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Orders\\CreateOrder\\CreateOrderCommandHandler.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Orders\\CreateOrder\\CreateOrderCommandHandler.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABwAAACBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:04:50.05Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "GetDetailOrderQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrder\\GetDetailOrderQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrder\\GetDetailOrderQueryHandler.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrder\\GetDetailOrderQueryHandler.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrder\\GetDetailOrderQueryHandler.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T10:04:37.351Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "GetAllOrderQueryHandlerForManager.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForManager\\GetAllOrderQueryHandlerForManager.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Queries\\Orders\\GetOrderListForManager\\GetAllOrderQueryHandlerForManager.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Queries\\Orders\\GetOrderListForManager\\GetAllOrderQueryHandlerForManager.cs",
-              "RelativeToolTip": "Core\\Aplication\\Queries\\Orders\\GetOrderListForManager\\GetAllOrderQueryHandlerForManager.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAIA0wBsAAAB2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T09:46:27.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "OrderConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\EntityFrameworkConfiguration\\OrderConfiguration.cs",
-              "RelativeDocumentMoniker": "Persistance\\Persistance\\EntityFrameworkConfiguration\\OrderConfiguration.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\EntityFrameworkConfiguration\\OrderConfiguration.cs",
-              "RelativeToolTip": "Persistance\\Persistance\\EntityFrameworkConfiguration\\OrderConfiguration.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAUwBUAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T09:43:24.499Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "ProductConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\EntityFrameworkConfiguration\\ProductConfiguration.cs",
-              "RelativeDocumentMoniker": "Persistance\\Persistance\\EntityFrameworkConfiguration\\ProductConfiguration.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Persistance\\Persistance\\EntityFrameworkConfiguration\\ProductConfiguration.cs",
-              "RelativeToolTip": "Persistance\\Persistance\\EntityFrameworkConfiguration\\ProductConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T10:43:12.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "CreateProductCommandValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\CreateProduct\\CreateProductCommandValidator.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Products\\CreateProduct\\CreateProductCommandValidator.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\CreateProduct\\CreateProductCommandValidator.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Products\\CreateProduct\\CreateProductCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T10:38:39.813Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "CreateProductCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\CreateProduct\\CreateProductCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Products\\CreateProduct\\CreateProductCommand.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\CreateProduct\\CreateProductCommand.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Products\\CreateProduct\\CreateProductCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T10:38:38.243Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Presentation\\ProductsWebApi\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAnwJkAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T10:34:24.511Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "CreateProductDto.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Product\\CreateProductDto.cs",
-              "RelativeDocumentMoniker": "Presentation\\ProductsWebApi\\Models\\Product\\CreateProductDto.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Presentation\\ProductsWebApi\\Models\\Product\\CreateProductDto.cs",
-              "RelativeToolTip": "Presentation\\ProductsWebApi\\Models\\Product\\CreateProductDto.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBoAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T09:19:47.174Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "UpdateProductCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\UpdateProduct\\UpdateProductCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Products\\UpdateProduct\\UpdateProductCommand.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\UpdateProduct\\UpdateProductCommand.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Products\\UpdateProduct\\UpdateProductCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T09:19:37.286Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "UpdateProductCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\UpdateProduct\\UpdateProductCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Products\\UpdateProduct\\UpdateProductCommandHandler.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\UpdateProduct\\UpdateProductCommandHandler.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Products\\UpdateProduct\\UpdateProductCommandHandler.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAmwDkAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T09:19:32.99Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "DeleteProductCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\DeleteProduct\\DeleteProductCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Products\\DeleteProduct\\DeleteProductCommandHandler.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\DeleteProduct\\DeleteProductCommandHandler.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Products\\DeleteProduct\\DeleteProductCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T09:19:29.999Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "CreateProductCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\CreateProduct\\CreateProductCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Aplication\\Commands\\Products\\CreateProduct\\CreateProductCommandHandler.cs",
-              "ToolTip": "C:\\Users\\Artem\\Desktop\\Ypk-App-Repository\\Core\\Aplication\\Commands\\Products\\CreateProduct\\CreateProductCommandHandler.cs",
-              "RelativeToolTip": "Core\\Aplication\\Commands\\Products\\CreateProduct\\CreateProductCommandHandler.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvxgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T09:42:25.846Z"
             }
           ]
         }

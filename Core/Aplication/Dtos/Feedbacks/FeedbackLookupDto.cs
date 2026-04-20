@@ -1,4 +1,5 @@
 ﻿using Aplication.Dtos.StatusProducts;
+using Aplication.Dtos.Users;
 using Application.Common.Mappings;
 using AutoMapper;
 using Domain.Model;
@@ -14,7 +15,8 @@ namespace Aplication.Dtos.Feedbacks
     {
         public Guid Id { get; set; }
         public string Comment { get; set; } = string.Empty;
-
+        public int Raiting {  get; set; }
+        public UserLookupDto? User {  get; set; }
 
         public string? ImagePath { get; set; }  
         public string? ImageUrl { get; set; }  
@@ -24,6 +26,10 @@ namespace Aplication.Dtos.Feedbacks
                 opt => opt.MapFrom(feedback => feedback.Id))
                 .ForMember(feedbackVm => feedbackVm.Comment,
                 opt => opt.MapFrom(feedback => feedback.Comment))
+                .ForMember(feedbackVm => feedbackVm.Raiting,
+                opt => opt.MapFrom(feedback => feedback.Raiting))
+                .ForMember(feedbackVm => feedbackVm.User,
+                opt => opt.MapFrom(feedback => feedback.User))
                 .ForMember(dto => dto.ImagePath,
                 opt => opt.MapFrom(f => f.ImagePath));
     }

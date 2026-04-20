@@ -32,7 +32,7 @@ namespace Aplication.Commands.Feedbacks.CreateFeedback
             {
                 Id = Guid.NewGuid(),
                 UserId = request.CurrentUserId,
-                Comment = request.FeedbackName,
+                Comment = request.Comment,
                 Raiting = request.Raiting,
                 ImagePath = imagePath
             };

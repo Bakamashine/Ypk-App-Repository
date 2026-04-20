@@ -167,18 +167,18 @@
           "Feedback"
         ],
         "summary": "Create object feedback",
-        "description": " Sample request:\r\n POST (HOST)/api/feedback\r\n{\r\n  \"FeedbackName\": \"string\",\r\n  \"Raiting\": \"int (1-5)\"\r\n  \"Image\": \"file\"\r\n}",
+        "description": " Sample request:\r\n POST (HOST)/api/feedback\r\n{\r\n  \"Comment\": \"string\",\r\n  \"Raiting\": \"int (1-5)\"\r\n  \"Image\": \"file\"\r\n}",
         "requestBody": {
           "content": {
             "multipart/form-data": {
               "schema": {
                 "required": [
-                  "FeedbackName",
+                  "Comment",
                   "Raiting"
                 ],
                 "type": "object",
                 "properties": {
-                  "FeedbackName": {
+                  "Comment": {
                     "type": "string"
                   },
                   "Raiting": {
@@ -192,7 +192,7 @@
                 }
               },
               "encoding": {
-                "FeedbackName": {
+                "Comment": {
                   "style": "form"
                 },
                 "Raiting": {
@@ -237,7 +237,7 @@
           "Feedback"
         ],
         "summary": "Update object Feedback",
-        "description": " Sample request:\r\n PUT (HOST)/api/feedback\r\n{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"FeedbackName\": \"string\",\r\n  \"Raiting\": \"int (1-5)\"\r\n}",
+        "description": " Sample request:\r\n PUT (HOST)/api/feedback\r\n{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"Comment\": \"string\",\r\n  \"Raiting\": \"int (1-5)\"\r\n}",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -251,7 +251,7 @@
                     "type": "string",
                     "format": "uuid"
                   },
-                  "FeedbackName": {
+                  "Comment": {
                     "type": "string"
                   },
                   "Raiting": {
@@ -264,7 +264,7 @@
                 "Id": {
                   "style": "form"
                 },
-                "FeedbackName": {
+                "Comment": {
                   "style": "form"
                 },
                 "Raiting": {
@@ -1731,6 +1731,13 @@
             "type": "string",
             "nullable": true
           },
+          "raiting": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "user": {
+            "$ref": "#/components/schemas/UserLookupDto"
+          },
           "imagePath": {
             "type": "string",
             "nullable": true
@@ -1790,6 +1797,10 @@
             "type": "string",
             "format": "date-time"
           },
+          "statusName": {
+            "type": "string",
+            "nullable": true
+          },
           "customersComment": {
             "type": "string",
             "nullable": true
@@ -1797,6 +1808,9 @@
           "userComment": {
             "type": "string",
             "nullable": true
+          },
+          "productDto": {
+            "$ref": "#/components/schemas/ProductLookupDto"
           }
         },
         "additionalProperties": false
@@ -1848,6 +1862,10 @@
             "type": "string",
             "format": "uuid"
           },
+          "ypkId": {
+            "type": "string",
+            "format": "uuid"
+          },
           "productName": {
             "type": "string",
             "nullable": true
@@ -1874,10 +1892,6 @@
           "adress": {
             "type": "string",
             "nullable": true
-          },
-          "raiting": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false

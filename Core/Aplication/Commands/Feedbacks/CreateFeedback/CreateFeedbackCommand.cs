@@ -13,7 +13,7 @@ namespace Aplication.Commands.Feedbacks.CreateFeedback
     public class CreateFeedbackCommand : IRequest<Guid>
     {
         public Guid CurrentUserId { get; set; }
-        public string FeedbackName { get; set; } = string.Empty;
+        public string Comment { get; set; } = string.Empty;
         public int Raiting { get; set; }
         public IFormFile? Image { get; set; }
     }

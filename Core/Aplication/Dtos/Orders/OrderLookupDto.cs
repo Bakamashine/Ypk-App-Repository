@@ -16,8 +16,11 @@ namespace Aplication.Dtos.Orders
         public Guid ExecutorId { get; set; }
         public Guid CustomerId { get; set; }
         public DateTime Date { get; set; }
+        public string? StatusName { get; set; }
         public string? CustomersComment { get; set; }
         public string? UserComment { get; set; }
+
+        public ProductLookupDto ProductDto { get; set; }
 
         public void Mapping(Profile profile)
         {
@@ -33,7 +36,11 @@ namespace Aplication.Dtos.Orders
                 .ForMember(productVm => productVm.CustomersComment,
                  opt => opt.MapFrom(product => product.CustomersComment))
                  .ForMember(productVm => productVm.UserComment,
-                 opt => opt.MapFrom(product => product.UserComment));
+                 opt => opt.MapFrom(product => product.UserComment))
+                 .ForMember(productVm => productVm.ProductDto,
+                 opt => opt.MapFrom(product => product.Product))
+                 .ForMember(productVm => productVm.StatusName,
+                 opt => opt.MapFrom(product => product.StatusOrder.StatusName));
 
         }
     }

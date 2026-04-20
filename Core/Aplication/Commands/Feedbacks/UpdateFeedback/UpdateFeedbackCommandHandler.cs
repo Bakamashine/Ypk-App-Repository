@@ -29,10 +29,10 @@ namespace Aplication.Commands.Feedbacks.UpdateFeedback
 
             var user = await context.Users.Include(x => x.Role).FirstOrDefaultAsync(x => x.Id == request.CurrentUserId, cancellationToken);
 
-            if (entity.UserId == request.CurrentUserId && user.Role.RoleName.Contains(nameof(EnumRoles.Admin)))
+            if (entity.UserId == request.CurrentUserId || user.Role.RoleName.Contains(nameof(EnumRoles.Admin)))
             {
-                if(!string.IsNullOrEmpty(request.FeedbackName))
-                    entity.Comment = request.FeedbackName;
+                if(!string.IsNullOrEmpty(request.Comment))
+                    entity.Comment = request.Comment;
                 if (request.Raiting != entity.Raiting)
                     entity.Raiting = request.Raiting;
 

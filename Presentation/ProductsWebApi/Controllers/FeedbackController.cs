@@ -96,7 +96,7 @@ namespace ProductsWebApi.Controllers
         /// Sample request:
         /// POST (HOST)/api/feedback
         ///{
-        ///  "FeedbackName": "string",
+        ///  "Comment": "string",
         ///  "Raiting": "int (1-5)"
         ///  "Image": "file"
         ///}
@@ -125,7 +125,7 @@ namespace ProductsWebApi.Controllers
         /// PUT (HOST)/api/feedback
         ///{
         ///  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-        ///  "FeedbackName": "string",
+        ///  "Comment": "string",
         ///  "Raiting": "int (1-5)"
         ///}        
         /// </remarks>
@@ -135,7 +135,6 @@ namespace ProductsWebApi.Controllers
         /// <response code="401">If the user is unautorized</response>
         [HttpPut]
         [Authorize]
-        [HttpPut]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Update([FromForm] UpdateFeedbackDto updateFeedbackDto)

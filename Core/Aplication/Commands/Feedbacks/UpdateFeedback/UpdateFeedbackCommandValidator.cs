@@ -12,7 +12,7 @@ namespace Aplication.Commands.Feedbacks.UpdateFeedback
     {
         public UpdateFeedbackCommandValidator()
         {
-            RuleFor(createFeedbackCommand => createFeedbackCommand.FeedbackName)
+            RuleFor(createFeedbackCommand => createFeedbackCommand.Comment)
                .MaximumLength(1000);
             RuleFor(createFeedbackCommand => createFeedbackCommand.CurrentUserId)
                 .NotEqual(Guid.Empty).NotNull();

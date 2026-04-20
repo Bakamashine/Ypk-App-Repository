@@ -11,7 +11,7 @@ namespace Aplication.Commands.Feedbacks.UpdateFeedback
     {
         public Guid Id { get; set; }
         public Guid CurrentUserId { get; set; }
-        public string FeedbackName { get; set; } = string.Empty;
+        public string Comment { get; set; } = string.Empty;
         public int Raiting { get; set; }
     }
 }

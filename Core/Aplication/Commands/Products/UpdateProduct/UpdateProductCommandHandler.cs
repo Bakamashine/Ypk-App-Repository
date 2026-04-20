@@ -46,7 +46,7 @@ namespace Aplication.Commands.Products.UpdateProduct
 
             var user = await _context.Users.Include(x => x.Role).FirstOrDefaultAsync(x => x.Id == request.CurrentUserId, cancellationToken);
 
-            if (entity.UserId == request.CurrentUserId && user.Role.RoleName.Contains(nameof(EnumRoles.Admin)))
+            if (entity.UserId == request.CurrentUserId || user.Role.RoleName.Contains(nameof(EnumRoles.Admin)))
             {
                 if (!string.IsNullOrEmpty(request.ProductName))
                     entity.ProductName = request.ProductName;

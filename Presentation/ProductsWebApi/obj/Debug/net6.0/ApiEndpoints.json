@@ -52,7 +52,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "FeedbackName",
+        "Name": "Comment",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -98,7 +98,7 @@
         "IsRequired": false
       },
       {
-        "Name": "FeedbackName",
+        "Name": "Comment",
         "Type": "System.String",
         "IsRequired": false
       },

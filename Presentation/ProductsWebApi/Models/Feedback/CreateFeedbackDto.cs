@@ -17,7 +17,7 @@ namespace ProductsWebApi.Models.Feedback
     public class CreateFeedbackDto : IMapWith<CreateFeedbackCommand>
     {
         [Required]
-        public string FeedbackName { get; set; } = string.Empty;
+        public string Comment { get; set; } = string.Empty;
         [Required]
         public int Raiting { get; set; }
         public IFormFile? Image { get; set; }
@@ -25,8 +25,8 @@ namespace ProductsWebApi.Models.Feedback
         public void Mapping(Profile profile)
         {
             profile.CreateMap<CreateFeedbackDto, CreateFeedbackCommand>()
-                .ForMember(userCommand => userCommand.FeedbackName,
-                opt => opt.MapFrom(userDto => userDto.FeedbackName))
+                .ForMember(userCommand => userCommand.Comment,
+                opt => opt.MapFrom(userDto => userDto.Comment))
                 .ForMember(userCommand => userCommand.Raiting,
                 opt => opt.MapFrom(userDto => userDto.Raiting))
                 .ForMember(cmd => cmd.Image, 
