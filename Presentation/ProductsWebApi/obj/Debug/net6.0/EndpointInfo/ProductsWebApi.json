@@ -705,6 +705,48 @@
         }
       }
     },
+    "/api/Product/byYpk/{id}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "summary": "Get products by Ypk",
+        "description": "Sample request:\r\nGET (HOST)/api/product/byYpk/AB670EFA-9049-46F2-AA3F-8C5044657851",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Siccess",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductListVm"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "If the user is unautorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Product/{id}": {
       "get": {
         "tags": [
@@ -1703,6 +1745,10 @@
         "properties": {
           "ypkName": {
             "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2113,6 +2159,10 @@
           "ypkName": {
             "type": "string",
             "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2155,6 +2205,12 @@
           },
           "isActive": {
             "type": "boolean"
+          },
+          "role": {
+            "$ref": "#/components/schemas/RoleLookupDto"
+          },
+          "ypk": {
+            "$ref": "#/components/schemas/YpkLookupDto"
           }
         },
         "additionalProperties": false
@@ -2180,6 +2236,10 @@
             "format": "uuid"
           },
           "ypkName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
             "type": "string",
             "nullable": true
           },

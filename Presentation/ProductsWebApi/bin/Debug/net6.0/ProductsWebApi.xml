@@ -263,6 +263,18 @@
             <response code="200">Siccess</response>
             <response code="401">If the user is unautorized</response>
         </member>
+        <member name="M:ProductsWebApi.Controllers.ProductController.GetAllCreated(System.Guid)">
+            <summary>
+            Get products by Ypk
+            </summary>
+            <remarks>
+            Sample request:
+            GET (HOST)/api/product/byYpk/AB670EFA-9049-46F2-AA3F-8C5044657851
+            </remarks>
+            <returns>Returns ProductListVm</returns>
+            <response code="200">Siccess</response>
+            <response code="401">If the user is unautorized</response>
+        </member>
         <member name="M:ProductsWebApi.Controllers.ProductController.Get(System.Guid)">
             <summary>
             Get info product by id

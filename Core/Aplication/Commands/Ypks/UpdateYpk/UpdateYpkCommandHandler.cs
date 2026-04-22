@@ -33,6 +33,8 @@ namespace Aplication.Commands.Ypks.UpdateYpk
             {
                 if (!string.IsNullOrEmpty(request.YpkName))
                     entity.YpkName = request.YpkName;
+                
+                entity.Description = request.Description;
 
                 await context.SaveChangesAsync(cancellationToken);
 

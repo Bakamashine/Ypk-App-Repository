@@ -12,6 +12,7 @@ namespace Aplication.Commands.Ypks.UpdateYpk
     {
         
         public string YpkName { get; set; } = string.Empty;
+        public string? Description { get; set; }
         public Guid Id { get; set; }
         public Guid CurrentUserId { get; set; }
     }

@@ -14,6 +14,7 @@ namespace Aplication.Dtos.Ypks
     {
         public Guid Id { get; set; }
         public string YpkName { get; set; } = string.Empty;
+        public string? Description { get; set; }
         public bool IsActive { get; set; }
 
         public void Mapping(Profile profile)

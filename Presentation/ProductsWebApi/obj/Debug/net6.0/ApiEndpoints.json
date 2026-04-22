@@ -720,6 +720,37 @@
     ]
   },
   {
+    "ContainingType": "ProductsWebApi.Controllers.ProductController",
+    "Method": "GetAllCreated",
+    "RelativePath": "api/Product/byYpk/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Aplication.Dtos.Products.ProductListVm",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  },
+  {
     "ContainingType": "ProductsWebApi.Controllers.RoleController",
     "Method": "Get",
     "RelativePath": "api/Role/{id}",

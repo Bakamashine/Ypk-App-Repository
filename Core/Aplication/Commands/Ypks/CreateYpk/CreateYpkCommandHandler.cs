@@ -24,6 +24,7 @@ namespace Aplication.Commands.Ypks.CreateYpk
             {
                 Id = Guid.NewGuid(),
                 YpkName = request.YpkName,
+                Description = request.Description,
                 IsActive = true
             };
 

@@ -75,6 +75,7 @@ namespace ProductsWebApi.Controllers
             var query = new GetDetailsYpkQuery
             {
                 Id = id,
+                CurrentUserId = UserId
             };
             var vm = await Mediator.Send(query);
             return Ok(vm);
