@@ -1,6 +1,6 @@
-﻿using Application.Dtos.Roles;
+﻿using Application.Common.Exceptions;
+using Application.Dtos.Roles;
 using Application.Interfaces;
-using Application.Common.Exceptions;
 using AutoMapper;
 using Domain.Model;
 using MediatR;

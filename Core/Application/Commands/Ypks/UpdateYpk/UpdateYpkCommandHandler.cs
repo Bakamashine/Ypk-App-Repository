@@ -29,6 +29,8 @@ public class UpdateYpkCommandHandler : IRequestHandler<UpdateYpkCommand>
             if (!string.IsNullOrEmpty(request.YpkName))
                 entity.YpkName = request.YpkName;
 
+            entity.Description = request.Description;
+
             await context.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;

@@ -19,6 +19,7 @@ public class CreateYpkCommandHandler : IRequestHandler<CreateYpkCommand, Guid>
         {
             Id = Guid.NewGuid(),
             YpkName = request.YpkName,
+            Description = request.Description,
             IsActive = true
         };
 

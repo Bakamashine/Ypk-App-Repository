@@ -1,4 +1,6 @@
 ﻿using Application.Common.Mappings;
+using Application.Dtos.Roles;
+using Application.Dtos.Ypks;
 using AutoMapper;
 using Domain.Model;
 
@@ -13,6 +15,9 @@ public class UserLookupDto : IMapWith<User>
     public string? UserInfo { get; set; }
     public bool IsActive { get; set; }
 
+    public RoleLookupDto? Role { get; set; }
+    public YpkLookupDto? Ypk { get; set; }
+
     public void Mapping(Profile profile)
     {
         profile.CreateMap<User, UserLookupDto>()
@@ -26,6 +31,10 @@ public class UserLookupDto : IMapWith<User>
                 opt => opt.MapFrom(user => user.HashPassword))
             .ForMember(userVm => userVm.UserInfo,
                 opt => opt.MapFrom(user => user.UserInfo))
+            .ForMember(userVm => userVm.Role,
+                opt => opt.MapFrom(user => user.Role))
+            .ForMember(userVm => userVm.Ypk,
+                opt => opt.MapFrom(user => user.Ypk))
             .ForMember(userVm => userVm.IsActive,
                 opt => opt.MapFrom(user => user.IsActive));
     }

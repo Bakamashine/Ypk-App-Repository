@@ -1,6 +1,6 @@
-﻿using Application.Dtos.Roles;
-using Application.Common.Queries.Roles.GetRole;
+﻿using Application.Common.Queries.Roles.GetRole;
 using Application.Common.Queries.Roles.GetRoleList;
+using Application.Dtos.Roles;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ProductsWebApi.Controllers;

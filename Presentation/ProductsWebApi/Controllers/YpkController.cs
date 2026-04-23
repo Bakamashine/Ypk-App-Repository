@@ -49,14 +49,15 @@ public class YpkController : BaseController
     /// </remarks>
     /// <param name="id">Ypk id guid</param>
     /// <returns>Returns YpkLookupDto</returns>
-    /// <response code="200">Success</response>
+    /// <response code="200">Siccess</response>
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<YpkLookupDto>> Get(Guid id)
     {
         var query = new GetDetailsYpkQuery
         {
-            Id = id
+            Id = id,
+            CurrentUserId = UserId
         };
         var vm = await Mediator.Send(query);
         return Ok(vm);

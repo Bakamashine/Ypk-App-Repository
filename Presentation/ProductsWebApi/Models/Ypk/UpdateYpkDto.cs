@@ -10,6 +10,7 @@ public class UpdateYpkDto : IMapWith<UpdateYpkCommand>
     [Required] public Guid Id { get; set; }
 
     public string YpkName { get; set; } = string.Empty;
+    public string? Description { get; set; }
 
     public void Mapping(Profile profile)
     {
@@ -17,6 +18,8 @@ public class UpdateYpkDto : IMapWith<UpdateYpkCommand>
             .ForMember(userCommand => userCommand.YpkName,
                 opt => opt.MapFrom(userDto => userDto.YpkName))
             .ForMember(userCommand => userCommand.Id,
-                opt => opt.MapFrom(userDto => userDto.Id));
+                opt => opt.MapFrom(userDto => userDto.Id))
+            .ForMember(userCommand => userCommand.Description,
+                opt => opt.MapFrom(userDto => userDto.Description));
     }
 }

@@ -1,10 +1,11 @@
-﻿using Application.Commands.Products.CreateProduct;
+using Application.Commands.Products.CreateProduct;
 using Application.Commands.Products.DeleteProduct;
 using Application.Commands.Products.UpdateProduct;
 using Application.Dtos.Products;
 using Application.Queries.Products.GetCreatedProductList;
 using Application.Queries.Products.GetProduct;
 using Application.Queries.Products.GetProductLis;
+using Application.Queries.Products.GetYpkListByYpk;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -75,6 +76,37 @@ public class ProductController : BaseController
 
         return Ok(vm);
     }
+
+    /// <summary>
+    ///     Get products by Ypk
+    /// </summary>
+    /// <remarks>
+    ///     Sample request:
+    ///     GET (HOST)/api/product/byYpk/AB670EFA-9049-46F2-AA3F-8C5044657851
+    /// </remarks>
+    /// <returns>Returns ProductListVm</returns>
+    /// <response code="200">Siccess</response>
+    /// <response code="401">If the user is unautorized</response>
+    [Authorize]
+    [HttpGet("byYpk/{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task<ActionResult<ProductListVm>> GetAllCreated(Guid id)
+    {
+        var query = new GetYpkListByYpkQuery
+        {
+            YpkId = id
+        };
+
+        var vm = await Mediator.Send(query);
+        if (vm?.Products == null) return Ok(vm);
+        foreach (var product in vm.Products)
+            if (!string.IsNullOrEmpty(product.PhotoPath))
+                product.PhotoUrl = $"{Request.Scheme}://{Request.Host}{product.PhotoPath}";
+
+        return Ok(vm);
+    }
+
 
     /// <summary>
     ///     Get info product by id

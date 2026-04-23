@@ -1,8 +1,8 @@
 using System.Reflection;
 using System.Text;
 using Application;
-using Application.Interfaces;
 using Application.Common.Mappings;
+using Application.Interfaces;
 using CourseWebApi.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
