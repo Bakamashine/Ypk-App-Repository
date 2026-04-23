@@ -29,7 +29,7 @@ public class FeedbackController : BaseController
     ///     GET (HOST)/api/feedback/all
     /// </remarks>
     /// <returns>Returns FeedbackListVm</returns>
-    /// <response code="200">Siccess</response>
+    /// <response code="200">Success</response>
     [HttpGet("All")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<FeedbackListVm>> GetAll()
@@ -55,7 +55,7 @@ public class FeedbackController : BaseController
     /// </remarks>
     /// <param name="id">Feedback id guid</param>
     /// <returns>Returns FeedbackLookupDto</returns>
-    /// <response code="200">Siccess</response>
+    /// <response code="200">Success</response>
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<FeedbackLookupDto>> Get(Guid id)
@@ -85,8 +85,8 @@ public class FeedbackController : BaseController
     /// </remarks>
     /// <param name="createFeedbackDto">CreateFeedbackDto object</param>
     /// <returns>Returns id (guid)</returns>
-    /// <response code="201">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="201">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [Authorize]
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -113,8 +113,8 @@ public class FeedbackController : BaseController
     /// </remarks>
     /// <param name="updateFeedbackDto">UpdateFeedbackDto object</param>
     /// <returns>Returns NoContent</returns>
-    /// <response code="204">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [HttpPut]
     [Authorize]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -136,8 +136,8 @@ public class FeedbackController : BaseController
     /// </remarks>
     /// <param name="id">Feedback id (guid)</param>
     /// <returns>Returns NoContent</returns>
-    /// <response code="204">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [Authorize]
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]

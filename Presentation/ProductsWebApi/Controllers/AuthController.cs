@@ -30,7 +30,7 @@ public class AuthController : BaseController
     /// </remarks>
     /// <param name="loginDto">LoginDto object</param>
     /// <returns>Returns access and refresh tokens</returns>
-    /// <response code="200">Siccess</response>
+    /// <response code="200">Success</response>
     [HttpPost("login")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
@@ -60,7 +60,7 @@ public class AuthController : BaseController
     /// </remarks>
     /// <param name="registrationDto">RegistrationDto object</param>
     /// <returns>Returns access and refresh tokens</returns>
-    /// <response code="200">Siccess</response>
+    /// <response code="200">Success</response>
     [HttpPost("register")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> Register([FromBody] RegistrationDto registrationDto)

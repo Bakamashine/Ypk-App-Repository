@@ -16,8 +16,8 @@ public class StatusProductController : BaseController
     ///     GET (HOST)/api/StatusProduct/all
     /// </remarks>
     /// <returns>Returns StatusProductListVm</returns>
-    /// <response code="200">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [Authorize(Roles = "Manager,Admin")]
     [HttpGet("All")]

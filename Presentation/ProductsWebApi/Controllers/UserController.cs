@@ -29,8 +29,8 @@ public class UserController : BaseController
     ///     GET (HOST)/api/user/all
     /// </remarks>
     /// <returns>Returns UsersListVm</returns>
-    /// <response code="200">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [Authorize(Roles = "Admin")]
     [HttpGet("All")]
@@ -54,8 +54,8 @@ public class UserController : BaseController
     /// </remarks>
     /// <param name="id">User id guid</param>
     /// <returns>Returns UserLookupDto</returns>
-    /// <response code="200">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [Authorize]
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -86,8 +86,8 @@ public class UserController : BaseController
     /// </remarks>
     /// <param name="createUserDto">CreateUserDto object</param>
     /// <returns>Returns id (guid)</returns>
-    /// <response code="201">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="201">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [Authorize(Roles = "Admin")]
     [ProducesResponseType(StatusCodes.Status201Created)]
@@ -120,8 +120,8 @@ public class UserController : BaseController
     /// </remarks>
     /// <param name="updateUserDto">UpdateUserDto object</param>
     /// <returns>Returns NoContent</returns>
-    /// <response code="204">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [Authorize]
     [HttpPut]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -151,8 +151,8 @@ public class UserController : BaseController
     /// </remarks>
     /// <param name="updateUserDto">UpdateUserForAdminDto object</param>
     /// <returns>Returns NoContent</returns>
-    /// <response code="204">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [Authorize(Roles = "Admin")]
     [HttpPut("admin")]
@@ -177,8 +177,8 @@ public class UserController : BaseController
     /// </remarks>
     /// <param name="id">User id (guid)</param>
     /// <returns>Returns NoContent</returns>
-    /// <response code="204">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [Authorize]
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]

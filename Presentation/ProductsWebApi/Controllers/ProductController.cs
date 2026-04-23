@@ -31,8 +31,8 @@ public class ProductController : BaseController
     ///     GET (HOST)/api/product/all
     /// </remarks>
     /// <returns>Returns ProductListVm</returns>
-    /// <response code="200">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [HttpGet("All")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -57,8 +57,8 @@ public class ProductController : BaseController
     ///     GET (HOST)/api/product/all
     /// </remarks>
     /// <returns>Returns ProductListVm</returns>
-    /// <response code="200">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [Authorize]
     [HttpGet("All/created")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -85,8 +85,8 @@ public class ProductController : BaseController
     /// </remarks>
     /// <param name="id">Product id guid</param>
     /// <returns>Returns ProductLookupDto</returns>
-    /// <response code="200">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -119,8 +119,8 @@ public class ProductController : BaseController
     /// </remarks>
     /// <param name="createProductDto">CreateProductDto object</param>
     /// <returns>Returns id (guid)</returns>
-    /// <response code="201">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="201">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [Authorize(Roles = "Manager,Admin")]
     [HttpPost]
@@ -154,8 +154,8 @@ public class ProductController : BaseController
     /// </remarks>
     /// <param name="updateProductDto">UpdateProductDto object</param>
     /// <returns>Returns NoContent</returns>
-    /// <response code="204">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [Authorize(Roles = "Manager,Admin")]
     [HttpPut]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -178,8 +178,8 @@ public class ProductController : BaseController
     /// </remarks>
     /// <param name="id">Product id (guid)</param>
     /// <returns>Returns NoContent</returns>
-    /// <response code="204">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [Authorize(Roles = "Manager,Admin")]
     [HttpDelete("{id}")]

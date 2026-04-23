@@ -34,8 +34,8 @@ public class OrderController : BaseController
     ///     GET (HOST)/api/order/manager
     /// </remarks>
     /// <returns>Returns OrderListVm</returns>
-    /// <response code="200">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [HttpGet("manager")]
     [Authorize(Roles = "Manager,Admin")]
@@ -62,8 +62,8 @@ public class OrderController : BaseController
     ///     GET (HOST)/api/order/user
     /// </remarks>
     /// <returns>Returns OrderListVm</returns>
-    /// <response code="200">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [HttpGet("user")]
     [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -87,8 +87,8 @@ public class OrderController : BaseController
     ///     GET (HOST)/api/order/all
     /// </remarks>
     /// <returns>Returns OrderListVm</returns>
-    /// <response code="200">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [HttpGet("all")]
     [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -110,8 +110,8 @@ public class OrderController : BaseController
     ///     GET (HOST)/api/order/manager/History
     /// </remarks>
     /// <returns>Returns OrderListVm</returns>
-    /// <response code="200">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [HttpGet("manager/History")]
     [Authorize(Roles = "Manager,Admin")]
@@ -138,8 +138,8 @@ public class OrderController : BaseController
     ///     GET (HOST)/api/order/user/History
     /// </remarks>
     /// <returns>Returns OrderListVm</returns>
-    /// <response code="200">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [HttpGet("user/History")]
     [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -165,8 +165,8 @@ public class OrderController : BaseController
     /// </remarks>
     /// <param name="id">Order id guid</param>
     /// <returns>Returns OrderLookupDto</returns>
-    /// <response code="200">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -194,8 +194,8 @@ public class OrderController : BaseController
     /// </remarks>
     /// <param name="createOrderDto">CreateOrderDto object</param>
     /// <returns>Returns id (guid)</returns>
-    /// <response code="201">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="201">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -226,8 +226,8 @@ public class OrderController : BaseController
     /// </remarks>
     /// <param name="updateOrderDto">UpdateOrderDto object</param>
     /// <returns>Returns NoContent</returns>
-    /// <response code="204">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [HttpPut]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -248,8 +248,8 @@ public class OrderController : BaseController
     /// </remarks>
     /// <param name="id">Order id (guid)</param>
     /// <returns>Returns NoContent</returns>
-    /// <response code="204">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]

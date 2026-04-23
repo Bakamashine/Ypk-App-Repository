@@ -29,7 +29,7 @@ public class YpkController : BaseController
     ///     GET (HOST)/api/ypk/all
     /// </remarks>
     /// <returns>Returns YpkListVm</returns>
-    /// <response code="200">Siccess</response>
+    /// <response code="200">Success</response>
     [HttpGet("All")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<YpkListVm>> GetAll()
@@ -49,7 +49,7 @@ public class YpkController : BaseController
     /// </remarks>
     /// <param name="id">Ypk id guid</param>
     /// <returns>Returns YpkLookupDto</returns>
-    /// <response code="200">Siccess</response>
+    /// <response code="200">Success</response>
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<YpkLookupDto>> Get(Guid id)
@@ -74,8 +74,8 @@ public class YpkController : BaseController
     /// </remarks>
     /// <param name="createYpkDto">CreateYpkDto object</param>
     /// <returns>Returns id (guid)</returns>
-    /// <response code="201">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="201">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [Authorize(Roles = "Admin")]
     [HttpPost]
@@ -103,8 +103,8 @@ public class YpkController : BaseController
     /// </remarks>
     /// <param name="updateYpkDto">UpdateYpkDto object</param>
     /// <returns>Returns NoContent</returns>
-    /// <response code="204">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [Authorize(Roles = "Manager,Admin")]
     [HttpPut]
@@ -128,8 +128,8 @@ public class YpkController : BaseController
     /// </remarks>
     /// <param name="id">Ypk id (guid)</param>
     /// <returns>Returns NoContent</returns>
-    /// <response code="204">Siccess</response>
-    /// <response code="401">If the user is unautorized</response>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [Authorize(Roles = "Admin")]
     [HttpDelete("{id}")]

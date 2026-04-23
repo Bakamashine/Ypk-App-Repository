@@ -16,7 +16,7 @@ public class RoleController : BaseController
     ///     GET (HOST)/api/role/all
     /// </remarks>
     /// <returns>Returns RoleListVm</returns>
-    /// <response code="200">Siccess</response>
+    /// <response code="200">Success</response>
     [HttpGet("All")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<RoleListVm>> GetAll()
@@ -36,7 +36,7 @@ public class RoleController : BaseController
     /// </remarks>
     /// <param name="id">Role id guid</param>
     /// <returns>Returns RoleLookupDto</returns>
-    /// <response code="200">Siccess</response>
+    /// <response code="200">Success</response>
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<RoleLookupDto>> Get(Guid id)
