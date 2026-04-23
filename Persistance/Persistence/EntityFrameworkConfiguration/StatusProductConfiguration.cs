@@ -2,11 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Persistance.EntityFrameworkConfiguration;
+namespace Persistence.EntityFrameworkConfiguration;
 
-public class StatusOrderConfiguration : IEntityTypeConfiguration<StatusOrder>
+public class StatusProductConfiguration : IEntityTypeConfiguration<StatusProduct>
 {
-    public void Configure(EntityTypeBuilder<StatusOrder> builder)
+    public void Configure(EntityTypeBuilder<StatusProduct> builder)
     {
         builder.HasKey(role => role.Id);
         builder.HasIndex(role => role.Id).IsUnique();

@@ -1,6 +1,6 @@
 ﻿using Application;
 using Domain.Model;
-using Persistance;
+using Persistence;
 
 namespace ProductsWebApi.Services;
 

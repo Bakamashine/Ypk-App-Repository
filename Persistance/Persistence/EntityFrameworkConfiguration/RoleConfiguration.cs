@@ -2,15 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Persistance.EntityFrameworkConfiguration;
+namespace Persistence.EntityFrameworkConfiguration;
 
-public class StatusProductConfiguration : IEntityTypeConfiguration<StatusProduct>
+public class RoleConfiguration : IEntityTypeConfiguration<Role>
 {
-    public void Configure(EntityTypeBuilder<StatusProduct> builder)
+    public void Configure(EntityTypeBuilder<Role> builder)
     {
         builder.HasKey(role => role.Id);
         builder.HasIndex(role => role.Id).IsUnique();
         builder.Property(role => role.Id).HasMaxLength(250);
-        builder.Property(role => role.StatusName).IsRequired();
+        builder.Property(role => role.RoleName).IsRequired().HasMaxLength(50);
     }
 }

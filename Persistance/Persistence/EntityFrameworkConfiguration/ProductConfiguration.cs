@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Persistance.EntityFrameworkConfiguration;
+namespace Persistence.EntityFrameworkConfiguration;
 
 public class ProductConfiguration : IEntityTypeConfiguration<Product>
 {

@@ -1,9 +1,9 @@
 ﻿using Application.Interfaces;
 using Domain.Model;
 using Microsoft.EntityFrameworkCore;
-using Persistance.EntityFrameworkConfiguration;
+using Persistence.EntityFrameworkConfiguration;
 
-namespace Persistance;
+namespace Persistence;
 
 public class ProductsDbContext : DbContext, IProductsDbContext
 {

@@ -1,7 +1,7 @@
 ﻿using Application;
 using Domain.Model;
 using Microsoft.EntityFrameworkCore;
-using Persistance;
+using Persistence;
 
 namespace ProductsWebApi.Services;
 

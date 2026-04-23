@@ -7,7 +7,7 @@ using CourseWebApi.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.IdentityModel.Tokens;
-using Persistance;
+using Persistence;
 using ProductsWebApi.Services;
 using Serilog;
 using Serilog.Events;
