@@ -70,6 +70,35 @@ try
             var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
             var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
             config.IncludeXmlComments(xmlPath);
+
+
+            if (builder.Environment.IsDevelopment())
+            {
+                config.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+                    Description = "JWT Authorization header"
+                });
+
+                config.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+            }
         });
 
         services.AddAuthentication(cnf =>
@@ -116,8 +145,9 @@ try
 
         app.UseCustomExceptionHandler();
         app.UseRouting();
-        app.UseHttpsRedirection();
         app.UseCors("AllowAll");
+
+        app.UseHttpsRedirection();
         app.UseAuthentication();
         app.UseAuthorization();
         app.UseStaticFiles();
