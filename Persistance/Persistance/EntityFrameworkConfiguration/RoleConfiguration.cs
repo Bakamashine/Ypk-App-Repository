@@ -1,22 +1,16 @@
 ﻿using Domain.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Persistance.EntityFrameworkConfiguration
+namespace Persistance.EntityFrameworkConfiguration;
+
+public class RoleConfiguration : IEntityTypeConfiguration<Role>
 {
-    public class RoleConfiguration : IEntityTypeConfiguration<Role>
+    public void Configure(EntityTypeBuilder<Role> builder)
     {
-        public void Configure(EntityTypeBuilder<Role> builder)
-        {
-            builder.HasKey(role => role.Id);
-            builder.HasIndex(role => role.Id).IsUnique();
-            builder.Property(role => role.Id).HasMaxLength(250);
-            builder.Property(role => role.RoleName).IsRequired().HasMaxLength(50);
-        }
+        builder.HasKey(role => role.Id);
+        builder.HasIndex(role => role.Id).IsUnique();
+        builder.Property(role => role.Id).HasMaxLength(250);
+        builder.Property(role => role.RoleName).IsRequired().HasMaxLength(50);
     }
 }

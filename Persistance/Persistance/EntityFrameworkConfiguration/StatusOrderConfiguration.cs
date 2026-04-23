@@ -1,22 +1,16 @@
 ﻿using Domain.Model;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Persistance.EntityFrameworkConfiguration
+namespace Persistance.EntityFrameworkConfiguration;
+
+public class StatusOrderConfiguration : IEntityTypeConfiguration<StatusOrder>
 {
-    public class StatusOrderConfiguration : IEntityTypeConfiguration<StatusOrder>
+    public void Configure(EntityTypeBuilder<StatusOrder> builder)
     {
-        public void Configure(EntityTypeBuilder<StatusOrder> builder)
-        {
-            builder.HasKey(role => role.Id);
-            builder.HasIndex(role => role.Id).IsUnique();
-            builder.Property(role => role.Id).HasMaxLength(250);
-            builder.Property(role => role.StatusName).IsRequired();
-        }
+        builder.HasKey(role => role.Id);
+        builder.HasIndex(role => role.Id).IsUnique();
+        builder.Property(role => role.Id).HasMaxLength(250);
+        builder.Property(role => role.StatusName).IsRequired();
     }
 }

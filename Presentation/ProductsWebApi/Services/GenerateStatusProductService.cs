@@ -1,42 +1,32 @@
-﻿using Aplication;
+﻿using Application;
 using Domain.Model;
 using Persistance;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ProductsWebApi.Services
+namespace ProductsWebApi.Services;
+
+public static class GenerateStatusProductService
 {
-    public static class GenerateStatusProductService
+    public static async Task AddStatusProductInDataBase(this WebApplication app)
     {
-        public static async Task AddStatusProductInDataBase(this WebApplication app)
+        using var scope = app.Services.CreateScope();
+        try
         {
-            using var scope = app.Services.CreateScope();
-            try
-            {
-                var context = scope.ServiceProvider.GetRequiredService<ProductsDbContext>();
-                await DbInitializer.Initialize(context, CancellationToken.None);
+            var context = scope.ServiceProvider.GetRequiredService<ProductsDbContext>();
+            await DbInitializer.Initialize(context, CancellationToken.None);
 
-                foreach (var nameStatus in Enum.GetNames<StatusProductEnum>())
-                {
-                    if (!context.StatusProducts.Any(name => name.StatusName == nameStatus))
+            foreach (var nameStatus in Enum.GetNames<StatusProductEnum>())
+                if (!context.StatusProducts.Any(name => name.StatusName == nameStatus))
+                    await context.StatusProducts.AddAsync(new StatusProduct
                     {
-                        await context.StatusProducts.AddAsync(new StatusProduct()
-                        {
-                            Id = Guid.NewGuid(),
-                            StatusName = nameStatus,
-                        });
-                    }
-                }
-                await context.SaveChangesAsync();
+                        Id = Guid.NewGuid(),
+                        StatusName = nameStatus
+                    });
 
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
+            await context.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
         }
     }
 }

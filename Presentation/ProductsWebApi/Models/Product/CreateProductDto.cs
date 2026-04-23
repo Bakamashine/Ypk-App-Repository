@@ -1,56 +1,46 @@
-﻿using Aplication.Commands.Orders.CreateOrder;
-using Aplication.Commands.Products.CreateProduct;
+﻿using System.ComponentModel.DataAnnotations;
+using Application.Commands.Products.CreateProduct;
 using Application.Common.Mappings;
 using AutoMapper;
-using Domain.Model;
-using ProductsWebApi.Models.Order;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ProductsWebApi.Models.Product
+namespace ProductsWebApi.Models.Product;
+
+public class CreateProductDto : IMapWith<CreateProductCommand>
 {
-    public class CreateProductDto : IMapWith<CreateProductCommand>
+    [Required] public string ProductName { get; set; } = string.Empty;
+
+    [Required] public string ProductInfo { get; set; } = string.Empty;
+
+    [Required] public decimal ProductCost { get; set; }
+
+    [Required] public bool IsProduct { get; set; }
+
+    [Required] public string Adress { get; set; } = string.Empty;
+
+    public IFormFile? Photo { get; set; }
+
+    [Required] public Guid YpkId { get; set; }
+
+    [Required] public Guid StatusProductId { get; set; }
+
+    public void Mapping(Profile profile)
     {
-        [Required]
-        public string ProductName { get; set; } = string.Empty;
-        [Required]
-        public string ProductInfo { get; set; } = string.Empty;
-        [Required]
-        public decimal ProductCost { get; set; }
-        [Required]
-        public bool IsProduct { get; set; }
-        [Required]
-        public string Adress { get; set; } = string.Empty;
-        public IFormFile? Photo { get; set; }
-
-        [Required]
-        public Guid YpkId { get; set; }
-        [Required]
-        public Guid StatusProductId { get; set; }
-
-        public void Mapping(Profile profile)
-        {
-            profile.CreateMap<CreateProductDto, CreateProductCommand>()
-                .ForMember(userCommand => userCommand.ProductName,
+        profile.CreateMap<CreateProductDto, CreateProductCommand>()
+            .ForMember(userCommand => userCommand.ProductName,
                 opt => opt.MapFrom(userDto => userDto.ProductName))
-                .ForMember(userCommand => userCommand.ProductInfo,
+            .ForMember(userCommand => userCommand.ProductInfo,
                 opt => opt.MapFrom(userDto => userDto.ProductInfo))
-                .ForMember(userCommand => userCommand.ProductCost,
+            .ForMember(userCommand => userCommand.ProductCost,
                 opt => opt.MapFrom(userDto => userDto.ProductCost))
-                .ForMember(userCommand => userCommand.IsProduct,
+            .ForMember(userCommand => userCommand.IsProduct,
                 opt => opt.MapFrom(userDto => userDto.IsProduct))
-                .ForMember(userCommand => userCommand.Adress,
+            .ForMember(userCommand => userCommand.Adress,
                 opt => opt.MapFrom(userDto => userDto.Adress))
-                .ForMember(userCommand => userCommand.Photo,
+            .ForMember(userCommand => userCommand.Photo,
                 opt => opt.MapFrom(userDto => userDto.Photo))
-                .ForMember(userCommand => userCommand.YpkId,
+            .ForMember(userCommand => userCommand.YpkId,
                 opt => opt.MapFrom(userDto => userDto.YpkId))
-                .ForMember(userCommand => userCommand.StatusProductId,
+            .ForMember(userCommand => userCommand.StatusProductId,
                 opt => opt.MapFrom(userDto => userDto.StatusProductId));
-        }
     }
 }

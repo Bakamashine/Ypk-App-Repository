@@ -1,0 +1,5 @@
+﻿namespace Application.Queries.Orders.GetOrderListForDefaultUserHistory;
+
+internal class GetAllOrderQueryValidatorForDefaultUserHistory
+{
+}
