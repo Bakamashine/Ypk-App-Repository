@@ -1,16 +1,10 @@
 ﻿using Domain.Model.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Domain.Model
+namespace Domain.Model;
+
+public class Role : BaseModel
 {
-    public class Role : BaseModel
-    {
-        public string RoleName { get; set; } = string.Empty;
+    public string RoleName { get; set; } = string.Empty;
 
-        public ICollection<User>? Users { get; set; }
-    }
+    public ICollection<User>? Users { get; set; }
 }

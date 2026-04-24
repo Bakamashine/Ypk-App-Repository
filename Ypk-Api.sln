@@ -8,14 +8,17 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistance", "Persistance", "{F881D395-90AC-48FB-A965-395BB70BAF69}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{376831E2-901B-40EE-82DC-0474203D2690}"
+	ProjectSection(SolutionItems) = preProject
+		Domain\.gitignore = Domain\.gitignore
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{D6A44BD5-DE80-48FA-A493-85DF97B58DB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain\Domain.csproj", "{BA700F72-7DBF-4255-9966-DCB8C832A4D6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistance", "Persistance\Persistance\Persistance.csproj", "{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistance\Persistence\Persistence.csproj", "{9BFEE4C4-1360-407E-A642-89D6A9EDBD1F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aplication", "Core\Aplication\Aplication.csproj", "{98F045ED-E437-4C71-BF8C-8E63ADB2E184}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Core\Application\Application.csproj", "{98F045ED-E437-4C71-BF8C-8E63ADB2E184}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsWebApi", "Presentation\ProductsWebApi\ProductsWebApi.csproj", "{A63335E1-9F89-4E6C-8975-FE4485300854}"
 EndProject

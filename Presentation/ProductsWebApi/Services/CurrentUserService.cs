@@ -1,25 +1,23 @@
-﻿using Aplication.Interfaces;
-using System.Security.Claims;
+﻿using System.Security.Claims;
+using Application.Interfaces;
 
-namespace ProductsWebApi.Services
+namespace ProductsWebApi.Services;
+
+public class CurrentUserService : ICurrentUserService
 {
-    public class CurrentUserService : ICurrentUserService
+    private readonly IHttpContextAccessor httpContextAccessor;
+
+    public CurrentUserService(IHttpContextAccessor httpContextAccessor)
     {
-        private readonly IHttpContextAccessor httpContextAccessor;
+        this.httpContextAccessor = httpContextAccessor;
+    }
 
-        public CurrentUserService(IHttpContextAccessor httpContextAccessor)
+    public Guid UserId
+    {
+        get
         {
-            this.httpContextAccessor = httpContextAccessor;
+            var id = httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+            return string.IsNullOrEmpty(id) ? Guid.Empty : Guid.Parse(id);
         }
-        public Guid UserId
-        {
-            get
-            {
-                var id = httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
-                return string.IsNullOrEmpty(id) ? Guid.Empty : Guid.Parse(id);
-
-            }
-        }
-
     }
 }

@@ -1,19 +1,70 @@
-# Visual Studio
-.vs/
+# Binaries
+bin/
+obj/
+
+# User-specific files
 *.user
 *.suo
 
-# Build outputs
-bin/
-obj/
-Debug/
-Release/
+# Visual Studio
+.vs/
+.vscode/
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# ASP.NET Core
+wwwroot/lib/
+wwwroot/dist/
 
 # Logs
 logs/
 *.log
+*.log.*
 
-# IDE
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Application settings (development)
+**/appsettings.Development.json
+**/appsettings.*.json
+
+# Rider
 .idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
 *.swp
 *.swo
+
+# Build artifacts
+*.exe
+*.dll
+*.pdb
+*.cache
+
+# Test results
+TestResults/
+*.trx
+
+# Coverage reports
+coverage/
+*.coverage
+
+*.lscache
