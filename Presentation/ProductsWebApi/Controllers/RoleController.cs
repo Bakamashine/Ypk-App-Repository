@@ -17,7 +17,7 @@ public class RoleController : BaseController
     /// </remarks>
     /// <returns>Returns RoleListVm</returns>
     /// <response code="200">Success</response>
-    [HttpGet("All")]
+    [HttpGet("all")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<RoleListVm>> GetAll()
     {

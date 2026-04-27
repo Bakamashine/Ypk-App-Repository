@@ -10,7 +10,7 @@ public class CreateProductCommandValidator : AbstractValidator<CreateProductComm
             .NotEmpty().NotNull();
         RuleFor(createFeedbackCommand => createFeedbackCommand.ProductInfo)
             .NotEmpty().NotNull();
-        RuleFor(createFeedbackCommand => createFeedbackCommand.Adress)
+        RuleFor(createFeedbackCommand => createFeedbackCommand.Adres)
             .NotEmpty().NotNull();
         RuleFor(createFeedbackCommand => createFeedbackCommand.IsProduct)
             .NotNull();

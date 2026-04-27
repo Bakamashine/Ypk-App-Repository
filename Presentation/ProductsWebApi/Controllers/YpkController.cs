@@ -30,7 +30,7 @@ public class YpkController : BaseController
     /// </remarks>
     /// <returns>Returns YpkListVm</returns>
     /// <response code="200">Success</response>
-    [HttpGet("All")]
+    [HttpGet("all")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<YpkListVm>> GetAll()
     {

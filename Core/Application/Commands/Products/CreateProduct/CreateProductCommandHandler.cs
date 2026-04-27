@@ -35,7 +35,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
             ProductInfo = request.ProductInfo,
             IsProduct = request.IsProduct,
             PhotoPath = photoPath,
-            Adress = request.Adress
+            Adres = request.Adres
         };
 
         await _context.Products.AddAsync(newProduct, cancellationToken);

@@ -43,8 +43,8 @@ public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand>
                 entity.ProductName = request.ProductName;
             if (!string.IsNullOrEmpty(request.ProductInfo))
                 entity.ProductInfo = request.ProductInfo;
-            if (!string.IsNullOrEmpty(request.Adress))
-                entity.ProductInfo = request.Adress;
+            if (!string.IsNullOrEmpty(request.Adres))
+                entity.ProductInfo = request.Adres;
             if (!string.IsNullOrEmpty(photoPath))
                 entity.ProductInfo = photoPath;
             if (request.IsProduct != request.IsProduct)

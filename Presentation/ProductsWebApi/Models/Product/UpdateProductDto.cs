@@ -13,7 +13,7 @@ public class UpdateProductDto : IMapWith<UpdateProductCommand>
     public string ProductInfo { get; set; } = string.Empty;
     public decimal ProductCost { get; set; }
     public bool IsProduct { get; set; }
-    public string Adress { get; set; } = string.Empty;
+    public string Adres { get; set; } = string.Empty;
     public IFormFile? Photo { get; set; }
 
     public Guid YpkId { get; set; }
@@ -32,8 +32,8 @@ public class UpdateProductDto : IMapWith<UpdateProductCommand>
                 opt => opt.MapFrom(userDto => userDto.ProductCost))
             .ForMember(userCommand => userCommand.IsProduct,
                 opt => opt.MapFrom(userDto => userDto.IsProduct))
-            .ForMember(userCommand => userCommand.Adress,
-                opt => opt.MapFrom(userDto => userDto.Adress))
+            .ForMember(userCommand => userCommand.Adres,
+                opt => opt.MapFrom(userDto => userDto.Adres))
             .ForMember(userCommand => userCommand.Photo,
                 opt => opt.MapFrom(userDto => userDto.Photo))
             .ForMember(userCommand => userCommand.YpkId,

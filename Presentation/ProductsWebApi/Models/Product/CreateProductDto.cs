@@ -15,7 +15,7 @@ public class CreateProductDto : IMapWith<CreateProductCommand>
 
     [Required] public bool IsProduct { get; set; }
 
-    [Required] public string Adress { get; set; } = string.Empty;
+    [Required] public string Adres { get; set; } = string.Empty;
 
     public IFormFile? Photo { get; set; }
 
@@ -34,8 +34,8 @@ public class CreateProductDto : IMapWith<CreateProductCommand>
                 opt => opt.MapFrom(userDto => userDto.ProductCost))
             .ForMember(userCommand => userCommand.IsProduct,
                 opt => opt.MapFrom(userDto => userDto.IsProduct))
-            .ForMember(userCommand => userCommand.Adress,
-                opt => opt.MapFrom(userDto => userDto.Adress))
+            .ForMember(userCommand => userCommand.Adres,
+                opt => opt.MapFrom(userDto => userDto.Adres))
             .ForMember(userCommand => userCommand.Photo,
                 opt => opt.MapFrom(userDto => userDto.Photo))
             .ForMember(userCommand => userCommand.YpkId,

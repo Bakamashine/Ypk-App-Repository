@@ -17,7 +17,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         builder.Property(user => user.UserId).IsRequired();
         builder.Property(user => user.ProductCost).IsRequired().HasPrecision(9, 2);
         builder.Property(user => user.IsProduct).IsRequired();
-        builder.Property(user => user.Adress).IsRequired();
+        builder.Property(user => user.Adres).IsRequired();
 
         builder.HasOne(product => product.User)
             .WithMany(user => user.Products)

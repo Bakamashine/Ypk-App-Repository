@@ -34,7 +34,7 @@ public class ProductController : BaseController
     /// <returns>Returns ProductListVm</returns>
     /// <response code="200">Success</response>
     /// <response code="401">If the user is unauthorized</response>
-    [HttpGet("All")]
+    [HttpGet("all")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<ProductListVm>> GetAll()
@@ -61,7 +61,7 @@ public class ProductController : BaseController
     /// <response code="200">Success</response>
     /// <response code="401">If the user is unauthorized</response>
     [Authorize]
-    [HttpGet("All/created")]
+    [HttpGet("all/created")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<ProductListVm>> GetAllCreated()
@@ -141,7 +141,7 @@ public class ProductController : BaseController
     ///     POST (HOST)/api/product
     ///     {
     ///     "ProductInfo": "string",
-    ///     "Adress": "string",
+    ///     "Adres": "string",
     ///     "Photo": "file"
     ///     "ProductCost": "decimal"
     ///     "IsProduct": "bool"
@@ -176,7 +176,7 @@ public class ProductController : BaseController
     ///     {
     ///     "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
     ///     "ProductInfo": "string",
-    ///     "Adress": "string",
+    ///     "Adres": "string",
     ///     "Photo": "file"
     ///     "ProductCost": "decimal"
     ///     "IsProduct": "bool"

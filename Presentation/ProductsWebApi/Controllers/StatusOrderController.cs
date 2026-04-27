@@ -20,7 +20,7 @@ public class StatusOrderController : BaseController
     /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [Authorize(Roles = "Manager,Admin")]
-    [HttpGet("All")]
+    [HttpGet("all")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status403Forbidden)]
