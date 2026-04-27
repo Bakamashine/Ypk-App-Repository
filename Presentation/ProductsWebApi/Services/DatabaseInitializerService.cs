@@ -14,9 +14,6 @@ public static class DatabaseInitializerService
         {
             var context = scope.ServiceProvider.GetRequiredService<ProductsDbContext>();
 
-            // Инициализируем базу один раз
-            await DbInitializer.Initialize(context, CancellationToken.None);
-
             // Добавляем все данные в одном методе
             await InitializeRoles(context);
             await InitializeStatusOrders(context);
