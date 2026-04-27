@@ -10,7 +10,7 @@ public static class DependencyInjection
     public static IServiceCollection AddPersistance(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration["DbConnection"];
-        services.AddDbContext<ProductsDbContext>(options => { options.UseNpgsql(connectionString); });
+        services.AddDbContext<ProductsDbContext>(options => { options.UseNpgsql(connectionString, b=> { b.MigrationsAssembly("Persistence"); }); });
         services.AddScoped<IProductsDbContext, ProductsDbContext>(provider =>
             provider.GetRequiredService<ProductsDbContext>());
         return services;
