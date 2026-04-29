@@ -7,9 +7,9 @@ namespace Application.Commands.Orders.CreateOrder;
 
 public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Guid>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
 
-    public CreateOrderCommandHandler(IProductsDbContext context)
+    public CreateOrderCommandHandler(IApplicationDbContext context)
     {
         this.context = context;
     }

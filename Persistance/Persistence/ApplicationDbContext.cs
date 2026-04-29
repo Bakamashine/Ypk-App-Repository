@@ -5,9 +5,9 @@ using Persistence.EntityFrameworkConfiguration;
 
 namespace Persistence;
 
-public class ProductsDbContext : DbContext, IProductsDbContext
+public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
-    public ProductsDbContext(DbContextOptions<ProductsDbContext> options) : base(options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
     }
 
@@ -20,6 +20,8 @@ public class ProductsDbContext : DbContext, IProductsDbContext
     public DbSet<Product> Products { get; set; }
     public DbSet<Feedback> Feedbacks { get; set; }
     public DbSet<Ypk> Ypks { get; set; }
+    public DbSet<RefreshToken> UserToken { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -31,6 +33,22 @@ public class ProductsDbContext : DbContext, IProductsDbContext
         builder.ApplyConfiguration(new StatusProductConfiguration());
         builder.ApplyConfiguration(new FeedbackConfiguration());
         builder.ApplyConfiguration(new ProductConfiguration());
+
         base.OnModelCreating(builder);
     }
+
+    // protected override void OnConfiguring(DbContextOptionsBuilder options)
+    // {
+    //     var connectionString = Environment.GetEnvironmentVariable("DbConnection");
+    //     var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+    //     if (connectionString == null) return;
+    //     if (env == "Development")
+    //     {
+    //         
+    //         options.UseSqlite(connectionString, b => { b.MigrationsAssembly("Persistence"); });
+    //     }
+    //     else
+    //         options.UseNpgsql(connectionString, b => { b.MigrationsAssembly("Persistence"); });
+    //     base.OnConfiguring(options);
+    // }
 }

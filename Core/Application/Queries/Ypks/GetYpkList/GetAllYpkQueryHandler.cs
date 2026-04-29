@@ -9,10 +9,10 @@ namespace Application.Queries.Ypks.GetYpkList;
 
 public class GetAllYpkQueryHandler : IRequestHandler<GetAllYpkQuery, YpkListVm>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IMapper mapper;
 
-    public GetAllYpkQueryHandler(IProductsDbContext context, IMapper mapper)
+    public GetAllYpkQueryHandler(IApplicationDbContext context, IMapper mapper)
     {
         this.context = context;
         this.mapper = mapper;

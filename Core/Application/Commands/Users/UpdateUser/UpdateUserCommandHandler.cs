@@ -7,21 +7,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Application.Commands.Users.UpdateUser;
 
-public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, TokensDto>
+public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, TokenDto>
 {
-    private readonly IProductsDbContext context;
+    private readonly IJwtTokenService _tokenService;
+    private readonly IApplicationDbContext context;
     private readonly IPasswordHasherServise passwordHasher;
-    private readonly IJwtTokenServise tokenServise;
 
-    public UpdateUserCommandHandler(IProductsDbContext context, IJwtTokenServise tokenServise,
+    public UpdateUserCommandHandler(IApplicationDbContext context, IJwtTokenService tokenService,
         IPasswordHasherServise passwordHasher)
     {
         this.context = context;
-        this.tokenServise = tokenServise;
+        _tokenService = tokenService;
         this.passwordHasher = passwordHasher;
     }
 
-    public async Task<TokensDto> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
+    public async Task<TokenDto> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
     {
         var currentUser = await context.Users.FindAsync(new object[] { request.CurrentUserId }, cancellationToken)
                           ?? throw new NotFoundException(nameof(User), request.CurrentUserId);
@@ -55,7 +55,7 @@ public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Token
 
                 await context.SaveChangesAsync(cancellationToken);
 
-                return await tokenServise.GenerateToken(entity);
+                return await _tokenService.GenerateToken(entity);
             }
         }
 

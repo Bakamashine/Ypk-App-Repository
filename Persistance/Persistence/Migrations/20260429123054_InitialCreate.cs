@@ -5,18 +5,16 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Persistence.Migrations
 {
-    /// <inheritdoc />
-    public partial class FirstMigrationYpkDB : Migration
+    public partial class InitialCreate : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", maxLength: 250, nullable: false),
-                    RoleName = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", maxLength: 250, nullable: false),
+                    RoleName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -27,8 +25,8 @@ namespace Persistence.Migrations
                 name: "StatusOrders",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", maxLength: 250, nullable: false),
-                    StatusName = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", maxLength: 250, nullable: false),
+                    StatusName = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -39,8 +37,8 @@ namespace Persistence.Migrations
                 name: "StatusProducts",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", maxLength: 250, nullable: false),
-                    StatusName = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", maxLength: 250, nullable: false),
+                    StatusName = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -51,10 +49,10 @@ namespace Persistence.Migrations
                 name: "Ypks",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", maxLength: 250, nullable: false),
-                    YpkName = table.Column<string>(type: "text", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: true),
-                    IsActive = table.Column<bool>(type: "boolean", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", maxLength: 250, nullable: false),
+                    YpkName = table.Column<string>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: true),
+                    IsActive = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -65,14 +63,14 @@ namespace Persistence.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", maxLength: 250, nullable: false),
-                    Fullname = table.Column<string>(type: "character varying(150)", maxLength: 150, nullable: false),
-                    HashPassword = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
-                    PhoneNumber = table.Column<string>(type: "character varying(12)", maxLength: 12, nullable: false),
-                    RoleId = table.Column<Guid>(type: "uuid", nullable: false),
-                    YpkId = table.Column<Guid>(type: "uuid", nullable: true),
-                    UserInfo = table.Column<string>(type: "text", nullable: true),
-                    IsActive = table.Column<bool>(type: "boolean", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", maxLength: 250, nullable: false),
+                    Fullname = table.Column<string>(type: "TEXT", maxLength: 150, nullable: false),
+                    HashPassword = table.Column<string>(type: "TEXT", maxLength: 250, nullable: false),
+                    PhoneNumber = table.Column<string>(type: "TEXT", maxLength: 12, nullable: false),
+                    RoleId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    YpkId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    UserInfo = table.Column<string>(type: "TEXT", nullable: true),
+                    IsActive = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -95,11 +93,11 @@ namespace Persistence.Migrations
                 name: "Feedbacks",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", maxLength: 250, nullable: false),
-                    UserId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Comment = table.Column<string>(type: "character varying(1500)", maxLength: 1500, nullable: false),
-                    Raiting = table.Column<int>(type: "integer", nullable: false, defaultValue: 1),
-                    ImagePath = table.Column<string>(type: "text", nullable: true)
+                    Id = table.Column<Guid>(type: "TEXT", maxLength: 250, nullable: false),
+                    UserId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Comment = table.Column<string>(type: "TEXT", maxLength: 1500, nullable: false),
+                    Raiting = table.Column<int>(type: "INTEGER", nullable: false, defaultValue: 1),
+                    ImagePath = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -116,16 +114,16 @@ namespace Persistence.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", maxLength: 250, nullable: false),
-                    ProductName = table.Column<string>(type: "text", nullable: false),
-                    YpkId = table.Column<Guid>(type: "uuid", nullable: false),
-                    UserId = table.Column<Guid>(type: "uuid", nullable: false),
-                    StatusProductId = table.Column<Guid>(type: "uuid", nullable: false),
-                    ProductCost = table.Column<decimal>(type: "numeric(9,2)", precision: 9, scale: 2, nullable: false),
-                    ProductInfo = table.Column<string>(type: "text", nullable: false),
-                    IsProduct = table.Column<bool>(type: "boolean", nullable: false),
-                    PhotoPath = table.Column<string>(type: "text", nullable: true),
-                    Adres = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", maxLength: 250, nullable: false),
+                    ProductName = table.Column<string>(type: "TEXT", nullable: false),
+                    YpkId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    UserId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    StatusProductId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    ProductCost = table.Column<decimal>(type: "TEXT", precision: 9, scale: 2, nullable: false),
+                    ProductInfo = table.Column<string>(type: "TEXT", nullable: false),
+                    IsProduct = table.Column<bool>(type: "INTEGER", nullable: false),
+                    PhotoPath = table.Column<string>(type: "TEXT", nullable: true),
+                    Adres = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -151,17 +149,37 @@ namespace Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "UserToken",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Token = table.Column<string>(type: "TEXT", nullable: false),
+                    UserId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    ExpiresOnUtc = table.Column<DateTime>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserToken", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserToken_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Orders",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", maxLength: 250, nullable: false),
-                    CustomerId = table.Column<Guid>(type: "uuid", nullable: false),
-                    ExecutorId = table.Column<Guid>(type: "uuid", nullable: true),
-                    ProductId = table.Column<Guid>(type: "uuid", nullable: false),
-                    StatusOrderId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    CustomersComment = table.Column<string>(type: "character varying(1500)", maxLength: 1500, nullable: true),
-                    UserComment = table.Column<string>(type: "character varying(1500)", maxLength: 1500, nullable: true)
+                    Id = table.Column<Guid>(type: "TEXT", maxLength: 250, nullable: false),
+                    CustomerId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    ExecutorId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    ProductId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    StatusOrderId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Date = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    CustomersComment = table.Column<string>(type: "TEXT", maxLength: 1500, nullable: true),
+                    UserComment = table.Column<string>(type: "TEXT", maxLength: 1500, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -274,13 +292,17 @@ namespace Persistence.Migrations
                 column: "YpkId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_UserToken_UserId",
+                table: "UserToken",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Ypks_Id",
                 table: "Ypks",
                 column: "Id",
                 unique: true);
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
@@ -288,6 +310,9 @@ namespace Persistence.Migrations
 
             migrationBuilder.DropTable(
                 name: "Orders");
+
+            migrationBuilder.DropTable(
+                name: "UserToken");
 
             migrationBuilder.DropTable(
                 name: "Products");

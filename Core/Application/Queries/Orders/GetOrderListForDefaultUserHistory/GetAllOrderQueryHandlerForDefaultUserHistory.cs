@@ -10,10 +10,10 @@ namespace Application.Queries.Orders.GetOrderListForDefaultUserHistory;
 public class
     GetAllOrderQueryHandlerForDefaultUserHistory : IRequestHandler<GetAllOrderQueryForDefaultUserHistory, OrderListVm>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IMapper mapper;
 
-    public GetAllOrderQueryHandlerForDefaultUserHistory(IMapper mapper, IProductsDbContext context)
+    public GetAllOrderQueryHandlerForDefaultUserHistory(IMapper mapper, IApplicationDbContext context)
     {
         this.mapper = mapper;
         this.context = context;

@@ -6,10 +6,10 @@ namespace Application.Commands.Feedbacks.CreateFeedback;
 
 public class CreateFeedbackCommandHandler : IRequestHandler<CreateFeedbackCommand, Guid>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IFileStorageService fileStorage;
 
-    public CreateFeedbackCommandHandler(IProductsDbContext context, IFileStorageService fileStorage)
+    public CreateFeedbackCommandHandler(IApplicationDbContext context, IFileStorageService fileStorage)
     {
         this.context = context;
         this.fileStorage = fileStorage;

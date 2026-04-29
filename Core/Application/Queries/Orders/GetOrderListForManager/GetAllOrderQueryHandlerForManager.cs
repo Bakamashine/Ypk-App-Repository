@@ -9,10 +9,10 @@ namespace Application.Queries.Orders.GetOrderListForManager;
 
 public class GetAllOrderQueryHandlerForManager : IRequestHandler<GetAllOrderQueryForManager, OrderListVm>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IMapper mapper;
 
-    public GetAllOrderQueryHandlerForManager(IMapper mapper, IProductsDbContext context)
+    public GetAllOrderQueryHandlerForManager(IMapper mapper, IApplicationDbContext context)
     {
         this.mapper = mapper;
         this.context = context;

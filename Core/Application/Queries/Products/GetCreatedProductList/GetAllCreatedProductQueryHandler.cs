@@ -9,10 +9,10 @@ namespace Application.Queries.Products.GetCreatedProductList;
 
 public class GetAllCreatedProductQueryHandler : IRequestHandler<GetAllCreatedProductQuery, ProductListVm>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IMapper mapper;
 
-    public GetAllCreatedProductQueryHandler(IMapper mapper, IProductsDbContext context)
+    public GetAllCreatedProductQueryHandler(IMapper mapper, IApplicationDbContext context)
     {
         this.mapper = mapper;
         this.context = context;

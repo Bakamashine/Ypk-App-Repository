@@ -8,9 +8,9 @@ namespace Application.Commands.Feedbacks.DeleteFeedback;
 
 public class DeleteFeedbackCommandHandler : IRequestHandler<DeleteFeedbackCommand>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
 
-    public DeleteFeedbackCommandHandler(IProductsDbContext context)
+    public DeleteFeedbackCommandHandler(IApplicationDbContext context)
     {
         this.context = context;
     }

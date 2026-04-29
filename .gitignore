@@ -68,3 +68,15 @@ coverage/
 *.coverage
 
 *.lscache
+
+# Sqlite
+*.db-*
+*.database
+*.sqlite
+
+# Logs
+Logs
+
+# Images or files
+wwwroot/*
+

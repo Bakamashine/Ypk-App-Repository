@@ -6,9 +6,9 @@ namespace Application.Commands.Ypks.CreateYpk;
 
 public class CreateYpkCommandHandler : IRequestHandler<CreateYpkCommand, Guid>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
 
-    public CreateYpkCommandHandler(IProductsDbContext context)
+    public CreateYpkCommandHandler(IApplicationDbContext context)
     {
         this.context = context;
     }

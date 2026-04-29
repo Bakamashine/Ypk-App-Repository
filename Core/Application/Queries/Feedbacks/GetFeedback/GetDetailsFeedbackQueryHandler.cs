@@ -10,10 +10,10 @@ namespace Application.Queries.Feedbacks.GetFeedback;
 
 public class GetDetailsFeedbackQueryHandler : IRequestHandler<GetDetailsFeedbackQuery, FeedbackLookupDto>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IMapper mapper;
 
-    public GetDetailsFeedbackQueryHandler(IProductsDbContext context, IMapper mapper)
+    public GetDetailsFeedbackQueryHandler(IApplicationDbContext context, IMapper mapper)
     {
         this.context = context;
         this.mapper = mapper;

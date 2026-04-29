@@ -7,12 +7,23 @@ namespace Persistence;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddPersistance(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration["DbConnection"];
-        services.AddDbContext<ProductsDbContext>(options => { options.UseNpgsql(connectionString, b=> { b.MigrationsAssembly("Persistence"); }); });
-        services.AddScoped<IProductsDbContext, ProductsDbContext>(provider =>
-            provider.GetRequiredService<ProductsDbContext>());
+        var env = configuration["ASPNETCORE_ENVIRONMENT"];
+
+        services.AddDbContext<ApplicationDbContext>(options =>
+        {
+            if (connectionString == null) return;
+            if (env == "Development")
+                options.UseSqlite(connectionString, b => { b.MigrationsAssembly("Persistence"); });
+            else
+                options.UseNpgsql(connectionString, b => { b.MigrationsAssembly("Persistence"); });
+        });
+
+        // services.AddDbContext<ApplicationDbContext>();
+        services.AddScoped<IApplicationDbContext>(provider =>
+            provider.GetRequiredService<ApplicationDbContext>());
         return services;
     }
 }

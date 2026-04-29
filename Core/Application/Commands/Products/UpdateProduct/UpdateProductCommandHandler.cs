@@ -8,12 +8,12 @@ namespace Application.Commands.Products.UpdateProduct;
 
 public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand>
 {
-    private readonly IProductsDbContext _context;
+    private readonly IApplicationDbContext _context;
     private readonly IFileStorageService _fileStorage;
 
 
     public UpdateProductCommandHandler(
-        IProductsDbContext context,
+        IApplicationDbContext context,
         IFileStorageService fileStorage)
     {
         _context = context;

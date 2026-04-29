@@ -8,10 +8,10 @@ namespace Application.Queries.Orders.GetOrder;
 
 public class GetDetailOrderQueryHandler : IRequestHandler<GetDetailOrderQuery, OrderLookupDto>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IMapper mapper;
 
-    public GetDetailOrderQueryHandler(IProductsDbContext context, IMapper mapper)
+    public GetDetailOrderQueryHandler(IApplicationDbContext context, IMapper mapper)
     {
         this.context = context;
         this.mapper = mapper;

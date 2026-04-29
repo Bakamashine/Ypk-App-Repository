@@ -8,9 +8,9 @@ namespace Application.Commands.Orders.UpdateOrder;
 
 public class UpdateOrderCommandHandler : IRequestHandler<UpdateOrderCommand>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
 
-    public UpdateOrderCommandHandler(IProductsDbContext context)
+    public UpdateOrderCommandHandler(IApplicationDbContext context)
     {
         this.context = context;
     }

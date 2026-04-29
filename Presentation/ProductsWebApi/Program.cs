@@ -7,6 +7,7 @@ using CourseWebApi.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Persistence;
 using ProductsWebApi.Services;
 using Serilog;
@@ -29,7 +30,7 @@ try
     var app = builder.Build();
     await Configure(app);
 
-    var uploadsPath = Path.Combine(app.Environment.WebRootPath, "uploads", "reviews");
+    // var uploadsPath = Path.Combine(app.Environment.WebRootPath, "uploads", "reviews");
 
     app.Run();
 
@@ -47,7 +48,7 @@ try
         services.AddAutoMapper(options =>
         {
             options.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
-            options.AddProfile(new AssemblyMappingProfile(typeof(IProductsDbContext).Assembly));
+            options.AddProfile(new AssemblyMappingProfile(typeof(IApplicationDbContext).Assembly));
         });
 
         services.AddCors(options =>
@@ -62,7 +63,7 @@ try
 
         services.AddHttpContextAccessor();
         services.AddApplication();
-        services.AddPersistance(builder.Configuration);
+        services.AddPersistence(builder.Configuration);
         services.AddControllers();
 
         services.AddSwaggerGen(config =>
@@ -74,30 +75,30 @@ try
 
             if (builder.Environment.IsDevelopment())
             {
-                config.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+                config.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
-                    Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+                    Type = SecuritySchemeType.Http,
                     Scheme = "Bearer",
                     BearerFormat = "JWT",
-                    In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+                    In = ParameterLocation.Header,
                     Description = "JWT Authorization header"
                 });
 
-                config.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
-    {
-        {
-            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
-            {
-                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                config.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
-                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            Array.Empty<string>()
-        }
-    });
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
             }
         });
 
@@ -128,7 +129,7 @@ try
 
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
-        services.AddScoped<IJwtTokenServise, JwtTokenService>();
+        services.AddScoped<IJwtTokenService, JwtTokenService>();
         services.AddScoped<IPasswordHasherServise, PasswordHasherService>();
     }
 

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Application.Interfaces;
 
-public interface IProductsDbContext
+public interface IApplicationDbContext
 {
     DbSet<User> Users { get; set; }
     DbSet<Role> Roles { get; set; }
@@ -14,5 +14,6 @@ public interface IProductsDbContext
     DbSet<Feedback> Feedbacks { get; set; }
     DbSet<Ypk> Ypks { get; set; }
 
+    DbSet<RefreshToken> UserToken { get; set; }
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

@@ -9,10 +9,10 @@ namespace Application.Common.Queries.Roles.GetRoleList;
 
 public class GetAllRoleQueryHandler : IRequestHandler<GetAllRoleQuery, RoleListVm>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IMapper mapper;
 
-    public GetAllRoleQueryHandler(IProductsDbContext context, IMapper mapper)
+    public GetAllRoleQueryHandler(IApplicationDbContext context, IMapper mapper)
     {
         this.context = context;
         this.mapper = mapper;

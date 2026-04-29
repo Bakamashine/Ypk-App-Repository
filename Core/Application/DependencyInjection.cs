@@ -1,5 +1,7 @@
 ﻿using System.Reflection;
 using Application.Behaviors;
+using Application.Interfaces.Repository;
+using Application.Repository;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,6 +15,7 @@ public static class DependencyInjection
         services.AddMediatR(Assembly.GetExecutingAssembly());
         services.AddValidatorsFromAssemblies(new[] { Assembly.GetExecutingAssembly() });
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+        services.AddScoped<IUserRepository, UserRepository>();
         return services;
     }
 }

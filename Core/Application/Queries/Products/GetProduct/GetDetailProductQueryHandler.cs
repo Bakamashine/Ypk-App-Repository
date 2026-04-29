@@ -8,10 +8,10 @@ namespace Application.Queries.Products.GetProduct;
 
 public class GetDetailProductQueryHandler : IRequestHandler<GetDetailProductQuery, ProductLookupDto>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IMapper mapper;
 
-    public GetDetailProductQueryHandler(IProductsDbContext context, IMapper mapper)
+    public GetDetailProductQueryHandler(IApplicationDbContext context, IMapper mapper)
     {
         this.context = context;
         this.mapper = mapper;

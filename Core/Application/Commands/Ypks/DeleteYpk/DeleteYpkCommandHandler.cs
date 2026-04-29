@@ -8,9 +8,9 @@ namespace Application.Commands.Ypks.DeleteYpk;
 
 public class DeleteYpkCommandHandler : IRequestHandler<DeleteYpkCommand>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
 
-    public DeleteYpkCommandHandler(IProductsDbContext context)
+    public DeleteYpkCommandHandler(IApplicationDbContext context)
     {
         this.context = context;
     }

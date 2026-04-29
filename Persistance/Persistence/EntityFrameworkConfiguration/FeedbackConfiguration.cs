@@ -13,9 +13,9 @@ public class FeedbackConfiguration : IEntityTypeConfiguration<Feedback>
         builder.Property(role => role.Id).HasMaxLength(250);
         builder.Property(role => role.UserId).IsRequired();
         builder.Property(role => role.Raiting)
-     .IsRequired()
-     .HasDefaultValue(1);
-        
+            .IsRequired()
+            .HasDefaultValue(1);
+
         builder.Property(role => role.Comment).IsRequired().HasMaxLength(1500);
 
 
