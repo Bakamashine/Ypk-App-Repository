@@ -2,8 +2,11 @@
 using Application.Commands.Feedbacks.DeleteFeedback;
 using Application.Commands.Feedbacks.UpdateFeedback;
 using Application.Dtos.Feedbacks;
+using Application.Extensions;
+using Application.Queries.Base;
 using Application.Queries.Feedbacks.GetFeedback;
 using Application.Queries.Feedbacks.GetFeedbackList;
+using Application.Queries.Feedbacks.GetFeedbackPagList;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -39,13 +42,28 @@ public class FeedbackController : BaseController
         var vm = await Mediator.Send(query);
 
         if (vm?.Feedbacks != null)
-            foreach (var feedback in vm.Feedbacks)
-                if (!string.IsNullOrEmpty(feedback.ImagePath))
-                    feedback.ImageUrl = $"{Request.Scheme}://{Request.Host}{feedback.ImagePath}";
+            vm.Feedbacks.SetImageUrls($"{Request.Scheme}://{Request.Host}");
+            // foreach (var feedback in vm.Feedbacks)
+            //     if (!string.IsNullOrEmpty(feedback.ImagePath))
+            //         feedback.ImageUrl = $"{Request.Scheme}://{Request.Host}{feedback.ImagePath}";
 
         return Ok(vm);
     }
 
+    [HttpGet("pag/all")]
+    
+    public async Task<ActionResult<PagedList<FeedbackListVm>>> GetWithPaginate(
+        [FromQuery] int pageSize = 5,
+        [FromQuery] int page = 1
+        )
+    {
+        var query = new GetAllFeedbackPagQuery() {PageSize = pageSize, Page = page};
+        var vm = await Mediator.Send(query);
+        
+        vm.Items.SetImageUrls($"{Request.Scheme}://{Request.Host}");
+        return Ok(vm);
+
+    }
     /// <summary>
     ///     Get info Feedback by id
     /// </summary>
