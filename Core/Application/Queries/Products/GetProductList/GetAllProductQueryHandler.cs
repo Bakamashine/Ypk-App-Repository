@@ -5,7 +5,7 @@ using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Queries.Products.GetProductLis;
+namespace Application.Queries.Products.GetProductList;
 
 public class GetAllProductQueryHandler : IRequestHandler<GetAllProductQuery, ProductListVm>
 {

@@ -4,7 +4,7 @@ using Application.Commands.Products.UpdateProduct;
 using Application.Dtos.Products;
 using Application.Queries.Products.GetCreatedProductList;
 using Application.Queries.Products.GetProduct;
-using Application.Queries.Products.GetProductLis;
+using Application.Queries.Products.GetProductList;
 using Application.Queries.Products.GetYpkListByYpk;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
