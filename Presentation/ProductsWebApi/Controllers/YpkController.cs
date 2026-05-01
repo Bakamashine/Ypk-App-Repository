@@ -2,8 +2,10 @@
 using Application.Commands.Ypks.DeleteYpk;
 using Application.Commands.Ypks.UpdateYpk;
 using Application.Dtos.Ypks;
+using Application.Queries.Base;
 using Application.Queries.Ypks.GetYpk;
 using Application.Queries.Ypks.GetYpkList;
+using Application.Queries.Ypks.GetYpkPagList;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -35,6 +37,19 @@ public class YpkController : BaseController
     public async Task<ActionResult<YpkListVm>> GetAll()
     {
         var query = new GetAllYpkQuery();
+
+        var vm = await Mediator.Send(query);
+        return Ok(vm);
+    }
+
+    [HttpGet("pag/all")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<ActionResult<PagedList<YpkLookupDto>>> GetAllWithPag(
+        [FromQuery] int pageSize = 5,
+        [FromQuery] int page = 1
+    )
+    {
+        var query = new GetAllYpkPagQuery { PageSize = pageSize, Page = page };
 
         var vm = await Mediator.Send(query);
         return Ok(vm);
