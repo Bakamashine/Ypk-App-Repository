@@ -43,23 +43,33 @@ public class FeedbackController : BaseController
 
         if (vm?.Feedbacks != null)
             vm.Feedbacks.SetImageUrls($"{Request.Scheme}://{Request.Host}");
-            // foreach (var feedback in vm.Feedbacks)
-            //     if (!string.IsNullOrEmpty(feedback.ImagePath))
-            //         feedback.ImageUrl = $"{Request.Scheme}://{Request.Host}{feedback.ImagePath}";
+        // foreach (var feedback in vm.Feedbacks)
+        //     if (!string.IsNullOrEmpty(feedback.ImagePath))
+        //         feedback.ImageUrl = $"{Request.Scheme}://{Request.Host}{feedback.ImagePath}";
 
         return Ok(vm);
     }
 
+    /// <summary>
+    ///     Get all Feedbacks with paginate
+    /// </summary>
+    /// <remarks>
+    ///     Sample request:
+    ///     GET (HOST)/api/feedback/pag/all
+    /// </remarks>
+    /// <returns>Returns FeedbackListVm</returns>
+    /// <response code="200">Success</response>
     [HttpGet("pag/all")]
-    
+    [ProducesResponseType(StatusCodes.Status200OK)]
+
     public async Task<ActionResult<PagedList<FeedbackListVm>>> GetWithPaginate(
         [FromQuery] int pageSize = 5,
         [FromQuery] int page = 1
         )
     {
-        var query = new GetAllFeedbackPagQuery() {PageSize = pageSize, Page = page};
+        var query = new GetAllFeedbackPagQuery() { PageSize = pageSize, Page = page };
         var vm = await Mediator.Send(query);
-        
+
         vm.Items.SetImageUrls($"{Request.Scheme}://{Request.Host}");
         return Ok(vm);
 
