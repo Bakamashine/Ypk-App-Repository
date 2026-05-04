@@ -17,7 +17,7 @@ public class JwtTokenService : IJwtTokenService
     private readonly IApplicationDbContext context;
     private readonly TimeSpan expiryDuration = new(0, 5, 0);
     private readonly string secretKey;
-    private readonly string _refreshTokenKey = "rememberToken";
+    private readonly string _refreshTokenKey = "refreshToken";
     private readonly IHttpContextAccessor _httpContextAccessor;
 
     private HttpContext GetHttpContext()
@@ -113,7 +113,7 @@ public class JwtTokenService : IJwtTokenService
             SameSite = SameSiteMode.None
         };
         var httpContext = GetHttpContext();
-        httpContext.Response.Cookies.Delete(_refreshTokenKey, cookieOptions);
+        // httpContext.Response.Cookies.Delete(_refreshTokenKey, cookieOptions);
         var recordWithRefreshToken = await context.UserToken
             .FirstOrDefaultAsync(e => e.Token == token, cancellationToken);
         if (recordWithRefreshToken != null)

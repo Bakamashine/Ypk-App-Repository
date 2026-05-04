@@ -58,7 +58,7 @@ public class AuthController : BaseController
             Console.WriteLine(e.Message);
             return StatusCode(500);
         }
-       
+
     }
 
     /// <summary>
@@ -88,7 +88,7 @@ public class AuthController : BaseController
         if (response is null)
             return Unauthorized();
 
-        
+
         var accessToken = response.AccessToken;
         var refreshToken = response.RefreshToken;
         return Ok(TokenDto.Create(accessToken, refreshToken));
@@ -110,19 +110,31 @@ public class AuthController : BaseController
     /// <response code="200">Success</response>
     [HttpPost("loginViaToken")]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<IActionResult> LoginViaRefreshToken([FromBody] LoginViaTokenRequest request)
+    public async Task<IActionResult> LoginViaRefreshToken([FromBody] LoginViaRefreshTokenRequest? request = null)
     {
-        var user = await _userRepository.GetByRefreshToken(request.refreshToken);
+        string refreshToken;
+        if (request != null && !string.IsNullOrEmpty(request.refreshToken))
+        {
+            refreshToken = request.refreshToken;
+        }
+        else
+        {
+            refreshToken = HttpContext.Request.Cookies["refreshToken"] ?? string.Empty;
+        }
+
+        if (string.IsNullOrEmpty(refreshToken)) return Unauthorized();
+        var user = await _userRepository.GetByRefreshToken(refreshToken);
         if (user == null) return Unauthorized();
+        await _service.InvalidateRefreshTokenAsync(refreshToken);
+
         var accessToken = await _service.GenerateJwtToken(user);
         var newRefreshToken = await _service.GenerateRefreshToken(user);
-        await _service.InvalidateRefreshTokenAsync(request.refreshToken);
 
         return Ok(TokenDto.Create(accessToken, newRefreshToken));
 
     }
 
-    
+
     /// <summary>
     ///     Account logout
     /// </summary>
