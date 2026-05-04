@@ -42,14 +42,23 @@ public class AuthController : BaseController
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
     {
-        var command = mapper.Map<LoginUserCommand>(loginDto);
+        try
+        {
+            var command = mapper.Map<LoginUserCommand>(loginDto);
 
-        var response = await Mediator.Send(command);
-        if (response is null)
-            return Unauthorized();
+            var response = await Mediator.Send(command);
+            if (response is null)
+                return Unauthorized();
 
-        // return Ok(new { accessToken = response.AccessToken });
-        return Ok(TokenDto.Create(response.AccessToken, response.RefreshToken));
+            // return Ok(new { accessToken = response.AccessToken });
+            return Ok(TokenDto.Create(response.AccessToken, response.RefreshToken));
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            return StatusCode(500);
+        }
+       
     }
 
     /// <summary>
