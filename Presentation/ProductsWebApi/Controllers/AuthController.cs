@@ -96,22 +96,21 @@ public class AuthController : BaseController
     ///     "refreshToken": "string"
     ///     }
     /// </remarks>
-    /// <param name="loginViaToken">LoginViaToken object</param>
+    /// <param name="request">LoginViaToken object</param>
     /// <returns>Returns access token</returns>
     /// <response code="200">Success</response>
     [HttpPost("loginViaToken")]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<IActionResult> LoginViaRememberToken([FromBody] LoginViaTokenRequest request)
+    public async Task<IActionResult> LoginViaRefreshToken([FromBody] LoginViaTokenRequest request)
     {
-        if (await _service.ValidateRefreshTokenAsync(request.refreshToken))
-        {
-            var user = await _userRepository.GetByRefreshToken(request.refreshToken);
-            if (user == null) return Unauthorized();
-            var accessToken = await _service.GenerateJwtToken(user);
-            return Ok(TokenDto.Create(accessToken, request.refreshToken));
-        }
+        var user = await _userRepository.GetByRefreshToken(request.refreshToken);
+        if (user == null) return Unauthorized();
+        var accessToken = await _service.GenerateJwtToken(user);
+        var newRefreshToken = await _service.GenerateRefreshToken(user);
+        await _service.InvalidateRefreshTokenAsync(request.refreshToken);
 
-        return Unauthorized();
+        return Ok(TokenDto.Create(accessToken, newRefreshToken));
+
     }
 
     
