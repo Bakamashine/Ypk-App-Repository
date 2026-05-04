@@ -1,6 +1,8 @@
 ﻿using Application.Common.Queries.Roles.GetRole;
 using Application.Common.Queries.Roles.GetRoleList;
+using Application.Common.Queries.Roles.GetRolePagList;
 using Application.Dtos.Roles;
+using Application.Queries.Base;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ProductsWebApi.Controllers;
@@ -22,6 +24,19 @@ public class RoleController : BaseController
     public async Task<ActionResult<RoleListVm>> GetAll()
     {
         var query = new GetAllRoleQuery();
+
+        var vm = await Mediator.Send(query);
+        return Ok(vm);
+    }
+
+    [HttpGet("pag/all")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<ActionResult<PagedList<RoleLookupDto>>> GetAllWithPag(
+        [FromQuery] int pageSize = 5,
+        [FromQuery] int page = 1
+    )
+    {
+        var query = new GetAllRolePagQuery { PageSize = pageSize, Page = page };
 
         var vm = await Mediator.Send(query);
         return Ok(vm);

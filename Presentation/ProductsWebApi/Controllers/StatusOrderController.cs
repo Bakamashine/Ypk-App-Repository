@@ -1,5 +1,7 @@
 ﻿using Application.Dtos.StatusOrders;
+using Application.Queries.Base;
 using Application.Queries.StatusOrders.GetStatusOrdersList;
+using Application.Queries.StatusOrders.GetStatusOrderPagList;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,6 +29,22 @@ public class StatusOrderController : BaseController
     public async Task<ActionResult<StatusOrderListVm>> GetAll()
     {
         var query = new GetAllStatusOrdersQuery();
+
+        var vm = await Mediator.Send(query);
+        return Ok(vm);
+    }
+
+    [Authorize(Roles = "Manager,Admin")]
+    [HttpGet("pag/all")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
+    public async Task<ActionResult<PagedList<StatusOrderLookupDto>>> GetAllWithPag(
+        [FromQuery] int pageSize = 5,
+        [FromQuery] int page = 1
+    )
+    {
+        var query = new GetAllStatusOrderPagQuery { PageSize = pageSize, Page = page };
 
         var vm = await Mediator.Send(query);
         return Ok(vm);

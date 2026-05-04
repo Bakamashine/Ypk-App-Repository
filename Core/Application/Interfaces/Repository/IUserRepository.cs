@@ -5,5 +5,5 @@ namespace Application.Interfaces.Repository;
 public interface IUserRepository
 {
     public Task<User?> GetByPhoneNumber(string phone);
-    public Task<User?> GetByRememberToken(string token);
+    public Task<User?> GetByRefreshToken(string token);
 }

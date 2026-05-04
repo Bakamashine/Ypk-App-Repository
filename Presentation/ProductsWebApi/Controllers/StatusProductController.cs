@@ -1,5 +1,7 @@
 ﻿using Application.Dtos.StatusProducts;
+using Application.Queries.Base;
 using Application.Queries.StatusProducts.GetStatusProductsList;
+using Application.Queries.StatusProducts.GetStatusProductPagList;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,6 +29,22 @@ public class StatusProductController : BaseController
     public async Task<ActionResult<StatusProductListVm>> GetAll()
     {
         var query = new GetAllStatusProductQuery();
+
+        var vm = await Mediator.Send(query);
+        return Ok(vm);
+    }
+
+    [Authorize(Roles = "Manager,Admin")]
+    [HttpGet("pag/all")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
+    public async Task<ActionResult<PagedList<StatusProductLookupDto>>> GetAllWithPag(
+        [FromQuery] int pageSize = 5,
+        [FromQuery] int page = 1
+    )
+    {
+        var query = new GetAllStatusProductPagQuery { PageSize = pageSize, Page = page };
 
         var vm = await Mediator.Send(query);
         return Ok(vm);

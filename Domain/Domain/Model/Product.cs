@@ -12,7 +12,7 @@ public class Product : BaseModel
     public string ProductInfo { get; set; } = string.Empty;
     public bool IsProduct { get; set; }
     public string? PhotoPath { get; set; }
-    public string Adres { get; set; } = string.Empty;
+    public string Address { get; set; } = string.Empty;
 
 
     public Ypk? Ypk { get; set; }

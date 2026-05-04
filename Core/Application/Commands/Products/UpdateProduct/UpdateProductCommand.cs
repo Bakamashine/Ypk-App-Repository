@@ -12,7 +12,7 @@ public class UpdateProductCommand : IRequest
     public string ProductInfo { get; set; } = string.Empty;
     public decimal ProductCost { get; set; }
     public bool IsProduct { get; set; }
-    public string Adres { get; set; } = string.Empty;
+    public string Address { get; set; } = string.Empty;
     public IFormFile? Photo { get; set; }
 
     public Guid YpkId { get; set; }
