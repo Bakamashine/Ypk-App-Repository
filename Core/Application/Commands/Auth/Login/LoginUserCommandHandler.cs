@@ -23,16 +23,6 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, TokenDt
 
     public async Task<TokenDto?> Handle(LoginUserCommand request, CancellationToken cancellationToken)
     {
-        // var users = await context.Users.Where(user =>
-        //     user.PhoneNumber == request.PhoneNumber).ToListAsync(cancellationToken);
-        // if (users == null)
-        //     return null;
-        //
-        // var user = users.FirstOrDefault(user =>
-        //     passwordHasher.VerifyBcryptPassword(request.Password, user.HashPassword) && user.IsActive);
-        // if (user == null)
-        //     return null;
-
         var user = await _repository.GetByPhoneNumber(request.PhoneNumber);
 
         if (user != null &&
