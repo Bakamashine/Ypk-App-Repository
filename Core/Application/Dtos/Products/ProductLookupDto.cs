@@ -17,7 +17,9 @@ public class ProductLookupDto : IMapWith<Product>
     public string? PhotoUrl { get; set; }
 
     public string Address { get; set; } = string.Empty;
-
+    
+    public Guid StatusProductId { get; set; }
+    
     public void Mapping(Profile profile)
     {
         profile.CreateMap<Product, ProductLookupDto>()
@@ -36,6 +38,8 @@ public class ProductLookupDto : IMapWith<Product>
             .ForMember(productVm => productVm.PhotoPath,
                 opt => opt.MapFrom(product => product.PhotoPath))
             .ForMember(productVm => productVm.Address,
-                opt => opt.MapFrom(product => product.Address));
+                opt => opt.MapFrom(product => product.Address))
+            .ForMember(productVm => productVm.StatusProductId,
+                opt => opt.MapFrom(product => product.StatusProductId))            ;
     }
 }
