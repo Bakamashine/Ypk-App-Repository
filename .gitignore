@@ -78,8 +78,20 @@ coverage/
 # Logs
 Logs
 
-# Images or files
-wwwroot/*
+# wwwroot directory and all contents
+wwwroot/
+Presentation/ProductsWebApi/wwwroot/
+
+# Image files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+*.ico
+*.webp
+*.tiff
 
 # Entity Framework Migrations
 **/Migrations/
