@@ -2,10 +2,14 @@ using Application.Commands.Products.CreateProduct;
 using Application.Commands.Products.DeleteProduct;
 using Application.Commands.Products.UpdateProduct;
 using Application.Dtos.Products;
+using Application.Queries.Base;
 using Application.Queries.Products.GetCreatedProductList;
+using Application.Queries.Products.GetCreatedProductPagList;
 using Application.Queries.Products.GetProduct;
-using Application.Queries.Products.GetProductLis;
+using Application.Queries.Products.GetProductList;
+using Application.Queries.Products.GetProductPagList;
 using Application.Queries.Products.GetYpkListByYpk;
+using Application.Queries.Products.GetYpkPagListByYpk;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -103,6 +107,67 @@ public class ProductController : BaseController
         foreach (var product in vm.Products)
             if (!string.IsNullOrEmpty(product.PhotoPath))
                 product.PhotoUrl = $"{Request.Scheme}://{Request.Host}{product.PhotoPath}";
+
+        return Ok(vm);
+    }
+
+
+    [HttpGet("pag/all")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task<ActionResult<PagedList<ProductLookupDto>>> GetAllWithPag(
+        [FromQuery] int pageSize = 5,
+        [FromQuery] int page = 1
+    )
+    {
+        var query = new GetAllProductPagQuery { PageSize = pageSize, Page = page };
+
+        var vm = await Mediator.Send(query);
+        if (vm?.Items != null)
+            foreach (var product in vm.Items)
+                if (!string.IsNullOrEmpty(product.PhotoPath))
+                    product.PhotoUrl = $"{Request.Scheme}://{Request.Host}{product.PhotoPath}";
+
+        return Ok(vm);
+    }
+
+    [Authorize]
+    [HttpGet("pag/all/created")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task<ActionResult<PagedList<ProductLookupDto>>> GetAllCreatedWithPag(
+        [FromQuery] int pageSize = 5,
+        [FromQuery] int page = 1
+    )
+    {
+        var query = new GetAllCreatedProductPagQuery { PageSize = pageSize, Page = page };
+
+        var vm = await Mediator.Send(query);
+        if (vm?.Items != null)
+            foreach (var product in vm.Items)
+                if (!string.IsNullOrEmpty(product.PhotoPath))
+                    product.PhotoUrl = $"{Request.Scheme}://{Request.Host}{product.PhotoPath}";
+
+        return Ok(vm);
+    }
+
+    [Authorize]
+    [HttpGet("pag/byYpk/{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task<ActionResult<PagedList<ProductLookupDto>>> GetByYpkWithPag(
+        Guid id,
+        [FromQuery] int pageSize = 5,
+        [FromQuery] int page = 1
+    )
+    {
+        var query = new GetYpkPagListByYpkQuery { YpkId = id, PageSize = pageSize, Page = page };
+
+        var vm = await Mediator.Send(query);
+        if (vm?.Items != null)
+            foreach (var product in vm.Items)
+                if (!string.IsNullOrEmpty(product.PhotoPath))
+                    product.PhotoUrl = $"{Request.Scheme}://{Request.Host}{product.PhotoPath}";
 
         return Ok(vm);
     }

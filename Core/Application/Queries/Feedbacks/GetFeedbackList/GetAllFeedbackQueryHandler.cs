@@ -9,10 +9,10 @@ namespace Application.Queries.Feedbacks.GetFeedbackList;
 
 public class GetAllFeedbackQueryHandler : IRequestHandler<GetAllFeedbackQuery, FeedbackListVm>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IMapper mapper;
 
-    public GetAllFeedbackQueryHandler(IProductsDbContext context, IMapper mapper)
+    public GetAllFeedbackQueryHandler(IApplicationDbContext context, IMapper mapper)
     {
         this.context = context;
         this.mapper = mapper;

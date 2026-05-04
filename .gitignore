@@ -68,3 +68,19 @@ coverage/
 *.coverage
 
 *.lscache
+
+# Sqlite
+*.db
+*.db-*
+*.database
+*.sqlite
+
+# Logs
+Logs
+
+# Images or files
+wwwroot/*
+
+# Entity Framework Migrations
+**/Migrations/
+

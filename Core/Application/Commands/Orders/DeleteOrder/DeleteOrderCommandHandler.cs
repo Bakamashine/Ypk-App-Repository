@@ -8,9 +8,9 @@ namespace Application.Commands.Orders.DeleteOrder;
 
 public class DeleteOrderCommandHandler : IRequestHandler<DeleteOrderCommand>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
 
-    public DeleteOrderCommandHandler(IProductsDbContext context)
+    public DeleteOrderCommandHandler(IApplicationDbContext context)
     {
         this.context = context;
     }

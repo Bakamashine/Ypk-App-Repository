@@ -1,8 +1,0 @@
-2026-04-02 12:20:19.290 +03:00 [INF] Starting web application
-2026-04-02 12:21:43.624 +03:00 [INF] Starting web application
-2026-04-02 12:23:36.738 +03:00 [INF] Starting web application
-2026-04-02 12:29:14.350 +03:00 [INF] Starting web application
-2026-04-02 12:30:55.534 +03:00 [INF] Starting web application
-2026-04-02 12:33:31.435 +03:00 [INF] Starting web application
-2026-04-02 12:41:20.739 +03:00 [INF] Starting web application
-2026-04-02 21:28:35.070 +03:00 [INF] Starting web application

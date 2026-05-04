@@ -8,9 +8,9 @@ namespace Application.Commands.Feedbacks.UpdateFeedback;
 
 public class UpdateFeedbackCommandHandler : IRequestHandler<UpdateFeedbackCommand>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
 
-    public UpdateFeedbackCommandHandler(IProductsDbContext context)
+    public UpdateFeedbackCommandHandler(IApplicationDbContext context)
     {
         this.context = context;
     }

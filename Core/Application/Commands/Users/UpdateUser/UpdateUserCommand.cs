@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Application.Commands.Users.UpdateUser;
 
-public class UpdateUserCommand : IRequest<TokensDto>
+public class UpdateUserCommand : IRequest<TokenDto>
 {
     public Guid Id { get; set; }
     public Guid CurrentUserId { get; set; }

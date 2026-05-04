@@ -8,12 +8,12 @@ namespace Application.Commands.Products.UpdateProduct;
 
 public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand>
 {
-    private readonly IProductsDbContext _context;
+    private readonly IApplicationDbContext _context;
     private readonly IFileStorageService _fileStorage;
 
 
     public UpdateProductCommandHandler(
-        IProductsDbContext context,
+        IApplicationDbContext context,
         IFileStorageService fileStorage)
     {
         _context = context;
@@ -43,10 +43,10 @@ public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand>
                 entity.ProductName = request.ProductName;
             if (!string.IsNullOrEmpty(request.ProductInfo))
                 entity.ProductInfo = request.ProductInfo;
-            if (!string.IsNullOrEmpty(request.Adres))
-                entity.ProductInfo = request.Adres;
+            if (!string.IsNullOrEmpty(request.Address))
+                entity.Address = request.Address;
             if (!string.IsNullOrEmpty(photoPath))
-                entity.ProductInfo = photoPath;
+                entity.PhotoPath = photoPath;
             if (request.IsProduct != request.IsProduct)
                 entity.IsProduct = request.IsProduct;
             if (request.ProductCost != request.ProductCost)

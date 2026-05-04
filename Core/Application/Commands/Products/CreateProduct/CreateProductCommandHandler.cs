@@ -6,11 +6,11 @@ namespace Application.Commands.Products.CreateProduct;
 
 public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, Guid>
 {
-    private readonly IProductsDbContext _context;
+    private readonly IApplicationDbContext _context;
     private readonly IFileStorageService _fileStorage;
 
     public CreateProductCommandHandler(
-        IProductsDbContext context,
+        IApplicationDbContext context,
         IFileStorageService fileStorage)
     {
         _context = context;
@@ -35,7 +35,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
             ProductInfo = request.ProductInfo,
             IsProduct = request.IsProduct,
             PhotoPath = photoPath,
-            Adres = request.Adres
+            Address = request.Address
         };
 
         await _context.Products.AddAsync(newProduct, cancellationToken);

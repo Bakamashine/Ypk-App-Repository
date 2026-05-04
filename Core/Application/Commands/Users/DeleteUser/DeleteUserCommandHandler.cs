@@ -8,9 +8,9 @@ namespace Application.Commands.Users.DeleteUser;
 
 public class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommand>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
 
-    public DeleteUserCommandHandler(IProductsDbContext context)
+    public DeleteUserCommandHandler(IApplicationDbContext context)
     {
         this.context = context;
     }

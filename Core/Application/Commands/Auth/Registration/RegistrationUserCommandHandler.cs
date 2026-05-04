@@ -6,21 +6,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Application.Commands.Auth.Registration;
 
-public class RegistrationUserCommandHandler : IRequestHandler<RegistrationUserCommand, TokensDto?>
+public class RegistrationUserCommandHandler : IRequestHandler<RegistrationUserCommand, TokenDto?>
 {
-    private readonly IProductsDbContext context;
+    private readonly IJwtTokenService _tokenService;
+    private readonly IApplicationDbContext context;
     private readonly IPasswordHasherServise passwordHasher;
-    private readonly IJwtTokenServise tokenServise;
 
-    public RegistrationUserCommandHandler(IProductsDbContext context, IJwtTokenServise tokenServise,
+    public RegistrationUserCommandHandler(IApplicationDbContext context, IJwtTokenService tokenService,
         IPasswordHasherServise passwordHasher)
     {
         this.context = context;
-        this.tokenServise = tokenServise;
+        _tokenService = tokenService;
         this.passwordHasher = passwordHasher;
     }
 
-    public async Task<TokensDto?> Handle(RegistrationUserCommand request, CancellationToken cancellationToken)
+    public async Task<TokenDto?> Handle(RegistrationUserCommand request, CancellationToken cancellationToken)
     {
         var role = await context.Roles.FirstOrDefaultAsync(x => x.RoleName == nameof(EnumRoles.DefaultUser),
             cancellationToken);
@@ -35,14 +35,18 @@ public class RegistrationUserCommandHandler : IRequestHandler<RegistrationUserCo
             IsActive = true
         };
 
-        var dublicate = await context.Users.AnyAsync(x => x.PhoneNumber == user.PhoneNumber, cancellationToken);
+        var duplicate = await context.Users.AnyAsync(x => x.PhoneNumber == user.PhoneNumber, cancellationToken);
 
-        if (dublicate)
+        if (duplicate)
             return null;
 
         await context.Users.AddAsync(user, cancellationToken);
         await context.SaveChangesAsync(cancellationToken);
+        var accessToken =  await _tokenService.GenerateJwtToken(user, cancellationToken);
 
-        return await tokenServise.GenerateToken(user);
+        var refreshToken = await _tokenService.GenerateRefreshToken(user, cancellationToken);
+
+        return TokenDto.Create(accessToken, refreshToken);
+        // return await _tokenService.(user);
     }
 }

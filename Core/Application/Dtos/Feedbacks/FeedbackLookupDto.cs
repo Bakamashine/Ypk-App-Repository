@@ -5,14 +5,22 @@ using Domain.Model;
 
 namespace Application.Dtos.Feedbacks;
 
-public class FeedbackLookupDto : IMapWith<Feedback>
+public class FeedbackLookupDto : IMapWith<Feedback>, IHasImage
 {
     public Guid Id { get; set; }
     public string Comment { get; set; } = string.Empty;
     public int Raiting { get; set; }
     public UserLookupDto? User { get; set; }
 
-    public string? ImagePath { get; set; }
+    // feedback.ImageUrl = $"{Request.Scheme}://{Request.Host}{feedback.ImagePath}";
+
+
+    public string? ImagePath
+    {
+        get;
+        set;
+    }
+
     public string? ImageUrl { get; set; }
 
     public void Mapping(Profile profile)

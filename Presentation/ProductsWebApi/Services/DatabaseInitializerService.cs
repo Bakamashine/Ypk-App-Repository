@@ -12,7 +12,7 @@ public static class DatabaseInitializerService
         using var scope = app.Services.CreateScope();
         try
         {
-            var context = scope.ServiceProvider.GetRequiredService<ProductsDbContext>();
+            var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
             // Добавляем все данные в одном методе
             await InitializeRoles(context);
@@ -28,7 +28,7 @@ public static class DatabaseInitializerService
         }
     }
 
-    private static async Task InitializeRoles(ProductsDbContext context)
+    private static async Task InitializeRoles(ApplicationDbContext context)
     {
         var existingRoles = await context.Roles
             .Select(r => r.RoleName)
@@ -51,7 +51,7 @@ public static class DatabaseInitializerService
         }
     }
 
-    private static async Task InitializeStatusOrders(ProductsDbContext context)
+    private static async Task InitializeStatusOrders(ApplicationDbContext context)
     {
         var existingStatuses = await context.StatusOrders
             .Select(s => s.StatusName)
@@ -74,7 +74,7 @@ public static class DatabaseInitializerService
         }
     }
 
-    private static async Task InitializeStatusProducts(ProductsDbContext context)
+    private static async Task InitializeStatusProducts(ApplicationDbContext context)
     {
         var existingStatuses = await context.StatusProducts
             .Select(s => s.StatusName)

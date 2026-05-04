@@ -9,10 +9,10 @@ namespace Application.Queries.Orders.GetOrderListForManagerHistory;
 
 public class GetAllOrderQueryHandlerForManagerHistory : IRequestHandler<GetAllOrderQueryForManagerHistory, OrderListVm>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IMapper mapper;
 
-    public GetAllOrderQueryHandlerForManagerHistory(IMapper mapper, IProductsDbContext context)
+    public GetAllOrderQueryHandlerForManagerHistory(IMapper mapper, IApplicationDbContext context)
     {
         this.mapper = mapper;
         this.context = context;

@@ -8,9 +8,9 @@ namespace Application.Commands.Ypks.UpdateYpk;
 
 public class UpdateYpkCommandHandler : IRequestHandler<UpdateYpkCommand>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
 
-    public UpdateYpkCommandHandler(IProductsDbContext context)
+    public UpdateYpkCommandHandler(IApplicationDbContext context)
     {
         this.context = context;
     }

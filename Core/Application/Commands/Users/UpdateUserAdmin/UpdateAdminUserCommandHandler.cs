@@ -9,10 +9,10 @@ namespace Application.Commands.Users.UpdateUserAdmin;
 
 public class UpdateAdminUserCommandHandler : IRequestHandler<UpdateAdminUserCommand>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IPasswordHasherServise passwordHasher;
 
-    public UpdateAdminUserCommandHandler(IProductsDbContext context, IPasswordHasherServise passwordHasher)
+    public UpdateAdminUserCommandHandler(IApplicationDbContext context, IPasswordHasherServise passwordHasher)
     {
         this.context = context;
         this.passwordHasher = passwordHasher;

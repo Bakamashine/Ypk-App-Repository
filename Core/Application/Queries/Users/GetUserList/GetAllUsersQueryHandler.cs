@@ -9,10 +9,10 @@ namespace Application.Queries.Users.GetUserList;
 
 public class GetAllUsersQueryHandler : IRequestHandler<GetAllUserQuery, UserListVm>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IMapper mapper;
 
-    public GetAllUsersQueryHandler(IMapper mapper, IProductsDbContext context)
+    public GetAllUsersQueryHandler(IMapper mapper, IApplicationDbContext context)
     {
         this.mapper = mapper;
         this.context = context;

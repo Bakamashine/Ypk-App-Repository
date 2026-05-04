@@ -2,12 +2,14 @@
 using Application.Commands.Orders.DeleteOrder;
 using Application.Commands.Orders.UpdateOrder;
 using Application.Dtos.Orders;
+using Application.Queries.Base;
 using Application.Queries.Orders.GetOrder;
 using Application.Queries.Orders.GetOrderList;
 using Application.Queries.Orders.GetOrderListForDefaultUser;
 using Application.Queries.Orders.GetOrderListForDefaultUserHistory;
 using Application.Queries.Orders.GetOrderListForManager;
 using Application.Queries.Orders.GetOrderListForManagerHistory;
+using Application.Queries.Orders.GetOrderPagList;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -101,6 +103,30 @@ public class OrderController : BaseController
         return Ok(vm);
     }
 
+    /// <summary>
+    ///     Get all Orders with paginate
+    /// </summary>
+    /// <remarks>
+    ///     Sample request:
+    ///     GET (HOST)/api/order/pag/all
+    /// </remarks>
+    /// <returns>Returns OrderListVm</returns>
+    /// <response code="200">Success</response>
+    [HttpGet("pag/all")]
+    [Authorize]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task<ActionResult<PagedList<OrderListVm>>> GetAllWithPag(
+        [FromQuery] int pageSize = 5,
+        [FromQuery] int page = 1
+    )
+    {
+        var query = new GetAllOrderPagQuery() { PageSize = pageSize, Page = page };
+
+        var vm = await Mediator.Send(query);
+
+        return Ok(vm);
+    }
 
     /// <summary>
     ///     Get orders history for manager

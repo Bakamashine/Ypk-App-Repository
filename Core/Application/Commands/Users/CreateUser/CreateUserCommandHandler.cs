@@ -6,13 +6,13 @@ namespace Application.Commands.Users.CreateUser;
 
 public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
 {
-    private readonly IProductsDbContext context;
-    private readonly IPasswordHasherServise hasherServise;
+    private readonly IApplicationDbContext context;
+    private readonly IPasswordHasherServise hasherService;
 
-    public CreateUserCommandHandler(IProductsDbContext context, IPasswordHasherServise hasherServise)
+    public CreateUserCommandHandler(IApplicationDbContext context, IPasswordHasherServise hasherService)
     {
         this.context = context;
-        this.hasherServise = hasherServise;
+        this.hasherService = hasherService;
     }
 
     public async Task<Guid> Handle(CreateUserCommand request, CancellationToken cancellationToken)
@@ -20,7 +20,7 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
         var newUser = new User
         {
             Id = Guid.NewGuid(),
-            HashPassword = hasherServise.HashPasword(request.Password),
+            HashPassword = hasherService.HashPasword(request.Password),
             PhoneNumber = request.PhoneNumber,
             RoleId = request.RoleId,
             UserInfo = request.UserInfo,

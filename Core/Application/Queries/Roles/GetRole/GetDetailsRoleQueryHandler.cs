@@ -10,10 +10,10 @@ namespace Application.Common.Queries.Roles.GetRole;
 
 public class GetDetailsRoleQueryHandler : IRequestHandler<GetDetailsRoleQuery, RoleLookupDto>
 {
-    private readonly IProductsDbContext context;
+    private readonly IApplicationDbContext context;
     private readonly IMapper mapper;
 
-    public GetDetailsRoleQueryHandler(IProductsDbContext context, IMapper mapper)
+    public GetDetailsRoleQueryHandler(IApplicationDbContext context, IMapper mapper)
     {
         this.context = context;
         this.mapper = mapper;
