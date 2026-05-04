@@ -23,7 +23,7 @@ public class UserRepository : IUserRepository
             .FirstAsync();
     }
 
-    public async Task<User?> GetByRememberToken(string token)
+    public async Task<User?> GetByRefreshToken(string token)
     {
         var record = await _context.UserToken
             .FirstOrDefaultAsync(r => r.Token == token && r.ExpiresOnUtc > DateTime.UtcNow);

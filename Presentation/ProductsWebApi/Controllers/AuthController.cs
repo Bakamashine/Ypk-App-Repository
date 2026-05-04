@@ -93,7 +93,7 @@ public class AuthController : BaseController
     ///     Sample request:
     ///     POST (HOST)/api/Auth/register
     ///     {
-    ///     "rememberToken": "string"
+    ///     "refreshToken": "string"
     ///     }
     /// </remarks>
     /// <param name="loginViaToken">LoginViaToken object</param>
@@ -105,12 +105,33 @@ public class AuthController : BaseController
     {
         if (await _service.ValidateRefreshTokenAsync(request.refreshToken))
         {
-            var user = await _userRepository.GetByRememberToken(request.refreshToken);
+            var user = await _userRepository.GetByRefreshToken(request.refreshToken);
             if (user == null) return Unauthorized();
             var accessToken = await _service.GenerateJwtToken(user);
             return Ok(TokenDto.Create(accessToken, request.refreshToken));
         }
 
         return Unauthorized();
+    }
+
+    
+    /// <summary>
+    ///     Account logout
+    /// </summary>
+    /// <remarks>
+    ///     Sample request:
+    ///     POST (HOST)/api/Auth/logout
+    ///     {
+    ///     "refreshToken": "string"
+    ///     }
+    /// </remarks>
+    /// <param name="request">LogoutRequest object</param>
+    /// <returns></returns>
+    [HttpPost("logout")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<IActionResult> Logout([FromBody] LogoutRequest request)
+    {
+        await _service.InvalidateRefreshTokenAsync(request.refreshToken);
+        return Ok();
     }
 }

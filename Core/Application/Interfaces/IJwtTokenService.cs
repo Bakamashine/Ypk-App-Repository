@@ -9,4 +9,5 @@ public interface IJwtTokenService
     public Task<string> GenerateRefreshToken(User user, CancellationToken cancellationToken = default);
     public Task<string> GenerateJwtToken(User user, CancellationToken cancellationToken = default);
     public Task<bool> ValidateRefreshTokenAsync(string refreshToken);
+    public Task InvalidateRefreshTokenAsync(string token, CancellationToken cancellationToken = default);
 }
