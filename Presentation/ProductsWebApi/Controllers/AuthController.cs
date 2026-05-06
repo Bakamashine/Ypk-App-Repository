@@ -5,6 +5,7 @@ using Application.Interfaces;
 using Application.Interfaces.Repository;
 using AutoMapper;
 using CourseWebApi.Models.Auth;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProductsWebApi.Controllers;
 
@@ -153,5 +154,13 @@ public class AuthController : BaseController
     {
         await _service.InvalidateRefreshTokenAsync(request.refreshToken);
         return Ok();
+    }
+
+    [HttpGet("test")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [Authorize]
+    public async Task<string> Test()
+    {
+        return "It's working!";
     }
 }

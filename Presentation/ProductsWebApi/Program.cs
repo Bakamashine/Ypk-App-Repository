@@ -126,6 +126,18 @@ try
                     ValidateLifetime = true,
                     ClockSkew = TimeSpan.Zero
                 };
+
+                options.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = ctx =>
+                    {
+                        ctx.Request.Cookies.TryGetValue("accessToken", out var accessToken);
+                        if (!string.IsNullOrEmpty(accessToken))
+                            ctx.Token = accessToken;
+
+                        return Task.CompletedTask;
+                    }
+                };
             });
 
 
