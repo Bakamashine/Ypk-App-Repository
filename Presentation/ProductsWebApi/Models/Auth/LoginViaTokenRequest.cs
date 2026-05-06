@@ -2,7 +2,7 @@
 
 namespace CourseWebApi.Models.Auth;
 
-public class LoginViaTokenRequest
+public class LoginViaRefreshTokenRequest
 {
-    [Required] public string refreshToken { set; get; } = string.Empty;
+    public string? refreshToken { set; get; } = string.Empty;
 }
