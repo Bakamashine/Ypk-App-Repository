@@ -55,9 +55,11 @@ try
         {
             options.AddPolicy("AllowAll", policy =>
             {
+                // policy.AllowAnyOrigin();
+                policy.SetIsOriginAllowed(_=>true);
                 policy.AllowAnyHeader();
                 policy.AllowAnyMethod();
-                policy.AllowAnyOrigin();
+                policy.AllowCredentials();
             });
         });
 
