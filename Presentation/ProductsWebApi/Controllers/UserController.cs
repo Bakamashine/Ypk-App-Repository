@@ -44,6 +44,12 @@ public class UserController : BaseController
         var query = new GetAllUserQuery();
 
         var vm = await Mediator.Send(query);
+
+        if (vm?.Users != null)
+            foreach (var product in vm.Users)
+                if (!string.IsNullOrEmpty(product.AvatarPath))
+                    product.AvatarUrl = $"{Request.Scheme}://{Request.Host}{product.AvatarPath}";
+
         return Ok(vm);
     }
 
@@ -60,6 +66,12 @@ public class UserController : BaseController
         var query = new GetAllUserPagQuery { PageSize = pageSize, Page = page };
 
         var vm = await Mediator.Send(query);
+
+        if (vm?.Items != null)
+            foreach (var product in vm.Items)
+                if (!string.IsNullOrEmpty(product.AvatarPath))
+                    product.AvatarUrl = $"{Request.Scheme}://{Request.Host}{product.AvatarPath}";
+
         return Ok(vm);
     }
 
@@ -85,6 +97,7 @@ public class UserController : BaseController
             Id = id
         };
         var vm = await Mediator.Send(query);
+        if (!string.IsNullOrEmpty(vm.AvatarPath)) vm.AvatarUrl = $"{Request.Scheme}://{Request.Host}{vm.AvatarPath}";
         return Ok(vm);
     }
 
@@ -99,6 +112,7 @@ public class UserController : BaseController
     ///     "password": "string",
     ///     "phoneNumber": "string",
     ///     "userInfo": "string",
+    ///     "avatar": "file",
     ///     "roleId": "7ab72f64-5717-4562-bgfc-2c963f663sa2",
     ///     }
     /// </remarks>
@@ -112,7 +126,7 @@ public class UserController : BaseController
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status403Forbidden)]
     [HttpPost]
-    public async Task<ActionResult<Guid>> Create([FromBody] CreateUserDto createUserDto)
+    public async Task<ActionResult<Guid>> Create([FromForm] CreateUserDto createUserDto)
     {
         var command = mapper.Map<CreateUserCommand>(createUserDto);
         command.CurrentUserId = UserId;
@@ -133,6 +147,7 @@ public class UserController : BaseController
     ///     "NewPassword": "string",
     ///     "phoneNumber": "string",
     ///     "userInfo": "string",
+    ///     "avatar": "file",
     ///     "IsActive": "bool",
     ///     }
     /// </remarks>
@@ -144,7 +159,7 @@ public class UserController : BaseController
     [HttpPut]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    public async Task<IActionResult> Update([FromBody] UpdateUserDto updateUserDto)
+    public async Task<IActionResult> Update([FromForm] UpdateUserDto updateUserDto)
     {
         var command = mapper.Map<UpdateUserCommand>(updateUserDto);
         command.CurrentUserId = UserId;
@@ -163,6 +178,7 @@ public class UserController : BaseController
     ///     "fullname": "string",
     ///     "phoneNumber": "string",
     ///     "userInfo": "string",
+    ///     "avatar": "file",
     ///     "roleId": "7ab72f64-5717-4562-bgfc-2c963f663sa2",
     ///     "YpkId": "76f24f64-5717-4562-bgfc-2c963f663sa2",
     ///     }
@@ -177,7 +193,7 @@ public class UserController : BaseController
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status403Forbidden)]
-    public async Task<IActionResult> UpdateAdmin([FromBody] UpdateUserForAdminDto updateUserDto)
+    public async Task<IActionResult> UpdateAdmin([FromForm] UpdateUserForAdminDto updateUserDto)
     {
         var command = mapper.Map<UpdateAdminUserCommand>(updateUserDto);
         command.CurrentUserId = UserId;

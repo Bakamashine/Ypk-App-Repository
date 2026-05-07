@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 
 namespace Application.Commands.Users.UpdateUser;
 
@@ -11,4 +12,5 @@ public class UpdateAdminUserCommand : IRequest
     public Guid RoleId { get; set; }
     public Guid? YpkId { get; set; }
     public string? UserInfo { get; set; }
+    public IFormFile? Avatar { get; set; }
 }

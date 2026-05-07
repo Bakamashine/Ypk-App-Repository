@@ -14,6 +14,7 @@ public class CreateUserDto : IMapWith<CreateUserCommand>
     [Required] public string PhoneNumber { get; set; } = string.Empty;
 
     public string? UserInfo { get; set; }
+    public IFormFile? Avatar { get; set; }
 
     [Required] public Guid RoleId { get; set; } = new();
 
@@ -29,6 +30,8 @@ public class CreateUserDto : IMapWith<CreateUserCommand>
             .ForMember(userCm => userCm.UserInfo,
                 opt => opt.MapFrom(userDto => userDto.UserInfo))
             .ForMember(userCm => userCm.RoleId,
-                opt => opt.MapFrom(userDto => userDto.RoleId));
+                opt => opt.MapFrom(userDto => userDto.RoleId))
+            .ForMember(userCommand => userCommand.Avatar,
+                opt => opt.MapFrom(userDto => userDto.Avatar));
     }
 }

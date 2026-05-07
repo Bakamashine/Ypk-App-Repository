@@ -14,6 +14,7 @@ public class UpdateUserForAdminDto : IMapWith<UpdateAdminUserCommand>
     public Guid RoleId { get; set; }
     public string? UserInfo { get; set; }
     public Guid? YpkId { get; set; }
+    public IFormFile? Avatar { get; set; }
 
     public void Mapping(Profile profile)
     {
@@ -27,6 +28,8 @@ public class UpdateUserForAdminDto : IMapWith<UpdateAdminUserCommand>
             .ForMember(userCommand => userCommand.YpkId,
                 opt => opt.MapFrom(userDto => userDto.YpkId))
             .ForMember(userCommand => userCommand.PhoneNumber,
-                opt => opt.MapFrom(userDto => userDto.PhoneNumber));
+                opt => opt.MapFrom(userDto => userDto.PhoneNumber))
+            .ForMember(userCommand => userCommand.Avatar,
+                opt => opt.MapFrom(userDto => userDto.Avatar));
     }
 }

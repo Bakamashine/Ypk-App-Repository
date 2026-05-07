@@ -23,6 +23,7 @@ public class GetDetailsUserQueryHandler : IRequestHandler<GetDetailsUserQuery, U
     {
         var entity = await context.Users
                          .Include(u => u.Role)
+                         .Include(u=>u.Ypk)
                          .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken) ??
                      throw new NotFoundException(nameof(User), request.Id);
 

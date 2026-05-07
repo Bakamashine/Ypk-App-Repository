@@ -30,6 +30,8 @@
 
     <ItemGroup>
         <Folder Include="Logs\" />
+        <Folder Include="wwwroot\uploads\avatars\" />
+        <Folder Include="wwwroot\uploads\reviews\" />
         <Folder Include="wwwroot\uploads\products\" />
     </ItemGroup>
 

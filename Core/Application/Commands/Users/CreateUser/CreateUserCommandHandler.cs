@@ -8,15 +8,22 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
 {
     private readonly IApplicationDbContext context;
     private readonly IPasswordHasherServise hasherService;
+    private readonly IFileStorageService _fileStorage;
 
-    public CreateUserCommandHandler(IApplicationDbContext context, IPasswordHasherServise hasherService)
+    public CreateUserCommandHandler(IApplicationDbContext context, IPasswordHasherServise hasherService, IFileStorageService fileStorage)
     {
         this.context = context;
         this.hasherService = hasherService;
+        _fileStorage = fileStorage;
     }
 
     public async Task<Guid> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
+        string? photoPath = null;
+
+        // Сохраняем фото, если оно есть
+        if (request.Avatar != null) photoPath = await _fileStorage.SaveFileAsync(request.Avatar, "avatars");
+
         var newUser = new User
         {
             Id = Guid.NewGuid(),
@@ -24,7 +31,8 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
             PhoneNumber = request.PhoneNumber,
             RoleId = request.RoleId,
             UserInfo = request.UserInfo,
-            IsActive = true
+            IsActive = true,
+            AvatarPath = photoPath
         };
 
         await context.Users.AddAsync(newUser, cancellationToken);

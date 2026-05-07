@@ -68,7 +68,8 @@ public class JwtTokenService : IJwtTokenService
                 new Claim(ClaimTypes.Name, user.Fullname),
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Role, roleNameClaim),
-                new Claim(ClaimTypes.MobilePhone, user.PhoneNumber)
+                new Claim(ClaimTypes.MobilePhone, user.PhoneNumber),
+                new Claim("avatarPath", user.AvatarPath ?? ""),
             }),
             Expires = DateTime.UtcNow.Add(expiryDuration),
             SigningCredentials = new SigningCredentials(GetSymmetricKey(),

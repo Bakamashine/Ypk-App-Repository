@@ -15,12 +15,7 @@ public class FeedbackLookupDto : IMapWith<Feedback>, IHasImage
     // feedback.ImageUrl = $"{Request.Scheme}://{Request.Host}{feedback.ImagePath}";
 
 
-    public string? ImagePath
-    {
-        get;
-        set;
-    }
-
+    public string? ImagePath { get; set; }
     public string? ImageUrl { get; set; }
 
     public void Mapping(Profile profile)

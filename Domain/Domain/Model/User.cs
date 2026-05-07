@@ -12,6 +12,8 @@ public class User : BaseModel
     public string? UserInfo { get; set; }
     public bool IsActive { get; set; }
 
+    public string? AvatarPath { get; set; }
+
     public Role? Role { get; set; }
     public Ypk? Ypk { get; set; }
 

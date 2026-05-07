@@ -1,5 +1,6 @@
 ﻿using Application.Dtos.Auth;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 
 namespace Application.Commands.Users.UpdateUser;
 
@@ -13,4 +14,5 @@ public class UpdateUserCommand : IRequest<TokenDto>
     public string PhoneNumber { get; set; } = string.Empty;
     public string? UserInfo { get; set; }
     public bool IsActive { get; set; }
+    public IFormFile? Avatar { get; set; }
 }
