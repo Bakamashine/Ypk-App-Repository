@@ -15,6 +15,7 @@ public class UpdateUserDto : IMapWith<UpdateUserCommand>
     public string PhoneNumber { get; set; } = string.Empty;
     public string? UserInfo { get; set; }
     public bool IsActive { get; set; }
+    public IFormFile? Avatar { get; set; }
 
     public void Mapping(Profile profile)
     {
@@ -32,6 +33,8 @@ public class UpdateUserDto : IMapWith<UpdateUserCommand>
             .ForMember(userCommand => userCommand.UserInfo,
                 opt => opt.MapFrom(userDto => userDto.UserInfo))
             .ForMember(userCommand => userCommand.IsActive,
-                opt => opt.MapFrom(userDto => userDto.IsActive));
+                opt => opt.MapFrom(userDto => userDto.IsActive))
+            .ForMember(userCommand => userCommand.Avatar,
+                opt => opt.MapFrom(userDto => userDto.Avatar));
     }
 }

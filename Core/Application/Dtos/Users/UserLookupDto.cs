@@ -15,6 +15,9 @@ public class UserLookupDto : IMapWith<User>
     public string? UserInfo { get; set; }
     public bool IsActive { get; set; }
 
+    public string? AvatarPath { get; set; }
+    public string? AvatarUrl { get; set; }
+
     public RoleLookupDto? Role { get; set; }
     public YpkLookupDto? Ypk { get; set; }
 
@@ -35,6 +38,8 @@ public class UserLookupDto : IMapWith<User>
                 opt => opt.MapFrom(user => user.Role))
             .ForMember(userVm => userVm.Ypk,
                 opt => opt.MapFrom(user => user.Ypk))
+            .ForMember(userVm => userVm.AvatarPath,
+                opt => opt.MapFrom(user => user.AvatarPath))
             .ForMember(userVm => userVm.IsActive,
                 opt => opt.MapFrom(user => user.IsActive));
     }

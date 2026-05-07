@@ -11,15 +11,22 @@ public class UpdateAdminUserCommandHandler : IRequestHandler<UpdateAdminUserComm
 {
     private readonly IApplicationDbContext context;
     private readonly IPasswordHasherServise passwordHasher;
+    private readonly IFileStorageService fileStorage;
 
-    public UpdateAdminUserCommandHandler(IApplicationDbContext context, IPasswordHasherServise passwordHasher)
+    public UpdateAdminUserCommandHandler(IApplicationDbContext context, IPasswordHasherServise passwordHasher, IFileStorageService fileStorage)
     {
         this.context = context;
         this.passwordHasher = passwordHasher;
+        this.fileStorage = fileStorage;
     }
 
     public async Task<Unit> Handle(UpdateAdminUserCommand request, CancellationToken cancellationToken)
     {
+        string? photoPath = null;
+
+        // Сохраняем фото, если оно есть
+        if (request.Avatar != null) photoPath = await fileStorage.SaveFileAsync(request.Avatar, "avatars");
+
         var entity = await context.Users.FindAsync(new object[] { request.Id }, cancellationToken)
                      ?? throw new NotFoundException(nameof(User), request.Id);
 
@@ -38,6 +45,8 @@ public class UpdateAdminUserCommandHandler : IRequestHandler<UpdateAdminUserComm
                 entity.PhoneNumber = request.PhoneNumber;
             if (!string.IsNullOrEmpty(request.UserInfo))
                 entity.UserInfo = request.UserInfo;
+            if (!string.IsNullOrEmpty(photoPath))
+                entity.AvatarPath = photoPath;
 
             await context.SaveChangesAsync(cancellationToken);
         }

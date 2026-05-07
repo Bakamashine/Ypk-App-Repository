@@ -12,17 +12,24 @@ public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Token
     private readonly IJwtTokenService _tokenService;
     private readonly IApplicationDbContext context;
     private readonly IPasswordHasherServise passwordHasher;
+    private readonly IFileStorageService _fileStorage;
 
     public UpdateUserCommandHandler(IApplicationDbContext context, IJwtTokenService tokenService,
-        IPasswordHasherServise passwordHasher)
+        IPasswordHasherServise passwordHasher, IFileStorageService fileStorage)
     {
         this.context = context;
         _tokenService = tokenService;
         this.passwordHasher = passwordHasher;
+        _fileStorage = fileStorage;
     }
 
     public async Task<TokenDto> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
     {
+        string? photoPath = null;
+
+        // Сохраняем фото, если оно есть
+        if (request.Avatar != null) photoPath = await _fileStorage.SaveFileAsync(request.Avatar, "avatars");
+
         var currentUser = await context.Users.FindAsync(new object[] { request.CurrentUserId }, cancellationToken)
                           ?? throw new NotFoundException(nameof(User), request.CurrentUserId);
 
@@ -52,6 +59,8 @@ public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, Token
                     entity.UserInfo = request.UserInfo;
                 if (entity.IsActive != request.IsActive)
                     entity.IsActive = request.IsActive;
+                if (!string.IsNullOrEmpty(photoPath))
+                    entity.AvatarPath = photoPath;
 
                 await context.SaveChangesAsync(cancellationToken);
 
