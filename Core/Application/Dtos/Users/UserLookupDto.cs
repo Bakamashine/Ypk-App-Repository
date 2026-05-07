@@ -43,4 +43,5 @@ public class UserLookupDto : IMapWith<User>
             .ForMember(userVm => userVm.IsActive,
                 opt => opt.MapFrom(user => user.IsActive));
     }
+    
 }

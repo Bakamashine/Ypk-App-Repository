@@ -1,10 +1,14 @@
-﻿using Application.Commands.Auth.Login;
+﻿using System.Security.Claims;
+using Application.Commands.Auth.Login;
 using Application.Commands.Auth.Registration;
 using Application.Dtos.Auth;
+using Application.Dtos.Users;
 using Application.Interfaces;
 using Application.Interfaces.Repository;
 using AutoMapper;
 using CourseWebApi.Models.Auth;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ProductsWebApi.Controllers;
 
@@ -153,5 +157,57 @@ public class AuthController : BaseController
     {
         await _service.InvalidateRefreshTokenAsync(request.refreshToken);
         return Ok();
+    }
+
+    [HttpGet("test")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [Authorize]
+    public async Task<string> Test()
+    {
+        return "It's working!";
+    }
+
+    /// <summary>
+    /// Get info about user by token
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("me")]
+    [Authorize]
+    public IActionResult GetMe()
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var name = User.FindFirstValue(ClaimTypes.Name);
+        var phone = User.FindFirstValue(ClaimTypes.MobilePhone);
+        var role = User.FindFirstValue(ClaimTypes.Role);
+        if (userId == null)
+            return Unauthorized();
+        return Ok(new
+        {
+            id = userId,
+            name = name,
+            phoneNumber = phone,
+            role = role
+        });
+    }
+
+    /// <summary>
+    /// Get info about user by token
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("me/all")]
+    [Authorize]
+    public async Task<IActionResult> GetMeAll()
+    {
+
+        var user = await _userRepository.GetByPhoneNumber(User.FindFirstValue(ClaimTypes.MobilePhone));
+        if (user == null) return NotFound();
+        var userDto = new UserResponse(user);
+        if (!string.IsNullOrEmpty(user.AvatarPath))
+        {
+            userDto.AvatarUrl = $"{Request.Scheme}://{Request.Host}{user.AvatarPath}";
+        }
+
+        return Ok(userDto);
+
     }
 }

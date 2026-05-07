@@ -1,4 +1,5 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -18,7 +19,17 @@ public class JwtTokenService : IJwtTokenService
     private readonly TimeSpan expiryDuration = new(0, 5, 0);
     private readonly string secretKey;
     private readonly string _refreshTokenKey = "refreshToken";
+    private readonly string _accessTokenKey = "accessToken";
     private readonly IHttpContextAccessor _httpContextAccessor;
+
+    private CookieOptions _cookieOptions = new CookieOptions()
+    {
+        //  Expires = expires,
+        HttpOnly = true,
+        Secure = true,
+        IsEssential = true,
+        SameSite = SameSiteMode.None
+    };
 
     private HttpContext GetHttpContext()
     {
@@ -67,7 +78,23 @@ public class JwtTokenService : IJwtTokenService
         };
 
         var token = tokenHandler.CreateToken(tokenDescription);
-        return tokenHandler.WriteToken(token);
+        var accessToken = tokenHandler.WriteToken(token);
+        var expires = DateTime.UtcNow.AddMinutes(5);
+
+        // var cookieOptions = new CookieOptions
+        // {
+        //     Expires = expires,
+        //     HttpOnly = true,
+        //     Secure = true,
+        //     IsEssential = true,
+        //     SameSite = SameSiteMode.None
+        // };
+
+        var cookieOptions = _cookieOptions;
+        cookieOptions.Expires = expires;
+        GetHttpContext().Response.Cookies.Append(_accessTokenKey, accessToken, cookieOptions);
+
+        return accessToken;
     }
 
     public async Task<string> GenerateRefreshToken(User user, CancellationToken cancellationToken = default)
@@ -83,15 +110,16 @@ public class JwtTokenService : IJwtTokenService
             ExpiresOnUtc = expires
         };
 
-        var cookieOptions = new CookieOptions()
-        {
-            Expires = expires,
-            HttpOnly = true,
-            Secure = true,
-            IsEssential = true,
-            SameSite = SameSiteMode.None
-        };
-
+        // var cookieOptions = new CookieOptions()
+        // {
+        //     Expires = expires,
+        //     HttpOnly = true,
+        //     Secure = true,
+        //     IsEssential = true,
+        //     SameSite = SameSiteMode.None
+        // };
+        var cookieOptions = _cookieOptions;
+        cookieOptions.Expires = expires;
         GetHttpContext().Response.Cookies.Append(_refreshTokenKey, refreshToken, cookieOptions);
         await context.UserToken.AddAsync(refreshTokenEntity, cancellationToken);
         await context.SaveChangesAsync(cancellationToken);
@@ -107,13 +135,13 @@ public class JwtTokenService : IJwtTokenService
 
     public async Task InvalidateRefreshTokenAsync(string token, CancellationToken cancellationToken = default)
     {
-        var cookieOptions = new CookieOptions()
-        {
-            HttpOnly = true,
-            Secure = true,
-            SameSite = SameSiteMode.None
-        };
-        var httpContext = GetHttpContext();
+        // var cookieOptions = new CookieOptions()
+        // {
+        //     HttpOnly = true,
+        //     Secure = true,
+        //     SameSite = SameSiteMode.None
+        // };
+        // var httpContext = GetHttpContext();
         // httpContext.Response.Cookies.Delete(_refreshTokenKey, cookieOptions);
         var recordWithRefreshToken = await context.UserToken
             .FirstOrDefaultAsync(e => e.Token == token, cancellationToken);
