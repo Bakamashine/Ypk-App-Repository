@@ -2,11 +2,13 @@
 using Application.Commands.Auth.Login;
 using Application.Commands.Auth.Registration;
 using Application.Dtos.Auth;
+using Application.Dtos.Users;
 using Application.Interfaces;
 using Application.Interfaces.Repository;
 using AutoMapper;
 using CourseWebApi.Models.Auth;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ProductsWebApi.Controllers;
 
@@ -186,5 +188,26 @@ public class AuthController : BaseController
             phoneNumber = phone,
             role = role
         });
+    }
+
+    /// <summary>
+    /// Get info about user by token
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("me/all")]
+    [Authorize]
+    public async Task<IActionResult> GetMeAll()
+    {
+
+        var user = await _userRepository.GetByPhoneNumber(User.FindFirstValue(ClaimTypes.MobilePhone));
+        if (user == null) return NotFound();
+        var userDto = new UserResponse(user);
+        if (!string.IsNullOrEmpty(user.AvatarPath))
+        {
+            userDto.AvatarUrl = $"{Request.Scheme}://{Request.Host}{user.AvatarPath}";
+        }
+
+        return Ok(userDto);
+
     }
 }
