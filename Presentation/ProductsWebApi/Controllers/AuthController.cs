@@ -1,4 +1,5 @@
-﻿using Application.Commands.Auth.Login;
+﻿using System.Security.Claims;
+using Application.Commands.Auth.Login;
 using Application.Commands.Auth.Registration;
 using Application.Dtos.Auth;
 using Application.Interfaces;
@@ -162,5 +163,28 @@ public class AuthController : BaseController
     public async Task<string> Test()
     {
         return "It's working!";
+    }
+
+    /// <summary>
+    /// Get info about user by token
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("me")]
+    [Authorize]
+    public IActionResult GetMe()
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var name = User.FindFirstValue(ClaimTypes.Name);
+        var phone = User.FindFirstValue(ClaimTypes.MobilePhone);
+        var role = User.FindFirstValue(ClaimTypes.Role);
+        if (userId == null)
+            return Unauthorized();
+        return Ok(new
+        {
+            id = userId,
+            name = name,
+            phoneNumber = phone,
+            role = role
+        });
     }
 }
