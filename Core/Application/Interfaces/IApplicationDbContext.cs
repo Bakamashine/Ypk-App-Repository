@@ -13,6 +13,7 @@ public interface IApplicationDbContext
     DbSet<Product> Products { get; set; }
     DbSet<Feedback> Feedbacks { get; set; }
     DbSet<Ypk> Ypks { get; set; }
+    DbSet<SelectedProducts> SelectedProducts { get; set; }
 
     DbSet<RefreshToken> UserToken { get; set; }
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);

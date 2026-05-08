@@ -20,4 +20,5 @@ public class Product : BaseModel
     public StatusProduct? StatusProduct { get; set; }
 
     public ICollection<Order>? Orders { get; set; }
+    public ICollection<SelectedProducts>? SelectedProducts { get; set; }
 }

@@ -93,6 +93,4 @@ Presentation/ProductsWebApi/wwwroot/
 *.webp
 *.tiff
 
-# Entity Framework Migrations
-**/Migrations/
 
