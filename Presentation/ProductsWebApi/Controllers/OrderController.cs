@@ -194,6 +194,7 @@ public class OrderController : BaseController
     /// <response code="200">Success</response>
     /// <response code="401">If the user is unauthorized</response>
     [HttpGet("{id}")]
+        [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<OrderLookupDto>> Get(Guid id)
@@ -224,6 +225,7 @@ public class OrderController : BaseController
     /// <response code="401">If the user is unauthorized</response>
     /// <response code="403">If the user not have permission</response>
     [HttpPost]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<Guid>> Create([FromBody] CreateOrderDto createOrderDto)
@@ -255,6 +257,7 @@ public class OrderController : BaseController
     /// <response code="204">Success</response>
     /// <response code="401">If the user is unauthorized</response>
     [HttpPut]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> Update([FromBody] UpdateOrderDto updateOrderDto)
@@ -277,6 +280,7 @@ public class OrderController : BaseController
     /// <response code="204">Success</response>
     /// <response code="401">If the user is unauthorized</response>
     [HttpDelete("{id}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> Delete(Guid id)

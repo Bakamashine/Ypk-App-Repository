@@ -17,6 +17,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
     public DbSet<Order> Orders { get; set; }
     public DbSet<StatusOrder> StatusOrders { get; set; }
     public DbSet<StatusProduct> StatusProducts { get; set; }
+    public DbSet<SelectedProducts> SelectedProducts { get; set; }
     public DbSet<Product> Products { get; set; }
     public DbSet<Feedback> Feedbacks { get; set; }
     public DbSet<Ypk> Ypks { get; set; }
@@ -29,6 +30,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
         builder.ApplyConfiguration(new UserConfiguration());
         builder.ApplyConfiguration(new YpkConfiguration());
         builder.ApplyConfiguration(new OrderConfiguration());
+        builder.ApplyConfiguration(new SelectedProductsConfiguration());
         builder.ApplyConfiguration(new StatusOrderConfiguration());
         builder.ApplyConfiguration(new StatusProductConfiguration());
         builder.ApplyConfiguration(new FeedbackConfiguration());

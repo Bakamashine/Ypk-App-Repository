@@ -1,5 +1,6 @@
 ﻿using Application.Commands.Users.CreateUser;
 using Application.Commands.Users.DeleteUser;
+using Application.Commands.Users.UpdateCurrentUser;
 using Application.Commands.Users.UpdateUser;
 using Application.Dtos.Users;
 using Application.Queries.Base;
@@ -165,6 +166,35 @@ public class UserController : BaseController
         command.CurrentUserId = UserId;
         await Mediator.Send(command);
         return NoContent();
+    }
+
+    /// <summary>
+    ///     Update current user
+    /// </summary>
+    /// <remarks>
+    ///     Sample request:
+    ///     PUT (HOST)/api/user/current
+    ///     {
+    ///     "fullname": "string",
+    ///     "phoneNumber": "string",
+    ///     "userInfo": "string",
+    ///     "avatar": "file",
+    ///     }
+    /// </remarks>
+    /// <param name="updateCurrentUserDto">UpdateUserDto object</param>
+    /// <returns>Returns NoContent</returns>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
+    [Authorize]
+    [HttpPut("current")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task<IActionResult> UpdateCurrentUser([FromForm] UpdateCurrentUserDto updateCurrentUserDto)
+    {
+        var command = mapper.Map<UpdateCurrentUserCommand>(updateCurrentUserDto);
+        command.CurrentUserId = UserId;
+        var result = await Mediator.Send(command);
+        return result == null ? Unauthorized() : NoContent();
     }
 
     /// <summary>

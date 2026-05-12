@@ -31,6 +31,12 @@ public class GetAllProductPagQueryHandler : IRequestHandler<GetAllProductPagQuer
             .ProjectTo<ProductLookupDto>(mapper.ConfigurationProvider)
             .AsQueryable();
 
+        if (!string.IsNullOrEmpty(request.SearchText))
+            query = query.Where(x => x.Address.ToLower().Trim().Contains(request.SearchText.ToLower().Trim())
+                    || x.ProductName.ToLower().Trim().Contains(request.SearchText.ToLower().Trim())
+                    || x.ProductInfo.ToLower().Trim().Contains(request.SearchText.ToLower().Trim())
+                    || x.ProductCost.ToString().ToLower().Trim().Contains(request.SearchText.ToLower().Trim()));
+
         return await query.ToPagedListAsync(request.Page, request.PageSize, cancellationToken);
     }
 }

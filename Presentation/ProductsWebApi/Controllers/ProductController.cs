@@ -116,11 +116,12 @@ public class ProductController : BaseController
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<PagedList<ProductLookupDto>>> GetAllWithPag(
+        [FromQuery] string searchText,
         [FromQuery] int pageSize = 5,
         [FromQuery] int page = 1
     )
     {
-        var query = new GetAllProductPagQuery { PageSize = pageSize, Page = page };
+        var query = new GetAllProductPagQuery { PageSize = pageSize, Page = page, SearchText = searchText};
 
         var vm = await Mediator.Send(query);
         if (vm?.Items != null)
