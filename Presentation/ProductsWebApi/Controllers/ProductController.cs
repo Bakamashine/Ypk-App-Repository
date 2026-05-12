@@ -116,7 +116,7 @@ public class ProductController : BaseController
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<PagedList<ProductLookupDto>>> GetAllWithPag(
-        [FromQuery] string searchText,
+        [FromQuery] string? searchText =null,
         [FromQuery] int pageSize = 5,
         [FromQuery] int page = 1
     )
