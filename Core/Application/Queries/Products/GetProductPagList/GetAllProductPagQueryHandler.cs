@@ -22,6 +22,9 @@ public class GetAllProductPagQueryHandler : IRequestHandler<GetAllProductPagQuer
 
     public async Task<PagedList<ProductLookupDto>> Handle(GetAllProductPagQuery request, CancellationToken cancellationToken)
     {
+
+        var searchText = request.SearchText?.ToLower().Trim();
+
         var query = context.Products
             .Include(u => u.User)
             .Include(u => u.StatusProduct)
@@ -31,11 +34,20 @@ public class GetAllProductPagQueryHandler : IRequestHandler<GetAllProductPagQuer
             .ProjectTo<ProductLookupDto>(mapper.ConfigurationProvider)
             .AsQueryable();
 
-        if (!string.IsNullOrEmpty(request.SearchText))
-            query = query.Where(x => x.Address.ToLower().Trim().Contains(request.SearchText.ToLower().Trim())
-                    || x.ProductName.ToLower().Trim().Contains(request.SearchText.ToLower().Trim())
-                    || x.ProductInfo.ToLower().Trim().Contains(request.SearchText.ToLower().Trim())
-                    || x.ProductCost.ToString().ToLower().Trim().Contains(request.SearchText.ToLower().Trim()));
+        if (!string.IsNullOrEmpty(searchText))
+
+            if (decimal.TryParse(searchText, out var searchCost))
+            {
+                query = query.Where(p => p.ProductCost == searchCost);
+            }
+            else
+            {
+                query = query.Where(x => x.Address.ToLower().Trim().Contains(searchText)
+                 || x.ProductName.ToLower().Trim().Contains(searchText)
+                 || x.ProductInfo.ToLower().Trim().Contains(searchText)
+         );
+            }
+
 
         return await query.ToPagedListAsync(request.Page, request.PageSize, cancellationToken);
     }

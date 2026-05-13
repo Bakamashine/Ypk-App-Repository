@@ -9,6 +9,9 @@ obj/
 # Visual Studio
 .vs/
 .vscode/
+pull.ps1
+
+
 
 # NuGet
 packages/
