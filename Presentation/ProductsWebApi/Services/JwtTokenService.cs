@@ -16,7 +16,7 @@ namespace ProductsWebApi.Services;
 public class JwtTokenService : IJwtTokenService
 {
     private readonly IApplicationDbContext context;
-    private readonly TimeSpan expiryDuration = new(0, 5, 0);
+    private readonly TimeSpan expiryDuration = new(0, 0, 0);
     private readonly string secretKey;
     private readonly string _refreshTokenKey = "refreshToken";
     private readonly string _accessTokenKey = "accessToken";
@@ -71,7 +71,7 @@ public class JwtTokenService : IJwtTokenService
                 new Claim(ClaimTypes.MobilePhone, user.PhoneNumber),
                 new Claim("avatarPath", user.AvatarPath ?? ""),
             }),
-            Expires = DateTime.UtcNow.Add(expiryDuration),
+            Expires = DateTime.UtcNow.AddDays(30),
             SigningCredentials = new SigningCredentials(GetSymmetricKey(),
                 SecurityAlgorithms.HmacSha256Signature),
             Audience = "ProductWebApi"

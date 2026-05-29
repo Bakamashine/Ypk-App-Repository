@@ -47,9 +47,9 @@ public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand>
                 entity.Address = request.Address;
             if (!string.IsNullOrEmpty(photoPath))
                 entity.PhotoPath = photoPath;
-            if (request.IsProduct != request.IsProduct)
+            if (entity.IsProduct != request.IsProduct)
                 entity.IsProduct = request.IsProduct;
-            if (request.ProductCost != request.ProductCost)
+            if (entity.ProductCost != request.ProductCost)
                 entity.ProductCost = request.ProductCost;
             if (request.StatusProductId != Guid.Empty)
                 entity.StatusProductId = request.StatusProductId;
